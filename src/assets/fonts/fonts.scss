@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'Roboto-Regular';
+  font-style: normal;
+
+  src: url('roboto_regular/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+  url('roboto_regular/Roboto-Regular.woff2') format('woff2'),
+  url('roboto_regular/Roboto-Regular.woff') format('woff'),
+  url('roboto_regular/Roboto-Regular.ttf') format('truetype'),
+  url('roboto_regular/Roboto-Regular.otf') format('otf');
+}
+
+
+@font-face {
+  font-family: 'Museo-500';
+  font-style: normal;
+  src: url('Museo_500/museo-500-regular.otf') format('otf'),
+  url('Museo_500/museo-500-webfont.woff') format('woff'),
+  url('Museo_500/museo-500-webfont.ttf') format('truetype'),
+  url('Museo_500/Museo-500.otf') format('otf');
+}
+
+@font-face {
+  font-family: Source-SansPro-Bold;
+  src: url('source_sans_pro/SourceSansPro-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Source-SansPro-Regular;
+  src: url('source_sans_pro/SourceSansPro-Regular.ttf') format('truetype');
+}
