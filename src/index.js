@@ -1,12 +1,30 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import { render } from 'react-dom';
+import { AppContainer } from 'react-hot-loader';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import configureStore, { history } from './services/configureStore';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const ROOT = document.getElementById('root');
+const store = configureStore();
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+const renderer = (Component) => {
+  render(
+    <AppContainer>
+      <Component history={history} store={store} />
+    </AppContainer>,
+    ROOT
+  );
+};
+
+renderer(App);
+
+if (module.hot) {
+  module.hot.accept(['./App'], () => {
+    const newApp = require('./App').default;
+
+    renderer(newApp);
+  });
+}
+
 serviceWorker.unregister();

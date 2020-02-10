@@ -1,7 +1,336 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="548926de-cff3-4d8a-aa20-72a745eefd1f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Museo_500/Museo-500.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Museo_500/museo-500-regular.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Museo_500/museo-500-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Museo_500/museo-500-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Nunito/Nunito-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Nunito/Nunito-Light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Nunito/Nunito-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Nunito/OFL.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Playfair_Display/OFL.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Playfair_Display/PlayfairDisplay-Black.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Playfair_Display/PlayfairDisplay-BlackItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Playfair_Display/PlayfairDisplay-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Playfair_Display/PlayfairDisplay-BoldItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Playfair_Display/PlayfairDisplay-Italic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Playfair_Display/PlayfairDisplay-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/fonts.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/roboto_regular/Roboto-Regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/roboto_regular/Roboto-Regular.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/roboto_regular/Roboto-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/roboto_regular/Roboto-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/roboto_regular/Roboto-Regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/source_sans_pro/SourceSansPro-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/source_sans_pro/SourceSansPro-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MainPage/MainPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MainPage/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MainPageSkeleton/HeaderSkeleton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MainPageSkeleton/MainPageSkeleton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MainPageSkeleton/MainPageSkeleton.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MainPageSkeleton/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MoviePageSkeleton/MoviePageSkeleton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MoviePageSkeleton/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/NotFoundPage/NotFoundPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/NotFoundPage/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PageDefaultContainer/PageDefaultContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PageDefaultContainer/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Routes/Routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Routes/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ScrollToTop/ScrollToTop.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ScrollToTop/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/config/base.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/constants/actionTypes/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/HttpService/httpService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/ViewportProvider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/configureStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/_variables.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assets/fonts/fonts.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/App.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="33" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/assets/fonts/fonts.scss" />
+        <option value="$PROJECT_DIR$/src/App.scss" />
+        <option value="$PROJECT_DIR$/src/_variables.scss" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
+  </component>
   <component name="ProjectId" id="1XA0v2h43zMuNvRr1ZgyVAvhWEi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/fonts" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/fonts" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/service" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/assets" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="npm.npm start">
+    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="npm start" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="548926de-cff3-4d8a-aa20-72a745eefd1f" name="Default Changelist" comment="" />
+      <created>1580473818857</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580473818857</updated>
+      <workItem from="1580473820863" duration="18391000" />
+      <workItem from="1580900281912" duration="14167000" />
+      <workItem from="1581265163122" duration="2708000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2708000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="npm" side_tool="true" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts</url>
+          <line>136</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/assets/fonts/Nunito/OFL.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-71" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/fonts/Playfair_Display/OFL.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/_variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/fonts/fonts.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="33" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

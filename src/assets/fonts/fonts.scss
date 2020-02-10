@@ -1,30 +1,40 @@
+$fonts: (
+        primary: 'Nunito-Regular',
+        primary-bold: 'Nunito-Bold',
+        primary-light: 'Nunito-Light',
+        secondary: 'Roboto-Regular'
+);
+
+@font-face {
+  font-family: 'Nunito-Regular';
+  src: url('/src/assets/fonts/Nunito/Nunito-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Nunito-Bold';
+  src: url('/src/assets/fonts/Nunito/Nunito-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Nunito-Light';
+  src: url('/src/assets/fonts/Nunito/Nunito-Light.ttf') format('truetype');
+}
+
+
 @font-face {
   font-family: 'Roboto-Regular';
   font-style: normal;
 
-  src: url('roboto_regular/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
-  url('roboto_regular/Roboto-Regular.woff2') format('woff2'),
-  url('roboto_regular/Roboto-Regular.woff') format('woff'),
-  url('roboto_regular/Roboto-Regular.ttf') format('truetype'),
-  url('roboto_regular/Roboto-Regular.otf') format('otf');
+  src: url('./roboto_regular/Roboto-Regular.eot?#iefix') format('embedded-opentype')
 }
 
+@function font($type: primary) {
+  @each $key, $font in $fonts {
+    @if $key == $type {
+      @return $font;
+    }
+  }
 
-@font-face {
-  font-family: 'Museo-500';
-  font-style: normal;
-  src: url('Museo_500/museo-500-regular.otf') format('otf'),
-  url('Museo_500/museo-500-webfont.woff') format('woff'),
-  url('Museo_500/museo-500-webfont.ttf') format('truetype'),
-  url('Museo_500/Museo-500.otf') format('otf');
-}
-
-@font-face {
-  font-family: Source-SansPro-Bold;
-  src: url('source_sans_pro/SourceSansPro-Bold.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: Source-SansPro-Regular;
-  src: url('source_sans_pro/SourceSansPro-Regular.ttf') format('truetype');
+  @debug $debug-message map-keys($fonts);
+  @return null;
 }
