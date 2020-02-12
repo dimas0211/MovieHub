@@ -1,10 +1,11 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import autoBind from 'auto-bind';
 
 import MainPageSkeleton from '../MainPageSkeleton';
-import MoviePageSkeleton from '../MoviePageSkeleton';
+import { Header } from '../Header';
 
 const propTypes = {
   component: PropTypes.any,
@@ -18,7 +19,7 @@ const defaultProps = {
   hideHeader: false
 };
 
-class PageDefaultContainer extends Component {
+class DefaultLayout extends Component {
   constructor(props) {
     super(props);
 
@@ -37,24 +38,15 @@ class PageDefaultContainer extends Component {
       hideFooter,
       hideHeader,
       location,
-      movieList = [],
+      movieList = [1],
       ...rest
     } = this.props;
 
-    const restProps = { ...rest };
-
     return (
       <Route
-        render={(matchProps) => {
-          // eslint-disable-next-line no-undef
-          if ((matchProps.match.path === '/:category') && !movieList.length) {
-            return (
-              <MoviePageSkeleton />
-            );
-          }
-          // will be removed after all demo pull request
-          // eslint-disable-next-line no-undef
-          if ((matchProps.match.path === '/main' || matchProps.match.path === '/') && !movieList.length) {
+        {...rest}
+        render={(props) => {
+          if (!movieList.length) {
             return (
               <MainPageSkeleton />
             );
@@ -62,21 +54,20 @@ class PageDefaultContainer extends Component {
 
           return (
             <>
-              {/* {!hideHeader && <Header />} */}
               {/* <Notifications type /> */}
+              {!hideHeader && <Header />}
               {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-              <Page {...matchProps} />
+              <Page {...props} />
               {/* {!hideFooter && <Footer />} */}
             </>
           );
         }}
-        restProps={restProps}
       />
     );
   }
 }
 
-PageDefaultContainer.propTypes = propTypes;
-PageDefaultContainer.defaultProps = defaultProps;
+DefaultLayout.propTypes = propTypes;
+DefaultLayout.defaultProps = defaultProps;
 
-export default PageDefaultContainer;
+export default DefaultLayout;

@@ -1,68 +1,34 @@
 exposeToClient:
   - api
   - client
-  - googleAuth.clientID
-  - featureSwitch
-  - googleAnalyticsId
 
 
 api:
   path: '/api'
   resources:
-    auth: '/auth'
-    questions: '/questions'
-    prescreen: '/prescreen'
-    taxonomy: '/taxonomy'
-    dashboard: '/dashboard'
-    profiles: '/profiles'
-    users: '/users'
-    interview: '/interview'
-    marks: '/marks'
-    comments: '/comments'
-    notifications: '/notifications'
-    login: '/login'
+    movie: '/movie'
+    movie-list: '/movie-list'
+    search: '/search'
+
 
 client:
   routing:
-    home:
+    main:
       path: '/'
-    dashboard:
-      path: '/dashboard'
-    questions:
-      path: '/questions'
+    movie:
+      path: '/movie'
       view: '/view/:id'
-      edit: '/edit/:id'
-      add: '/add'
+    movie-list:
+      path: '/movie-list'
+      genre:
+        path: '/:genre'
+        view: 'view/:id'
+      year:
+        path: '/:year'
+        view: 'view/:id'
+      country:
+        path: '/:country'
+        view: 'view/:id'
 
-      review: '/review/:id'
-      approve: '/approve/:id'
-      reject: '/reject/:id'
-    prescreen:
-      path: '/prescreen'
-      add: '/add'
-      edit: '/edit/:id'
-      view: '/view/:id'
-    guest:
-      path: '/guest'
-    login:
-      path: '/login'
-    user:
-      path: '/users'
-    profile:
-      path: '/profiles'
-      add: '/add'
-      view: '/view/:id'
-    wiki:
-      path: '/wiki'
-      page: '/public/docs/wiki/manual/About.html'
-    interview:
-      path: '/interview'
-      generate: '/generate'
-      view: '/view/:id'
-      run: '/run/:id/:question'
-      pdf: '/pdf'
-    notifications:
-      path: '/notifications'
-      unsubscribeEmail: '/unsubscribe-email'
   pagination:
     itemsPerPage: 20

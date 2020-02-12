@@ -1,4 +1,4 @@
-/* eslint-disable no-undef */
+/* eslint-disable react/jsx-props-no-spreading */
 import React, { Component } from 'react';
 
 const ViewportContext = React.createContext('desktop');
@@ -8,6 +8,21 @@ const BREAKPOINTS = {
   TABLET: { value: 576, name: 'tablet' },
   DESKTOP: { value: 768, name: 'desktop' }
 };
+
+export function connectWithViewport(Comp) {
+  const wrappedComponent = (viewport, props) => (
+    <Comp
+      viewport={viewport}
+      {...props}
+    />
+  );
+
+  return (props) => (
+    <ViewportContext.Consumer>
+      {(viewport) => wrappedComponent(viewport, props)}
+    </ViewportContext.Consumer>
+  );
+}
 
 class ViewportProvider extends Component {
   constructor() {

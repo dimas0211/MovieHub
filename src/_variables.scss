@@ -13,10 +13,12 @@ $black: #000000;
 $white: #ffffff;
 $red: #d83e3e;
 $silver-chalice: #aaaaaa;
-$light-gray: #7d7f7f;
-$gray: #696969;
+$light-gray: #303535;
+$gray: #353b48;
+
 
 $background-primary: #282D2D;
+$input-background: #2d3436;
 
 // fonts
 $font-color: $white;
@@ -85,6 +87,23 @@ $upper-background: linear-gradient(to top, $gray, $gray) 100% 50% / 100% 2px - 1
     background-color: $gray;
     box-shadow: $black;
     //caret-color: $turquoise;
+  }
+}
+
+@mixin flex($direction: null, $justify: null, $align: null, $wrap: wrap) {
+  display: flex;
+
+  @if($direction) {
+    flex-direction: $direction;
+  }
+  @if $justify {
+    justify-content: $justify;
+  }
+  @if $align {
+    align-items: $align;
+  }
+  @if $wrap {
+    flex-wrap: $wrap;
   }
 }
 

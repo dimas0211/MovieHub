@@ -1,18 +1,23 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import PageDefaultContainer from '../PageDefaultContainer';
+import { DefaultLayout } from '../DefaultLayout';
 import MainPage from '../MainPage';
+import MovieListPage from '../MovieListPage';
 import NotFoundPage from '../NotFoundPage';
 
 const Routes = () => (
   <Route render={() => (
     <Switch>
-      <PageDefaultContainer component={MainPage} exact path="/" />
-      <PageDefaultContainer component={MainPage} path="/main" />
-      <PageDefaultContainer component path="/movie-page/:id" />
-      <PageDefaultContainer component path="/:category" />
-      <PageDefaultContainer
+      <DefaultLayout component={MainPage} exact path="/" />
+      <DefaultLayout component={MainPage} path="/main" />
+      <DefaultLayout component={MovieListPage} path="/movies" />
+      <DefaultLayout component={MovieListPage} path="/new" />
+      <DefaultLayout component={MovieListPage} path="/popular" />
+      <DefaultLayout component={NotFoundPage} path="/buy" />
+      <DefaultLayout component path="/movie/view/:id" />
+      <DefaultLayout component path="/:genre" />
+      <DefaultLayout
         component={NotFoundPage}
         hideFooter
         hideHeader

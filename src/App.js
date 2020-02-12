@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 
-import ViewportProvider from './services/ViewportProvider';
+import ViewportProvider from './services/connectWithViewport';
 import ScrollToTop from './components/ScrollToTop';
 import Routes from './components/Routes';
 import './App.scss';
