@@ -31,34 +31,36 @@ class Navigation extends Component {
 
     return (
       <div className={CN}>
-        <Link className={`${CN}__logo-container`} to="/main">
-          <img src={Logo} alt="logo" className={`${CN}__logo-img`} />
-          <h3 className={`${CN}__logo-name`}>Movie Hub</h3>
-        </Link>
-        <Tabs
-          centered
-          className={`${CN}__tabs-container`}
-          indicatorColor="secondary"
-          textColor="secondary"
-          value={selectedTab}
-          onChange={this.handleChange}
-        >
-          {options.map((menuItem) => (
-            <Tab
-              className={`${CN}__tab`}
-              component={Link}
-              key={menuItem.value}
-              label={menuItem.label}
-              to={menuItem.link}
+        <div className={`${CN}__nav-wrapper`}>
+          <Link className={`${CN}__logo-container`} to="/main">
+            <img src={Logo} alt="logo" className={`${CN}__logo-img`} />
+            <h3 className={`${CN}__logo-name`}>Movie Hub</h3>
+          </Link>
+          <Tabs
+            centered
+            className={`${CN}__tabs-container`}
+            indicatorColor="secondary"
+            textColor="secondary"
+            value={selectedTab}
+            onChange={this.handleChange}
+          >
+            {options.map((menuItem) => (
+              <Tab
+                className={`${CN}__tab`}
+                component={Link}
+                key={menuItem.value}
+                label={menuItem.label}
+                to={menuItem.link}
+              />
+            ))}
+          </Tabs>
+          <div className={`${CN}__search-container`}>
+            <SearchIcon className={`${CN}__search-icon`} />
+            <InputBase
+              className={`${CN}__search-field`}
+              placeholder="Search…"
             />
-          ))}
-        </Tabs>
-        <div className={`${CN}__search-container`}>
-          <SearchIcon className={`${CN}__search-icon`} />
-          <InputBase
-            className={`${CN}__search-field`}
-            placeholder="Search…"
-          />
+          </div>
         </div>
       </div>
     );

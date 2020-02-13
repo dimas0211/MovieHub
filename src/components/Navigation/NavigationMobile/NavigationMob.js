@@ -54,6 +54,7 @@ class NavigationMob extends Component {
             <ListItem
               button
               component={Link}
+              className={`${CN}__nav-item`}
               key={menuItem.value}
               to={menuItem.link}
               onClick={this.toggleDrawer(false)}
@@ -88,8 +89,8 @@ class NavigationMob extends Component {
     const isMobile = viewport === MOBILE;
 
     return (
-      <div>
-        <div className={CN}>
+      <div className={`${CN}__mobile`}>
+        <div className={`${CN}__mobile-wrapper`}>
           <Button className={`${CN}__burger-icon`} onClick={this.toggleDrawer(true)}><MenuIcon /></Button>
           <div className={`${CN}__logo-container`}>
             <Link className={`${CN}__logo-container`} to="/main">
