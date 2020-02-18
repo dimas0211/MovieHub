@@ -7,17 +7,17 @@ $fonts: (
 
 @font-face {
   font-family: 'Nunito-Regular';
-  src: url('/src/assets/fonts/Nunito/Nunito-Regular.ttf') format('truetype');
+  src: url('./Nunito/Nunito-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Nunito-Bold';
-  src: url('/src/assets/fonts/Nunito/Nunito-Bold.ttf') format('truetype');
+  src: url('./Nunito/Nunito-Bold.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Nunito-Light';
-  src: url('/src/assets/fonts/Nunito/Nunito-Light.ttf') format('truetype');
+  src: url('./Nunito/Nunito-Light.ttf') format('truetype');
 }
 
 
@@ -35,6 +35,6 @@ $fonts: (
     }
   }
 
-  @debug $debug-message map-keys($fonts);
+  @debug map-keys($fonts);
   @return null;
 }

@@ -16,7 +16,6 @@ const Routes = () => (
       <DefaultLayout component={MovieListPage} path="/popular" />
       <DefaultLayout component={NotFoundPage} path="/buy" />
       <DefaultLayout component path="/movie/view/:id" />
-      <DefaultLayout component path="/:genre" />
       <DefaultLayout
         component={NotFoundPage}
         hideFooter

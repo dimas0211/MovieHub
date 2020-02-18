@@ -3,10 +3,9 @@ import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import configureStore, { history } from './services/configureStore';
+import store, { history } from './store';
 
 const ROOT = document.getElementById('root');
-const store = configureStore();
 
 const renderer = (Component) => {
   render(

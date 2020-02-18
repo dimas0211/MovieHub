@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import Navigation from '../Navigation';
 import NavigationMob from '../Navigation/NavigationMobile';
 import config from '../../config';
@@ -9,14 +8,14 @@ const { navConfig } = config;
 
 class Header extends Component {
   render() {
-    const { viewport } = this.props;
-    const isDesktop = viewport === DESKTOP;
+    const { viewport: { device } } = this.props;
+    const isDesktop = device === DESKTOP;
 
     return (
       <div>
         {isDesktop
           ? <Navigation options={navConfig} />
-          : <NavigationMob options={navConfig} viewport={viewport} />}
+          : <NavigationMob options={navConfig} viewport={device} />}
       </div>
     );
   }

@@ -6,17 +6,12 @@ import createRootReducer from '../reducers';
 
 export const history = createBrowserHistory();
 
-export default function configureStore(preloadedState) {
-  const store = createStore(
-    createRootReducer(history),
-    preloadedState,
-    compose(
-      applyMiddleware(
-        routerMiddleware(history),
-        thunk
-      )
+export default createStore(
+  createRootReducer(history),
+  compose(
+    applyMiddleware(
+      routerMiddleware(history),
+      thunk
     )
-  );
-
-  return store;
-}
+  )
+);
