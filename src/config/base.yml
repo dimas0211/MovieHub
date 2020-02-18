@@ -2,14 +2,12 @@ exposeToClient:
   - api
   - client
 
-
 api:
   path: '/api'
   resources:
     movie: '/movie'
     movie-list: '/movie-list'
     search: '/search'
-
 
 client:
   routing:

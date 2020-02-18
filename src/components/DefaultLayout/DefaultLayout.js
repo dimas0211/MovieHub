@@ -38,9 +38,9 @@ class DefaultLayout extends Component {
       hideFooter,
       hideHeader,
       location,
-      movieList = [1],
       ...rest
     } = this.props;
+    const movieList = [1, 2, 3];
 
     return (
       <Route
@@ -54,11 +54,9 @@ class DefaultLayout extends Component {
 
           return (
             <>
-              {/* <Notifications type /> */}
               {!hideHeader && <Header />}
               {/* eslint-disable-next-line react/jsx-props-no-spreading */}
               <Page {...props} />
-              {/* {!hideFooter && <Footer />} */}
             </>
           );
         }}

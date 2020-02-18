@@ -2,13 +2,15 @@ import axios from 'axios/index';
 
 const successHandler = (response) => response.data;
 const errorHandler = (error) => {
+  // eslint-disable-next-line no-console
   console.log(error);
 
   return error;
 };
 const defaultConfig = {
   headers: {
-    'X-Custom-Header': 'foobar'
+    // 'X-Custom-Header': 'foobar'
+    // Authorization: '3f4df268ddd96ffb4344a1b20d93d24b'
   }
 };
 
