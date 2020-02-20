@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
 import MovieMainItemCard from '../MovieMainItemCard';
 import MovieListPagination from '../MovieListPagination';
+import { TV_SHOW_LIST, TV_SHOW_GENRES } from '../../constants/configurations';
 
 const CN = 'main-page';
 
-class MainPage extends Component {
+class TVShowListPage extends Component {
   componentDidMount() {
-    this.loadMovieList();
+    this.loadShowList();
   }
 
-  loadMovieList() {
+  loadShowList() {
     const { getGenres, getMovies } = this.props;
 
-    getGenres && getGenres();
-    getMovies && getMovies(1);
+    getGenres && getGenres(TV_SHOW_GENRES);
+    getMovies && getMovies(1, TV_SHOW_LIST);
   }
 
   renderMovieList() {
@@ -37,7 +38,9 @@ class MainPage extends Component {
       <div className={CN}>
         {this.renderMovieList()}
         <MovieListPagination
+          genreTVShow={TV_SHOW_GENRES}
           getMovies={getMovies}
+          listTVShow={TV_SHOW_LIST}
           pagesCount={moviesPages}
           scrollToTop={scrollToTop}
         />
@@ -46,4 +49,4 @@ class MainPage extends Component {
   }
 }
 
-export default MainPage;
+export default TVShowListPage;

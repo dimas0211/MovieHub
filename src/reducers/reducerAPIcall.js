@@ -1,12 +1,18 @@
-import { GET_MOVIES_PENDING, GET_MOVIES_SUCCESS, GET_MOVIES_ERROR } from '../constants/actionTypes';
+import {
+  GET_MOVIES_PENDING, GET_MOVIES_SUCCESS, GET_MOVIES_ERROR, GET_GENRES_PENDING, GET_GENRES_SUCCESS, GET_GENRES_ERROR
+} from '../constants/actionTypes';
 
 const initialState = {
   rending: false,
   movies: [],
+  moviesPages: null,
+  genres: [],
   error: null
 };
 
-export const moviesReducer = (state = initialState, { type, movies, error }) => {
+export const ApiReducer = (state = initialState, {
+  type, movies, genres, error, pagesCount
+}) => {
   switch (type) {
     case GET_MOVIES_PENDING:
       return {
@@ -17,9 +23,27 @@ export const moviesReducer = (state = initialState, { type, movies, error }) => 
       return {
         ...state,
         pending: false,
-        movies
+        movies: [...movies],
+        moviesPages: pagesCount
       };
     case GET_MOVIES_ERROR:
+      return {
+        ...state,
+        pending: false,
+        error
+      };
+    case GET_GENRES_PENDING:
+      return {
+        ...state,
+        pending: true
+      };
+    case GET_GENRES_SUCCESS:
+      return {
+        ...state,
+        pending: false,
+        genres: [...genres]
+      };
+    case GET_GENRES_ERROR:
       return {
         ...state,
         pending: false,
@@ -29,7 +53,3 @@ export const moviesReducer = (state = initialState, { type, movies, error }) => 
       return state;
   }
 };
-
-export const getMovies = (state) => state.movies;
-export const getMoviesPending = (state) => state.pending;
-export const getMoviesError = (state) => state.error;

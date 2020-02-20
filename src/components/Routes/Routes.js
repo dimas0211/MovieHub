@@ -2,8 +2,9 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import { DefaultLayout } from '../DefaultLayout';
-import MainPage from '../MainPage';
+import { MainPage } from '../MainPage';
 import MovieListPage from '../MovieListPage';
+import { TVShowListPage } from '../TVShowListPage';
 import NotFoundPage from '../NotFoundPage';
 
 const Routes = () => (
@@ -11,10 +12,10 @@ const Routes = () => (
     <Switch>
       <DefaultLayout component={MainPage} exact path="/" />
       <DefaultLayout component={MainPage} path="/main" />
-      <DefaultLayout component={MovieListPage} path="/movies" />
+      <DefaultLayout component={MainPage} path="/movies" />
       <DefaultLayout component={MovieListPage} path="/new" />
       <DefaultLayout component={MovieListPage} path="/popular" />
-      <DefaultLayout component={NotFoundPage} path="/buy" />
+      <DefaultLayout component={TVShowListPage} path="/tv-shows" />
       <DefaultLayout component path="/movie/view/:id" />
       <DefaultLayout
         component={NotFoundPage}
