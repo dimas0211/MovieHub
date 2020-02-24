@@ -1,23 +1,24 @@
 import React, { Component } from 'react';
 import MovieMainItemCard from '../MovieMainItemCard';
 import MovieListPagination from '../MovieListPagination';
-import { TV_SHOW_LIST, TV_SHOW_GENRES } from '../../constants/configurations';
+
+import { MOVIE_LIST, PARAMS_FOR_NEW_MOVIES } from '../../constants/configurations';
 import CarouselItem from '../CarouselItem';
 import Carousel from '../Carousel';
 
 const CN = 'main-page';
 const CNL = 'list-page';
 
-class TVShowListPage extends Component {
+class NewMoviesListPage extends Component {
   componentDidMount() {
-    this.loadShowList();
+    this.loadMovieList();
   }
 
-  loadShowList() {
+  loadMovieList() {
     const { getGenres, getMovies } = this.props;
 
-    getGenres && getGenres(TV_SHOW_GENRES);
-    getMovies && getMovies(1, TV_SHOW_LIST);
+    getGenres && getGenres();
+    getMovies && getMovies(1, MOVIE_LIST, PARAMS_FOR_NEW_MOVIES);
   }
 
   renderCarouselItems() {
@@ -44,7 +45,7 @@ class TVShowListPage extends Component {
   renderMovieList() {
     const { genres, movieList, viewport: { device } } = this.props;
 
-    return movieList.results.map((movieData) => (
+    return movieList.getMovieList().map((movieData) => (
       <MovieMainItemCard
         className={`${CN}__movie-item-card`}
         device={device}
@@ -56,22 +57,24 @@ class TVShowListPage extends Component {
   }
 
   render() {
-    const { movieList: { total_pages }, getMovies, scrollToTop } = this.props;
+    const { getMovies, scrollToTop, movieList } = this.props;
+    const movieParams = [PARAMS_FOR_NEW_MOVIES];
 
     return (
       <div className={CN}>
         {this.renderMovieCarousel()}
         {this.renderMovieList()}
         <MovieListPagination
-          genreTVShow={TV_SHOW_GENRES}
           getMovies={getMovies}
-          listTVShow={TV_SHOW_LIST}
-          pagesCount={total_pages}
+          pagesCount={movieList.getNumberOfPages()}
           scrollToTop={scrollToTop}
+          movieListParam={MOVIE_LIST}
+          movieParams={movieParams}
+
         />
       </div>
     );
   }
 }
 
-export default TVShowListPage;
+export default NewMoviesListPage;

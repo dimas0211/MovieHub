@@ -8,9 +8,8 @@ import getMovies from '../../actions/getMovies';
 
 const mapStateToProps = ({ ApiReducer }) => ({
   error: ApiReducer.error,
-  movieList: ApiReducer.movies,
-  genres: ApiReducer.genres,
-  moviesPages: ApiReducer.moviesPages
+  movieList: ApiReducer.movieListInfo,
+  genres: ApiReducer.genresList.genres
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({

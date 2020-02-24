@@ -1,26 +1,29 @@
 import { connect } from 'react-redux';
 import { bindActionCreators, compose } from 'redux';
-import getMovies from '../../actions/getMovies';
-import getGenres from '../../actions/getGenres';
 import connectWithViewport from '../../services/connectWithViewport';
 
-import DefaultLayout from './DefaultLayout';
+import MovieItemPage from './MovieItemPage';
+import getGenres from '../../actions/getGenres';
+import getOneMovie from '../../actions/getOneMovie';
+import getVideos from '../../actions/getVideos';
 
 const mapStateToProps = ({ ApiReducer }) => ({
   error: ApiReducer.error,
-  movies: ApiReducer.movieList,
-  genres: ApiReducer.genres
+  movie: ApiReducer.movie,
+  genres: ApiReducer.genresList.genres,
+  videos: ApiReducer.videos
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
-  getMovies,
-  getGenres
+  getGenres,
+  getOneMovie,
+  getVideos
 }, dispatch);
 
-export const DefaultLayoutContainer = compose(
+export const MovieItemPageContainer = compose(
   connectWithViewport(),
   connect(
     mapStateToProps,
     mapDispatchToProps
   )
-)(DefaultLayout);
+)(MovieItemPage);

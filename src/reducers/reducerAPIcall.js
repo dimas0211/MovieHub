@@ -1,17 +1,35 @@
 import {
-  GET_MOVIES_PENDING, GET_MOVIES_SUCCESS, GET_MOVIES_ERROR, GET_GENRES_PENDING, GET_GENRES_SUCCESS, GET_GENRES_ERROR
-} from '../constants/actionTypes';
+  GET_MOVIES_PENDING,
+  GET_MOVIES_SUCCESS,
+  GET_MOVIES_ERROR,
+  GET_GENRES_PENDING,
+  GET_GENRES_SUCCESS,
+  GET_GENRES_ERROR,
+  GET_MOVIE_SUCCESS,
+  GET_MOVIE_ERROR,
+  GET_VIDEOS_SUCCESS,
+  GET_VIDEOS_ERROR
+} from '../constants/actionTypes/index';
+import { MovieListModel, GenresModel, MovieModel, VideosModel } from '../models';
 
 const initialState = {
   rending: false,
   movies: [],
   moviesPages: null,
-  genres: [],
-  error: null
+  genresList: new GenresModel(),
+  error: null,
+  movieListInfo: new MovieListModel(),
+  movie: new MovieModel(),
+  videos: new VideosModel()
 };
 
 export const ApiReducer = (state = initialState, {
-  type, movies, genres, error, pagesCount
+  type,
+  movieListResponse,
+  genresResponse,
+  moveResponse,
+  videosResponse,
+  error
 }) => {
   switch (type) {
     case GET_MOVIES_PENDING:
@@ -23,8 +41,7 @@ export const ApiReducer = (state = initialState, {
       return {
         ...state,
         pending: false,
-        movies: [...movies],
-        moviesPages: pagesCount
+        movieListInfo: new MovieListModel(movieListResponse)
       };
     case GET_MOVIES_ERROR:
       return {
@@ -41,9 +58,33 @@ export const ApiReducer = (state = initialState, {
       return {
         ...state,
         pending: false,
-        genres: [...genres]
+        genresList: new GenresModel(genresResponse)
       };
     case GET_GENRES_ERROR:
+      return {
+        ...state,
+        pending: false,
+        error
+      };
+    case GET_MOVIE_SUCCESS:
+      return {
+        ...state,
+        pending: false,
+        movie: new MovieModel(moveResponse)
+      };
+    case GET_MOVIE_ERROR:
+      return {
+        ...state,
+        pending: false,
+        error
+      };
+    case GET_VIDEOS_SUCCESS:
+      return {
+        ...state,
+        pending: false,
+        videos: new VideosModel(videosResponse)
+      };
+    case GET_VIDEOS_ERROR:
       return {
         ...state,
         pending: false,

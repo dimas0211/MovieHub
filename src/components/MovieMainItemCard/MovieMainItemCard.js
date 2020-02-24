@@ -4,6 +4,7 @@ import cx from 'classnames';
 
 import './MovieMainItemCard.scss';
 import { MOBILE } from '../../constants/configurations';
+import defaultImage from '../../assets/images/noimage.png';
 
 const CN = 'movie-card';
 
@@ -11,11 +12,13 @@ class MovieMainItemCard extends Component {
   getGenres(ids) {
     const { genres } = this.props;
 
-    if (!ids.length) return 'No genre';
+    if (!ids || !ids.length) {
+      return 'No genre';
+    }
 
     const genresStrArray = ids.map((id) => genres.find((genre) => genre.id === id));
 
-    return (genresStrArray.map((el) => el && (
+    return (genresStrArray && genresStrArray.map((el) => el && (
       <div className={`${CN}__genre`} key={el.name}>
         <span className={`${CN}__genre-item`} key={el.name}>
           {el.name}
@@ -25,21 +28,22 @@ class MovieMainItemCard extends Component {
   }
 
   returnPosters = () => {
-    const { movieData: { poster_path } } = this.props;
+    const { movieData } = this.props;
     const posterURL = 'https://image.tmdb.org/t/p/w500/';
-    const posterSrc = `${posterURL}${poster_path}`;
+    const posterPath = movieData.getPosterPath();
+    const posterSrc = (posterPath === null) ? defaultImage : `${posterURL}${posterPath}`;
 
     return posterSrc;
   };
 
   returnMovieYear() {
-    const { movieData: { release_date, first_air_date } } = this.props;
+    const { movieData } = this.props;
 
-    return new Date(release_date || first_air_date).getFullYear();
+    return new Date(movieData.getReleaseDate()).getFullYear();
   }
 
   renderStarRating() {
-    const { movieData: { vote_average } } = this.props;
+    const { movieData } = this.props;
     const starsNumber = 5;
     const starWidth = '15px';
     const starSpacing = '0';
@@ -50,7 +54,7 @@ class MovieMainItemCard extends Component {
         className={`${CN}__rating-starts`}
         name="rating"
         numberOfStars={starsNumber}
-        rating={vote_average / 2}
+        rating={movieData.getMovieVote() / 2}
         starDimension={starWidth}
         starRatedColor="gold"
         starSpacing={starSpacing}
@@ -61,15 +65,7 @@ class MovieMainItemCard extends Component {
   render() {
     const {
       device,
-      movieData: {
-        vote_average,
-        vote_count,
-        title,
-        name,
-        original_title,
-        original_name,
-        genre_ids
-      }
+      movieData
     } = this.props;
     const isMobile = device === MOBILE;
 
@@ -84,17 +80,17 @@ class MovieMainItemCard extends Component {
         </div>
         <div className={cx(`${CN}__info-container`, isMobile && `${CN}__info-container-mobile`)}>
           <div className={`${CN}__title-container`}>
-            <h4 className={`${CN}__movie-title`}>{title || name}</h4>
-            <h5 className={`${CN}__movie-title-native-lang`}>{original_title || original_name}</h5>
+            <h4 className={`${CN}__movie-title`}>{movieData.getTitle()}</h4>
+            <h5 className={`${CN}__movie-title-native-lang`}>{movieData.getOriginalTitle()}</h5>
           </div>
           <div className={`${CN}__rating-genre-container`}>
             {this.renderStarRating()}
             <div className={`${CN}__rating-info`}>
-              {`Rating: ${vote_average}/10 | Votes: ${vote_count}`}
+              {`Rating: ${movieData.getMovieVote()}/10 | Votes: ${movieData.getMovieVoteCount()}`}
             </div>
             <div className={`${CN}__year-genre`}>
               {`${this.returnMovieYear()} | `}
-              {this.getGenres(genre_ids)}
+              {this.getGenres(movieData.getMovieGeresId())}
             </div>
           </div>
         </div>

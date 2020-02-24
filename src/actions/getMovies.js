@@ -7,24 +7,25 @@ const baseUrl = 'https://api.themoviedb.org/3';
 const targetPath = '/discover';
 const apiKey = '3f4df268ddd96ffb4344a1b20d93d24b';
 
-const getMovies = (page = 1, movieOrShow = '/movie', ...params) => (
+const getMovies = (page = 1, movieOrShow = '/movie', ...otherParams) => (
   async (dispatch) => {
     const userAPI = new HttpService();
+    const parsedParams = otherParams.reduce((acc, el) => ({ ...acc, ...el }), {});
 
     try {
       const response = await userAPI.get(`${baseUrl}${targetPath}${movieOrShow}`, {
         params: {
           api_key: apiKey,
           page,
-          ...params
+          ...parsedParams
         }
       });
-      const { statusText, results, total_pages, status } = response;
+      const { statusText, status } = response;
 
       if (status === ERROR404) {
         return Error(statusText);
       }
-      dispatch(getMoviesSuccess(results, total_pages));
+      dispatch(getMoviesSuccess(response));
     } catch (error) {
       dispatch(getMoviesError(error));
     }

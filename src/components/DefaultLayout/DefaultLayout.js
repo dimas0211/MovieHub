@@ -28,13 +28,6 @@ class DefaultLayout extends Component {
     autoBind(this);
   }
 
-  componentDidMount() {
-    const { getMovies, getGenres } = this.props;
-
-    getGenres && getGenres();
-    getMovies && getMovies(1);
-  }
-
   render() {
     const {
       component: Page,
@@ -51,7 +44,7 @@ class DefaultLayout extends Component {
       <Route
         {...rest}
         render={(props) => {
-          if (!movies.length) {
+          if (movies && !movies.length) {
             return (
               <MainPageSkeleton />
             );

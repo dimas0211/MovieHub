@@ -1,4 +1,5 @@
 import { Record, List } from 'immutable';
+import { MovieCardModel } from './MovieCard.model';
 
 /**
  * MovieListModel
@@ -14,4 +15,33 @@ export class MovieListModel extends Record({
   total_results: 0,
   total_pages: 0,
   results: List()
-}, 'MovieListModel') {}
+}, 'MovieListModel') {
+  constructor(values) {
+    super(values);
+
+    return this
+      .set('results', this.populateResults());
+  }
+
+  populateResults() {
+    const movies = this.get('results');
+
+    if (movies.length) {
+      return List(movies.map((movie) => new MovieCardModel(movie)));
+    }
+
+    return List();
+  }
+
+  getPage() {
+    return this.get('page');
+  }
+
+  getNumberOfPages() {
+    return this.get('total_pages');
+  }
+
+  getMovieList() {
+    return this.get('results');
+  }
+}

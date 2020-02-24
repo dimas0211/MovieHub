@@ -36,13 +36,15 @@ class MovieListPagination extends Component {
   }
 
   handleChange = (event, value) => {
-    const { getMovies, scrollToTop, listTVShow } = this.props;
+    const {
+      getMovies, scrollToTop, listTVShow, movieParams, movieListParam
+    } = this.props;
 
     this.setState({ page: value });
 
     listTVShow
       ? getMovies && getMovies(value, listTVShow)
-      : getMovies && getMovies(value);
+      : getMovies && getMovies(value, movieListParam, movieParams);
 
     scrollToTop && scrollToTop();
   }
