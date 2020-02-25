@@ -1,20 +1,20 @@
 import { connect } from 'react-redux';
 import { bindActionCreators, compose } from 'redux';
-import getDataAction from '../../actions/getData';
-import { getMoviesPending, getMovies, getMoviesError } from '../../reducers/reducerAPIcall';
+import getMovies from '../../actions/getMovies';
+import getGenres from '../../actions/getGenres';
 import connectWithViewport from '../../services/connectWithViewport';
 
 import DefaultLayout from './DefaultLayout';
 
-const mapStateToProps = (state) => ({
-  error: getMoviesError(state),
-  movies: getMovies(state),
-  pending: getMoviesPending(state),
-  movieList: state.moviesReducer.movies
+const mapStateToProps = ({ ApiReducer }) => ({
+  error: ApiReducer.error,
+  movies: ApiReducer.movieList,
+  genres: ApiReducer.genres
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
-  getData: getDataAction
+  getMovies,
+  getGenres
 }, dispatch);
 
 export const DefaultLayoutContainer = compose(

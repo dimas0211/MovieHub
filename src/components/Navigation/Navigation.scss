@@ -10,6 +10,7 @@
   height: 50px;
 
   background-color: $gray;
+  border: 1px solid $border-color;
 
   a {
     color: $font-color;
@@ -98,6 +99,22 @@
 .navigation-bar {
   &__mobile {
     background-color: $gray;
+
+    &__search-container {
+      @include flex($justify: space-around, $align: center);
+
+      border-radius: 5px;
+
+      background-color: $input-background;
+    }
+
+    &__search-icon {
+      margin-left: 5px;
+    }
+
+    .MuiInputBase-root {
+      color: $font-color;
+    }
   }
 
   &__mobile-wrapper {

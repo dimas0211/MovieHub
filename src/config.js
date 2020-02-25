@@ -3,7 +3,7 @@ export default {
     { value: 'movies', label: 'MOVIES', link: '/movies' },
     { value: 'new', label: 'NEW', link: '/new' },
     { value: 'popular', label: 'POPULAR', link: '/popular' },
-    { value: 'buy', label: 'BUY', link: '/404' }
+    { value: 'tv-shows', label: 'SHOWS', link: '/tv-shows' }
   ],
   burgerMenuItemsList: [
     { value: 'movies', label: 'movies', link: '/movies' },

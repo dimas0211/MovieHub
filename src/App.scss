@@ -7,7 +7,7 @@ html, body {
 
   background: $background-primary;
 
-  font-family: font(secondary), serif;
+  font-family: font(primary), serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -16,13 +16,9 @@ html, body {
   height: 100%;
 }
 
-.app {
-  &__layout {
-    padding-top: 30px;
-  }
-}
-
-.App {
-  color: $white;
+.default-layout {
+  color: $font-color;
   text-align: center;
 }
+
+

@@ -8,6 +8,7 @@
     "jest": true
   },
   "rules": {
+    "camelcase": "off",
     "indent": ["error", 2, { "SwitchCase": 1 }],
     "import/prefer-default-export": "off",
     "comma-dangle": ["error", "never"],

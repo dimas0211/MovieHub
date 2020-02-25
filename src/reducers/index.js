@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 import { connectRouter } from 'connected-react-router';
-import { moviesReducer } from './reducerAPIcall';
+import { ApiReducer } from './reducerAPIcall';
 
 const createRootReducer = (history) => combineReducers({
   router: connectRouter(history),
-  moviesReducer
+  ApiReducer
 });
 
 export default createRootReducer;

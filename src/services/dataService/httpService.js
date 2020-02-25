@@ -1,16 +1,18 @@
 import axios from 'axios/index';
+import { API_KEY } from '../../constants/configurations';
+
+axios.defaults.headers.common.Authorization = `Bearer ${API_KEY}`;
 
 const successHandler = (response) => response.data;
 const errorHandler = (error) => {
   // eslint-disable-next-line no-console
-  console.log(error);
+  console.log(error, 'Couldn`t get data');
 
   return error;
 };
 const defaultConfig = {
   headers: {
-    // 'X-Custom-Header': 'foobar'
-    // Authorization: '3f4df268ddd96ffb4344a1b20d93d24b'
+    'X-Custom-Header': 'foobar'
   }
 };
 
@@ -19,6 +21,7 @@ export const createHttpHandler = (handler, onSuccess = successHandler, onError =
 export default class HttpService {
   constructor(config = defaultConfig) {
     this.config = config;
+    // this.authorization = authorization;
   }
 
   get(url, config) {
