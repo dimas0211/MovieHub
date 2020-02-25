@@ -1,5 +1,7 @@
 // eslint-disable-next-line max-classes-per-file
 import { Record, List, Map } from 'immutable';
+import { IMAGE_BASE_URL } from '../constants/configurations';
+import defaultImage from '../assets/images/noimage.png';
 
 /**
  * GenreItemModel
@@ -146,7 +148,9 @@ export class MovieModel extends Record({
   }
 
   get genres() {
-    return this.get('genres');
+    const genresList = this.get('genres');
+
+    return List(genresList.map((el) => el));
   }
 
   get homePage() {
@@ -170,19 +174,33 @@ export class MovieModel extends Record({
   }
 
   get poster() {
-    return this.get('poster_path');
+    const posterPath = this.get('poster_path');
+
+    return (!posterPath) ? defaultImage : `${IMAGE_BASE_URL}${posterPath}`;
   }
 
   get prodCompanies() {
-    return this.get('production_companies');
+    const companyList = this.get('production_companies');
+
+    return List(companyList.map((el) => `${el.name} `));
   }
 
   get prodCountries() {
-    return this.get('production_countries');
+    const counriesList = this.get('production_countries');
+
+    return List(counriesList.map((el) => `${el.iso_3166_1} `));
   }
 
   get releaseDate() {
-    return this.get('release_date');
+    const date = this.get('release_date');
+
+    return new Date(date).toLocaleDateString();
+  }
+
+  get movieYear() {
+    const date = this.get('release_date');
+
+    return new Date(date).getFullYear();
   }
 
   get revenue() {
@@ -194,7 +212,9 @@ export class MovieModel extends Record({
   }
 
   get languages() {
-    return this.get('spoken_languages');
+    const languages = this.get('spoken_languages');
+
+    return List(languages.map((el) => `${el.name} `));
   }
 
   get status() {

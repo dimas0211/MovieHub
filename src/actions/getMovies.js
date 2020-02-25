@@ -1,11 +1,9 @@
 import HttpService from '../services/dataService/httpService';
 import { getMoviesSuccess, getMoviesError } from './actionsAPIcall';
 
-import { ERROR404 } from '../constants/configurations';
+import { ERROR404, BASE_URL } from '../constants/configurations';
 
-const baseUrl = 'https://api.themoviedb.org/3';
 const targetPath = '/discover';
-const apiKey = '3f4df268ddd96ffb4344a1b20d93d24b';
 
 const getMovies = (page = 1, movieOrShow = '/movie', ...otherParams) => (
   async (dispatch) => {
@@ -13,9 +11,8 @@ const getMovies = (page = 1, movieOrShow = '/movie', ...otherParams) => (
     const parsedParams = otherParams.reduce((acc, el) => ({ ...acc, ...el }), {});
 
     try {
-      const response = await userAPI.get(`${baseUrl}${targetPath}${movieOrShow}`, {
+      const response = await userAPI.get(`${BASE_URL}${targetPath}${movieOrShow}`, {
         params: {
-          api_key: apiKey,
           page,
           ...parsedParams
         }

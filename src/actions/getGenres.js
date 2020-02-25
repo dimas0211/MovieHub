@@ -1,22 +1,16 @@
 import HttpService from '../services/dataService/httpService';
 import { getGenresSuccess, getGenresError } from './actionsAPIcall';
 
-import { ERROR404 } from '../constants/configurations';
+import { ERROR404, BASE_URL } from '../constants/configurations';
 
-const baseUrl = 'https://api.themoviedb.org/3';
 const targetPath = '/genre';
-const apiKey = '3f4df268ddd96ffb4344a1b20d93d24b';
 
 const getGenres = (movieOrShow = '/movie/list') => (
   async (dispatch) => {
     const userAPI = new HttpService();
 
     try {
-      const response = await userAPI.get(`${baseUrl}${targetPath}${movieOrShow}`, {
-        params: {
-          api_key: apiKey
-        }
-      });
+      const response = await userAPI.get(`${BASE_URL}${targetPath}${movieOrShow}`);
       const { statusText, status } = response;
 
       if (status === ERROR404) {

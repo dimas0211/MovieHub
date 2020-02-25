@@ -4,17 +4,14 @@ import { debounce } from 'lodash';
 import PropTypes from 'prop-types';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import { CAROUSEL_SIZE_VALUES } from '../../constants/configurations';
 import { scrollTo } from './ScrollToHelper';
 
 import './Carousel.scss';
 
-const sizeValues = {
-  desktop: 4,
-  tablet: 3,
-  mobile: 2
-};
-
-export const CN = 'carousel';
+const CN = 'carousel';
+const LEFT = 'left';
+const RIGHT = 'right';
 
 class Carousel extends Component {
   constructor(props) {
@@ -56,14 +53,15 @@ class Carousel extends Component {
   }
 
   getSlidesCount = () => {
+    const { desktop, tablet, mobile } = CAROUSEL_SIZE_VALUES;
     let count;
 
-    if (window.innerWidth >= 1024) {
-      count = sizeValues.desktop;
-    } else if (window.innerWidth > 768) {
-      count = sizeValues.tablet;
-    } else if (window.innerWidth >= 320) {
-      count = sizeValues.mobile;
+    if (window.innerWidth >= desktop.width) {
+      count = desktop.slidesCount;
+    } else if (window.innerWidth >= tablet.width) {
+      count = tablet.slidesCount;
+    } else if (window.innerWidth >= mobile.width) {
+      count = mobile.slidesCount;
     }
 
     return count;
@@ -111,7 +109,8 @@ class Carousel extends Component {
   }
 
   checkNumOfSlidesToScroll() {
-    const numOfSlidesToScroll = window.innerWidth <= 1024 ? 1 : 2;
+    const { desktop } = CAROUSEL_SIZE_VALUES;
+    const numOfSlidesToScroll = window.innerWidth <= desktop.width ? 1 : 2;
     const { numOfSlidesToScroll: numOfSlides } = this.state;
 
     numOfSlides !== numOfSlidesToScroll
@@ -120,21 +119,21 @@ class Carousel extends Component {
 
   handleClick({ currentTarget }) {
     const clickedBtn = currentTarget.classList.contains(`${CN}__left-nav`)
-      ? 'left'
-      : 'right';
+      ? LEFT
+      : RIGHT;
     const { numOfSlidesToScroll, widthOfSlide } = this.state;
     const carouselViewport = this.carouselViewport.current;
     const step = numOfSlidesToScroll * widthOfSlide;
-    const newPos = clickedBtn === 'left'
+    const newPos = clickedBtn === LEFT
       ? carouselViewport.scrollLeft - step
       : carouselViewport.scrollLeft + step;
     const timeToMoveOneSlide = 200;
-    const totalTimetoMove = numOfSlidesToScroll * timeToMoveOneSlide;
+    const totalTimeToMove = numOfSlidesToScroll * timeToMoveOneSlide;
 
     scrollTo({
       element: this.carouselViewport,
       to: newPos,
-      duration: totalTimetoMove,
+      duration: totalTimeToMove,
       scrollDirection: 'scrollLeft'
     });
   }
@@ -157,15 +156,14 @@ class Carousel extends Component {
 
   render() {
     const { allTheWayLeft, allTheWayRight } = this.state;
-    const navClasses = cx(`${CN}__nav`);
     const leftNavClasses = cx(
-      navClasses,
+      `${CN}__nav`,
       `${CN}__left-nav`,
       allTheWayLeft && [`${CN}__nav-disabled`]
     );
     const rightNavClasses = cx(
       `${CN}__right-nav`,
-      navClasses,
+      `${CN}__nav`,
       allTheWayRight && [`${CN}__nav-disabled`]
     );
 

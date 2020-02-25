@@ -1,23 +1,13 @@
 import React from 'react';
 import cx from 'classnames';
 
-import './CarouselItem.scss';
 import { MOBILE } from '../../constants/configurations';
-import defaultImage from '../../assets/images/noimage.png';
+
+import './CarouselItem.scss';
 
 const CN = 'carousel-item';
 
-const CarouselItem = (props) => {
-  const returnPosters = () => {
-    const { movieData } = props;
-    const posterURL = 'https://image.tmdb.org/t/p/w500/';
-    const posterPath = movieData.getPosterPath();
-    const posterSrc = (posterPath === null) ? defaultImage : `${posterURL}${posterPath}`;
-
-    return posterSrc;
-  };
-
-  const { device, movieData } = props;
+const CarouselItem = ({ device, movieData }) => {
   const isMobile = device === MOBILE;
 
   return (
@@ -25,9 +15,9 @@ const CarouselItem = (props) => {
       <img
         alt="movie-poster"
         className={`${CN}__image`}
-        src={returnPosters()}
+        src={movieData.poster}
       />
-      <h4 className={`${CN}__movie-title`}>{movieData.getTitle()}</h4>
+      <h4 className={`${CN}__movie-title`}>{movieData.title}</h4>
     </div>
   );
 };

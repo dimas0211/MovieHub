@@ -1,4 +1,3 @@
-
 @import '../../variables';
 
 .movie-page {
@@ -88,9 +87,7 @@
     display: inline-block;
     margin: 2px 0;
     font-weight: bold;
-    &:hover {
-      text-decoration: underline;
-    }
+
   }
 
   &__info-item-name {

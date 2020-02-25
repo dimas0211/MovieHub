@@ -3,28 +3,28 @@ import autoBind from 'auto-bind';
 import { withStyles } from '@material-ui/core/styles';
 import { Pagination } from '@material-ui/lab';
 
-class MovieListPagination extends Component {
-  StyledMovieListPagination = withStyles({
-    root: {
-      background: '#282D2D',
-      display: 'flex',
-      justifyContent: 'center',
-      borderRadius: 3,
-      border: '1px solid #404040',
-      height: 48,
-      width: '100%'
-    },
-    ul: {
-      height: '100%',
+const StyledMovieListPagination = withStyles({
+  root: {
+    background: '#282D2D',
+    display: 'flex',
+    justifyContent: 'center',
+    borderRadius: 3,
+    border: '1px solid #404040',
+    height: 48,
+    width: '100%'
+  },
+  ul: {
+    height: '100%',
 
-      '&> li>button, div': {
-        color: 'white',
-        margin: 0,
-        padding: 0
-      }
+    '&> li>button, div': {
+      color: 'white',
+      margin: 0,
+      padding: 0
     }
-  })(Pagination);
+  }
+})(Pagination);
 
+class MovieListPagination extends Component {
   constructor(props) {
     super(props);
 
@@ -55,7 +55,7 @@ class MovieListPagination extends Component {
 
     return (
       <div>
-        <this.StyledMovieListPagination color="secondary" count={pagesCount} page={page} onChange={this.handleChange} />
+        <StyledMovieListPagination color="secondary" count={pagesCount} page={page} onChange={this.handleChange} />
       </div>
     );
   }

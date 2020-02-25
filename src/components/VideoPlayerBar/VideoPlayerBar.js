@@ -15,11 +15,11 @@ const TabPanel = (props) => {
 
   return (
     <Typography
+      aria-labelledby={`wrapped-tab-${index}`}
       component="div"
-      role="tabpanel"
       hidden={value !== index}
       id={`wrapped-tabpanel-${index}`}
-      aria-labelledby={`wrapped-tab-${index}`}
+      role="tabpanel"
       {...other}
     >
       {value === index && <Box p={3}>{children}</Box>}
@@ -39,21 +39,21 @@ function a11yProps(index) {
   };
 }
 
+const StyledAppBar = withStyles({
+  root: {
+    flexGrow: 1,
+    backgroundColor: '#282D2D'
+  }
+})(AppBar);
+
+const StyledTabPanel = withStyles({
+  root: {
+    flexGrow: 1,
+    backgroundColor: '#282D2D'
+  }
+})(TabPanel);
+
 class VideoPlayerBar extends Component {
-  StyledAppBar = withStyles({
-    root: {
-      flexGrow: 1,
-      backgroundColor: '#282D2D'
-    }
-  })(AppBar);
-
-  StyledTabPanel = withStyles({
-    root: {
-      flexGrow: 1,
-      backgroundColor: '#282D2D'
-    }
-  })(TabPanel);
-
   constructor(props) {
     super(props);
 
@@ -74,8 +74,8 @@ class VideoPlayerBar extends Component {
     return videos.getVideos().map((video, index) => (
       <Tab
         key={video.id}
-        value={index}
         label={video.name}
+        value={index}
         wrapped
         {...a11yProps(index)}
       />
@@ -86,15 +86,15 @@ class VideoPlayerBar extends Component {
     const { videos, CN, isMobile } = this.props;
 
     return videos.getVideos().map((video, index) => (
-      <this.StyledTabPanel value={value} index={index} key={video.name}>
+      <StyledTabPanel index={index} key={video.name} value={value}>
         <p className={`${CN}__info-item-container`}>
           <span className={`${CN}__info-item-name`}>Language: </span>
           <span className={`${CN}__info-item-value video-title`}>
             {video.iso_639_1}
           </span>
         </p>
-        <VideoPlayer youtubeId={video.key} title={video.type} isMobile={isMobile} />
-      </this.StyledTabPanel>
+        <VideoPlayer isMobile={isMobile} title={video.type} youtubeId={video.key} />
+      </StyledTabPanel>
     ));
   }
 
@@ -103,11 +103,11 @@ class VideoPlayerBar extends Component {
 
     return (
       <div>
-        <this.StyledAppBar position="static">
-          <Tabs value={value} onChange={this.handleChange} aria-label="wrapped label tabs example" variant="scrollable">
+        <StyledAppBar position="static">
+          <Tabs aria-label="wrapped label tabs example" value={value} variant="scrollable" onChange={this.handleChange}>
             {this.returnTabs()}
           </Tabs>
-        </this.StyledAppBar>
+        </StyledAppBar>
         {this.returnTabPanel(value)}
       </div>
     );

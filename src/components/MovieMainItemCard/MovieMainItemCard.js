@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import StarRatings from 'react-star-ratings';
 import cx from 'classnames';
 
-import './MovieMainItemCard.scss';
 import { MOBILE } from '../../constants/configurations';
-import defaultImage from '../../assets/images/noimage.png';
+
+import './MovieMainItemCard.scss';
 
 const CN = 'movie-card';
 
@@ -16,30 +16,15 @@ class MovieMainItemCard extends Component {
       return 'No genre';
     }
 
-    const genresStrArray = ids.map((id) => genres.find((genre) => genre.id === id));
+    const genresStrArray = genres.filter((genre) => ids.includes(genre.id));
 
-    return (genresStrArray && genresStrArray.map((el) => el && (
+    return (!genresStrArray.length && genresStrArray.map((el) => el && (
       <div className={`${CN}__genre`} key={el.name}>
         <span className={`${CN}__genre-item`} key={el.name}>
           {el.name}
         </span>
       </div>
     )));
-  }
-
-  returnPosters = () => {
-    const { movieData } = this.props;
-    const posterURL = 'https://image.tmdb.org/t/p/w500/';
-    const posterPath = movieData.getPosterPath();
-    const posterSrc = (posterPath === null) ? defaultImage : `${posterURL}${posterPath}`;
-
-    return posterSrc;
-  };
-
-  returnMovieYear() {
-    const { movieData } = this.props;
-
-    return new Date(movieData.getReleaseDate()).getFullYear();
   }
 
   renderStarRating() {
@@ -54,7 +39,7 @@ class MovieMainItemCard extends Component {
         className={`${CN}__rating-starts`}
         name="rating"
         numberOfStars={starsNumber}
-        rating={movieData.getMovieVote() / 2}
+        rating={movieData.movieVote / 2}
         starDimension={starWidth}
         starRatedColor="gold"
         starSpacing={starSpacing}
@@ -75,22 +60,22 @@ class MovieMainItemCard extends Component {
           <img
             alt="movie-poster"
             className={`${CN}__image`}
-            src={this.returnPosters()}
+            src={movieData.poster}
           />
         </div>
         <div className={cx(`${CN}__info-container`, isMobile && `${CN}__info-container-mobile`)}>
           <div className={`${CN}__title-container`}>
-            <h4 className={`${CN}__movie-title`}>{movieData.getTitle()}</h4>
-            <h5 className={`${CN}__movie-title-native-lang`}>{movieData.getOriginalTitle()}</h5>
+            <h4 className={`${CN}__movie-title`}>{movieData.title}</h4>
+            <h5 className={`${CN}__movie-title-native-lang`}>{movieData.originalTitle}</h5>
           </div>
           <div className={`${CN}__rating-genre-container`}>
             {this.renderStarRating()}
             <div className={`${CN}__rating-info`}>
-              {`Rating: ${movieData.getMovieVote()}/10 | Votes: ${movieData.getMovieVoteCount()}`}
+              {`Rating: ${movieData.movieVote}/10 | Votes: ${movieData.movieVoteCount}`}
             </div>
             <div className={`${CN}__year-genre`}>
-              {`${this.returnMovieYear()} | `}
-              {this.getGenres(movieData.getMovieGeresId())}
+              {`${movieData.releaseDate} | `}
+              {this.getGenres(movieData.movieGeresId)}
             </div>
           </div>
         </div>

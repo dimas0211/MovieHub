@@ -1,4 +1,7 @@
 import axios from 'axios/index';
+import { API_KEY } from '../../constants/configurations';
+
+axios.defaults.headers.common.Authorization = `Bearer ${API_KEY}`;
 
 const successHandler = (response) => response.data;
 const errorHandler = (error) => {
@@ -18,6 +21,7 @@ export const createHttpHandler = (handler, onSuccess = successHandler, onError =
 export default class HttpService {
   constructor(config = defaultConfig) {
     this.config = config;
+    // this.authorization = authorization;
   }
 
   get(url, config) {

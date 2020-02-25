@@ -20,7 +20,7 @@ export function scrollTo(params) {
   const change = to - start;
   const increment = (500 / 50);
 
-  const animatedScroll = (time) => {
+  function animatedScroll(time) {
     const elapsedTime = time + increment;
 
     const position = easeInOut(elapsedTime, start, change, duration);
@@ -30,9 +30,8 @@ export function scrollTo(params) {
     if (elapsedTime < duration) {
       window.requestAnimationFrame(animatedScroll.bind(null, elapsedTime));
     }
-  };
+  }
 
   window.requestAnimationFrame(animatedScroll.bind(null, 0));
 }
 
-// export scrollTo;

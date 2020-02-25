@@ -1,4 +1,6 @@
 import { Record, List } from 'immutable';
+import defaultImage from '../assets/images/noimage.png';
+import { IMAGE_BASE_URL } from '../constants/configurations';
 
 /**
  * MovieCardModel
@@ -48,40 +50,44 @@ export class MovieCardModel extends Record({
     return this.get('id');
   }
 
-  getTitle() {
+  get title() {
     const movieTitle = this.get('title');
     const showTitle = this.get('name');
 
     return movieTitle === null ? showTitle : movieTitle;
   }
 
-  getOriginalTitle() {
+  get originalTitle() {
     const movieOriginalTitle = this.get('original_title');
     const showOriginalTitle = this.get('original_name');
 
     return movieOriginalTitle === null ? showOriginalTitle : movieOriginalTitle;
   }
 
-  getReleaseDate() {
+  get releaseDate() {
     const movieRelease = this.get('release_date');
     const showRelease = this.get('first_air_date');
 
-    return movieRelease === null ? showRelease : movieRelease;
+    const releaseDate = movieRelease === null ? showRelease : movieRelease;
+
+    return new Date(releaseDate).getFullYear();
   }
 
-  getPosterPath() {
-    return this.get('poster_path');
+  get poster() {
+    const posterPath = this.get('poster_path');
+
+    return (!posterPath) ? defaultImage : `${IMAGE_BASE_URL}${posterPath}`;
   }
 
-  getMovieVote() {
+  get movieVote() {
     return this.get('vote_average');
   }
 
-  getMovieVoteCount() {
+  get movieVoteCount() {
     return this.get('vote_count');
   }
 
-  getMovieGeresId() {
+  get movieGeresId() {
     return this.get('genre_ids');
   }
 }

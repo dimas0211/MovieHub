@@ -4,7 +4,6 @@ import cx from 'classnames';
 
 import VideoPlayerBar from '../VideoPlayerBar';
 import { MOBILE } from '../../constants/configurations';
-import defaultImage from '../../assets/images/noimage.png';
 
 import './MovieItemPage.scss';
 
@@ -18,49 +17,10 @@ class MovieItemPage extends Component {
     getVideos && getVideos(121);
   }
 
-  returnPosters() {
-    const { movie } = this.props;
-    const posterURL = 'https://image.tmdb.org/t/p/w500/';
-    const posterPath = movie.poster;
-    const posterSrc = (posterPath === null) ? defaultImage : `${posterURL}${posterPath}`;
+  renderGenres() {
+    const { movie: { genres } } = this.props;
 
-    return posterSrc;
-  }
-
-  returnMovieYear() {
-    const { movie } = this.props;
-
-    return new Date(movie.releaseDate).getFullYear();
-  }
-
-  returnReleasDate() {
-    const { movie } = this.props;
-
-    return new Date(movie.releaseDate).toLocaleDateString();
-  }
-
-  returnProdCountries() {
-    const { movie } = this.props;
-
-    return (movie.prodCountries.map((el) => `${el.iso_3166_1} `));
-  }
-
-  returnProdCompanies() {
-    const { movie } = this.props;
-
-    return (movie.prodCompanies.map((el) => `${el.name} `));
-  }
-
-  returnGenres() {
-    const { movie } = this.props;
-
-    return (movie.genres.map((el) => <span className={`${CN}__genre-item`} key={el.id}>{el.name}</span>));
-  }
-
-  returnLanguages() {
-    const { movie } = this.props;
-
-    return (movie.languages.map((el) => <span className={`${CN}__language`} key={el.iso_639_1}>{el.name}</span>));
+    return (genres.map((el) => <span className={`${CN}__genre-item`} key={el.id}>{el.name}</span>));
   }
 
   renderStarRating() {
@@ -84,13 +44,32 @@ class MovieItemPage extends Component {
   }
 
   render() {
-    const { movie, videos, viewport: { device } } = this.props;
+    const {
+      movie: {
+        title,
+        originTitle,
+        runtime,
+        movieVote,
+        voteCount,
+        homePage,
+        budget,
+        overview,
+        poster,
+        movieYear,
+        prodCompanies,
+        releaseDate,
+        prodCountries,
+        languages
+      },
+      videos,
+      viewport: { device }
+    } = this.props;
     const isMobile = device === MOBILE;
 
     return (
       <div className={`${CN}__wrapper`}>
         <div className={`${CN}__main-title-container`}>
-          <h2 className={`${CN}__main-title`}>{movie.title}</h2>
+          <h2 className={`${CN}__main-title`}>{title}</h2>
           <hr className={`${CN}__main-title-underline`} />
         </div>
         <div className={cx(`${CN}__main-info-container`, isMobile && `${CN}__mobile-main-info-container`)}>
@@ -98,75 +77,75 @@ class MovieItemPage extends Component {
             <img
               alt="movie-poster"
               className={`${CN}__poster`}
-              src={this.returnPosters()}
+              src={poster}
             />
           </div>
           <div className={cx(`${CN}__info-container`, isMobile && `${CN}__mobile-info-container`)}>
             <p className={`${CN}__info-item-container`}>
               <span className={`${CN}__info-item-name`}>Original Title: </span>
               <span className={`${CN}__info-item-value original-title`}>
-                {movie.originTitle}
+                {originTitle}
               </span>
             </p>
             <p className={`${CN}__info-item-container`}>
               <span className={`${CN}__info-item-name`}>Year: </span>
               <span className={`${CN}__info-item-value release-year`}>
-                {this.returnMovieYear()}
+                {movieYear}
               </span>
             </p>
             <p className={`${CN}__info-item-container`}>
               <span className={`${CN}__info-item-name`}>Country: </span>
               <span className={`${CN}__info-item-value country`}>
-                {this.returnProdCountries()}
+                {prodCountries}
               </span>
             </p>
             <p className={`${CN}__info-item-container`}>
               <span className={`${CN}__info-item-name`}>Company: </span>
               <span className={`${CN}__info-item-value company`}>
-                {this.returnProdCompanies()}
+                {prodCompanies}
               </span>
             </p>
             <p className={`${CN}__info-item-container`}>
               <span className={`${CN}__info-item-name`}>Genre: </span>
               <span className={`${CN}__info-item-value genre`}>
-                {this.returnGenres()}
+                {this.renderGenres()}
               </span>
             </p>
             <p className={`${CN}__info-item-container`}>
               <span className={`${CN}__info-item-name`}>Release Date: </span>
               <span className={`${CN}__info-item-value release-year`}>
-                {this.returnReleasDate()}
+                {releaseDate}
               </span>
             </p>
             <p className={`${CN}__info-item-container`}>
               <span className={`${CN}__info-item-name`}>Duration: </span>
               <span className={`${CN}__info-item-value release-year`}>
-                {movie.runtime}
+                {runtime}
                 {' minutes'}
               </span>
             </p>
             <p className={`${CN}__info-item-container`}>
               <span className={`${CN}__info-item-name`}>Language: </span>
               <span className={`${CN}__info-item-value languages`}>
-                {this.returnLanguages()}
+                {languages}
               </span>
             </p>
             <div className={`${CN}__info-item-container`}>
               {this.renderStarRating()}
             </div>
             <div className={`${CN}__rating-info`}>
-              {`Rating: ${movie.movieVote}/10 (${movie.voteCount} Votes)`}
+              {`Rating: ${movieVote}/10 (${voteCount} Votes)`}
             </div>
             <p className={`${CN}__info-item-container`}>
               <span className={`${CN}__info-item-name`}>Budget $: </span>
               <span className={`${CN}__info-item-value budget`}>
-                {movie.budget}
+                {budget}
               </span>
             </p>
             <p className={`${CN}__info-item-container`}>
               <span className={`${CN}__info-item-name`}>Homepage: </span>
-              <a className={`${CN}__info-item-value homepage`} href={movie.homePage}>
-                {movie.homePage}
+              <a className={`${CN}__info-item-value homepage`} href={homePage}>
+                {homePage}
               </a>
             </p>
           </div>
@@ -176,16 +155,16 @@ class MovieItemPage extends Component {
             <h4 className={`${CN}__about-title`}>
               About
               {' '}
-              {movie.title}
+              {title}
             </h4>
             <p className={`${CN}__about`}>
-              {movie.overview}
+              {overview}
             </p>
           </div>
 
         </div>
         <div className={`${CN}__video-tabs-wrapper`}>
-          <VideoPlayerBar videos={videos} CN={CN} isMobile={isMobile} />
+          <VideoPlayerBar CN={CN} isMobile={isMobile} videos={videos} />
         </div>
       </div>
     );

@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
-import MovieMainItemCard from '../MovieMainItemCard';
-import MovieListPagination from '../MovieListPagination';
-import { TV_SHOW_LIST, TV_SHOW_GENRES } from '../../constants/configurations';
-import CarouselItem from '../CarouselItem';
-import Carousel from '../Carousel';
+import MovieListPage from '../MovieListPage/MovieListPage';
 
-const CN = 'main-page';
-const CNL = 'list-page';
+import { TV_SHOW_LIST, TV_SHOW_GENRES } from '../../constants/configurations';
 
 class TVShowListPage extends Component {
   componentDidMount() {
@@ -20,57 +15,9 @@ class TVShowListPage extends Component {
     getMovies && getMovies(1, TV_SHOW_LIST);
   }
 
-  renderCarouselItems() {
-    const { movieList, viewport: { device } } = this.props;
-
-    return [...movieList.getMovieList().map((movieData) => (
-      <CarouselItem
-        className={`${CNL}__carousel-item-card`}
-        device={device}
-        key={movieData.getId()}
-        movieData={movieData}
-      />
-    ))];
-  }
-
-  renderMovieCarousel() {
-    return (
-      <Carousel className={`${CNL}__carousel`}>
-        {this.renderCarouselItems()}
-      </Carousel>
-    );
-  }
-
-  renderMovieList() {
-    const { genres, movieList, viewport: { device } } = this.props;
-
-    return movieList.results.map((movieData) => (
-      <MovieMainItemCard
-        className={`${CN}__movie-item-card`}
-        device={device}
-        genres={genres}
-        key={movieData.getId()}
-        movieData={movieData}
-      />
-    ));
-  }
-
   render() {
-    const { movieList: { total_pages }, getMovies, scrollToTop } = this.props;
-
-    return (
-      <div className={CN}>
-        {this.renderMovieCarousel()}
-        {this.renderMovieList()}
-        <MovieListPagination
-          genreTVShow={TV_SHOW_GENRES}
-          getMovies={getMovies}
-          listTVShow={TV_SHOW_LIST}
-          pagesCount={total_pages}
-          scrollToTop={scrollToTop}
-        />
-      </div>
-    );
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    return <MovieListPage {...this.props} />;
   }
 }
 
