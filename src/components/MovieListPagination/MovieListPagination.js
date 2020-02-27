@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import autoBind from 'auto-bind';
 import { withStyles } from '@material-ui/core/styles';
 import { Pagination } from '@material-ui/lab';
+import { MOVIE_LIST } from '../../constants/configurations';
 
 const StyledMovieListPagination = withStyles({
   root: {
@@ -36,17 +37,28 @@ class MovieListPagination extends Component {
   }
 
   handleChange = (event, value) => {
-    const {
-      getMovies, scrollToTop, listTVShow, movieParams, movieListParam
-    } = this.props;
+    const { scrollToTop } = this.props;
 
     this.setState({ page: value });
-
-    listTVShow
-      ? getMovies && getMovies(value, listTVShow)
-      : getMovies && getMovies(value, movieListParam, movieParams);
+    this.movieListOrMovieSearchApiCall(value);
 
     scrollToTop && scrollToTop();
+  };
+
+  movieListOrMovieSearchApiCall(page) {
+    const {
+      searchMovies,
+      searchMode,
+      query,
+      movieOrShow,
+      pageParams,
+      getMovies,
+      filtrationQueryParams
+    } = this.props;
+
+    searchMode === true
+      ? searchMovies && searchMovies(page, MOVIE_LIST, query)
+      : getMovies && getMovies(page, movieOrShow, pageParams, ...filtrationQueryParams);
   }
 
   render() {

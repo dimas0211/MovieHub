@@ -2,24 +2,23 @@ import React, { Component } from 'react';
 import { MovieListPage } from '../MovieListPage';
 import { MOVIE_LIST } from '../../constants/configurations';
 
-class MainPage extends Component {
+class SearchPage extends Component {
   componentDidMount() {
     this.loadMovieList();
   }
 
-  componentDidUpdate(prevProps) {
-    const { filtrationQueryParams, getMovies } = this.props;
+  componentWillUnmount() {
+    const { clearSearchMode, clearSearchQuery } = this.props;
 
-    if (prevProps.filtrationQueryParams && prevProps.filtrationQueryParams !== filtrationQueryParams) {
-      getMovies && getMovies(1, MOVIE_LIST, ...filtrationQueryParams);
-    }
+    clearSearchMode && clearSearchMode();
+    clearSearchQuery && clearSearchQuery();
   }
 
   loadMovieList() {
-    const { getGenres, getMovies } = this.props;
+    const { getGenres, searchMovies, query } = this.props;
 
     getGenres && getGenres();
-    getMovies && getMovies(1);
+    searchMovies && searchMovies(1, MOVIE_LIST, query);
   }
 
   render() {
@@ -28,4 +27,4 @@ class MainPage extends Component {
   }
 }
 
-export default MainPage;
+export default SearchPage;

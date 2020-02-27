@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Tabs, Tab, InputBase } from '@material-ui/core';
+import {
+  Tabs, Tab, InputBase, Button, withStyles
+} from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import autoBind from 'auto-bind';
 import { Link } from 'react-router-dom';
@@ -10,30 +12,63 @@ import './Navigation.scss';
 
 const CN = 'navigation-bar';
 
+const StyledButton = withStyles({
+  root: {
+    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+    borderRadius: 3,
+    border: 0,
+    color: 'white',
+    padding: '0 10px',
+    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+    '& > span': {
+      color: 'white'
+    }
+  }
+
+})(Button);
+
 class Navigation extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      selectedTab: 0
+      selectedTab: 0,
+      query: ''
     };
 
     autoBind(this);
+  }
+
+  handleSearchInput(event) {
+    this.setState({ query: event.target.value });
   }
 
   handleChange(event, tabIndex) {
     this.setState({ selectedTab: tabIndex });
   }
 
+  handleSearchSubmit() {
+    const { query } = this.state;
+    const { handleSearch } = this.props;
+
+    handleSearch && handleSearch(query);
+  }
+
+  isButtonDisabled() {
+    const { query } = this.state;
+
+    return !query;
+  }
+
   render() {
-    const { selectedTab } = this.state;
+    const { selectedTab, query } = this.state;
     const { options } = this.props;
 
     return (
       <div className={CN}>
         <div className={`${CN}__nav-wrapper`}>
           <Link className={`${CN}__logo-container`} to="/main">
-            <img src={Logo} alt="logo" className={`${CN}__logo-img`} />
+            <img alt="logo" className={`${CN}__logo-img`} src={Logo} />
             <h3 className={`${CN}__logo-name`}>Movie Hub</h3>
           </Link>
           <Tabs
@@ -59,7 +94,12 @@ class Navigation extends Component {
             <InputBase
               className={`${CN}__search-field`}
               placeholder="Search…"
+              value={query}
+              onChange={this.handleSearchInput}
             />
+            <StyledButton disabled={this.isButtonDisabled()} onClick={this.handleSearchSubmit}>
+              Find
+            </StyledButton>
           </div>
         </div>
       </div>

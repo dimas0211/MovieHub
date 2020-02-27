@@ -1,30 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="548926de-cff3-4d8a-aa20-72a745eefd1f" name="Default Changelist" comment="fixes of features #3:&#10;&#10;1. refactored code&#10;2. Moved functions from rendering components to models where it posiible">
-      <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
+    <list default="true" id="548926de-cff3-4d8a-aa20-72a745eefd1f" name="Default Changelist" comment="created #4:&#10;&#10;1. filtration by year anr/or genre&#10;2. search functionality&#10;3. ioc pre setup">
+      <change afterPath="$PROJECT_DIR$/src/ClientConfiguration/ClientConfiguration.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ClientConfiguration/ClientConfiguration.stub.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ClientConfiguration/Configuration.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ClientConfiguration/recompose.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/searchMovies.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/setFiltrationParams.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/noimage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/FiltrationPanel/FiltrationPanel.container.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/FiltrationPanel/FiltrationPanel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/FiltrationPanel/FiltrationPanel.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/FiltrationPanel/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.container.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SearchPage/SearchPage.container.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SearchPage/SearchPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SearchPage/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ioc/clientIoC.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/reducerSearch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/reducerSetFiltrationParams.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/dataService/getDataService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/dataService/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/getGenres.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/getGenres.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/getMovies.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/getMovies.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/getOneMovie.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/getOneMovie.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/getVideos.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/getVideos.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Carousel/Carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Carousel/Carousel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Carousel/ScrollToHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Carousel/ScrollToHelper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CarouselItem/CarouselItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CarouselItem/CarouselItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CarouselItem/CarouselItem.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CarouselItem/CarouselItem.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DefaultLayout/DefaultLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DefaultLayout/DefaultLayout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPage.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPage.container.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MovieListPage/MovieListPage.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieListPage/MovieListPage.container.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MovieListPage/MovieListPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieListPage/MovieListPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MovieListPage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieListPage/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MovieListPagination/MovieListPagination.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieListPagination/MovieListPagination.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieMainItemCard/MovieMainItemCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieMainItemCard/MovieMainItemCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MovieMainItemCard/MovieMainItemCard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieMainItemCard/MovieMainItemCard.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/NavigationMobile/NavigationMob.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/NavigationMobile/NavigationMob.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NewMoviesListPage/NewMoviesListPage.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewMoviesListPage/NewMoviesListPage.container.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/NewMoviesListPage/NewMoviesListPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewMoviesListPage/NewMoviesListPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PopularMoviesListPage/PopularMoviesListPage.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PopularMoviesListPage/PopularMoviesListPage.container.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PopularMoviesListPage/PopularMoviesListPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PopularMoviesListPage/PopularMoviesListPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Routes/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Routes/Routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TVShowListPage/TVShowListPage.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TVShowListPage/TVShowListPage.container.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/TVShowListPage/TVShowListPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TVShowListPage/TVShowListPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/VideoPlayerBar/VideoPlayerBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/VideoPlayerBar/VideoPlayerBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/configurations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/configurations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Movie.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Movie.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/MovieCard.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/MovieCard.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/actionTypes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/actionTypes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/dataService/httpService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/dataService/httpService.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,114 +62,64 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/Movie.model.js">
+        <entry file="file://$PROJECT_DIR$/src/components/Header/Header.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-37">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            <state>
+              <caret column="34" selection-start-column="34" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Navigation/NavigationMobile/NavigationMob.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="98">
+              <caret line="63" column="10" selection-start-line="63" selection-start-column="10" selection-end-line="63" selection-end-column="10" />
               <folding>
-                <element signature="e#49#95#0" expanded="true" />
+                <element signature="e#0#41#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Carousel/Carousel.js">
+        <entry file="file://$PROJECT_DIR$/src/components/Navigation/Navigation.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="6" column="70" selection-start-line="6" selection-start-column="70" selection-end-line="6" selection-end-column="70" />
+            <state relative-caret-position="117">
+              <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/services/dataService/httpService.js">
+        <entry file="file://$PROJECT_DIR$/src/components/Navigation/Navigation.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="21" column="39" lean-forward="true" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="197">
+              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/PopularMoviesListPage/PopularMoviesListPage.js">
+        <entry file="file://$PROJECT_DIR$/src/components/MovieListPagination/MovieListPagination.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="30">
+              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.editorconfig">
+        <entry file="file://$PROJECT_DIR$/src/components/DefaultLayout/DefaultLayout.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+            <state relative-caret-position="96">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
               <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/NewMoviesListPage/NewMoviesListPage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/MovieCard.model.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1080">
-              <caret line="72" column="31" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/MovieListPage/MovieListPage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="60" column="1" lean-forward="true" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/CarouselItem/CarouselItem.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#50#85#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -160,9 +136,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>secon</find>
-      <find>scrollTo</find>
-      <find>style</find>
       <find>console.lo</find>
       <find>getGenres</find>
       <find>vertical</find>
@@ -190,6 +163,9 @@
       <find>'right'</find>
       <find>animatedScroll</find>
       <find>totalTimetoMove</find>
+      <find>border-r</find>
+      <find>history</find>
+      <find>withRou</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src</dir>
@@ -207,57 +183,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/MainPage/MainPage.container.js" />
-        <option value="$PROJECT_DIR$/src/components/TVShowListPage/TVShowListPage.container.js" />
-        <option value="$PROJECT_DIR$/src/models/Genres.model.js" />
-        <option value="$PROJECT_DIR$/src/components/NewMoviesListPage/NewMoviesListPage.container.js" />
-        <option value="$PROJECT_DIR$/src/components/NewMoviesListPage/index.js" />
-        <option value="$PROJECT_DIR$/src/components/PopularMoviesListPage/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Carousel/CarouselItem.js" />
-        <option value="$PROJECT_DIR$/src/components/Carousel/index.js" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/components/MovieItemPage/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Routes/Routes.js" />
-        <option value="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.sccs" />
-        <option value="$PROJECT_DIR$/src/constants/actionTypes/index.js" />
-        <option value="$PROJECT_DIR$/src/models/index.js" />
-        <option value="$PROJECT_DIR$/src/components/VideoPlayerComponent/index.js" />
-        <option value="$PROJECT_DIR$/src/components/VideoPlayer/index.js" />
-        <option value="$PROJECT_DIR$/src/models/Videos.model.js" />
-        <option value="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.container.js" />
-        <option value="$PROJECT_DIR$/src/reducers/reducerAPIcall.js" />
-        <option value="$PROJECT_DIR$/src/components/VideoPlayerComponent/VideoPlayerComponent.js" />
-        <option value="$PROJECT_DIR$/src/actions/actionsAPIcall.js" />
-        <option value="$PROJECT_DIR$/src/components/CarouselItem/CarouselItem.scss" />
-        <option value="$PROJECT_DIR$/src/components/DefaultLayout/DefaultLayout.js" />
-        <option value="$PROJECT_DIR$/src/components/Navigation/Navigation.scss" />
-        <option value="$PROJECT_DIR$/src/components/MovieMainItemCard/MovieMainItemCard.scss" />
-        <option value="$PROJECT_DIR$/src/models/MovieList.model.js" />
-        <option value="$PROJECT_DIR$/src/components/VideoPlayer/VideoPlayer.scss" />
-        <option value="$PROJECT_DIR$/src/components/Carousel/Carousel.scss" />
-        <option value="$PROJECT_DIR$/src/components/VideoPlayer/VideoPlayer.js" />
-        <option value="$PROJECT_DIR$/src/_variables.scss" />
-        <option value="$PROJECT_DIR$/src/actions/getVideos.js" />
-        <option value="$PROJECT_DIR$/src/actions/getOneMovie.js" />
-        <option value="$PROJECT_DIR$/src/actions/getMovies.js" />
-        <option value="$PROJECT_DIR$/src/actions/getGenres.js" />
-        <option value="$PROJECT_DIR$/src/components/Carousel/ScrollToHelper.js" />
-        <option value="$PROJECT_DIR$/src/components/MovieListPagination/MovieListPagination.js" />
-        <option value="$PROJECT_DIR$/src/components/VideoPlayerBar/VideoPlayerBar.js" />
-        <option value="$PROJECT_DIR$/src/components/TVShowListPage/TVShowListPage.js" />
-        <option value="$PROJECT_DIR$/src/constants/configurations.js" />
-        <option value="$PROJECT_DIR$/src/components/MainPage/MainPage.js" />
-        <option value="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.scss" />
-        <option value="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.js" />
-        <option value="$PROJECT_DIR$/src/components/MovieMainItemCard/MovieMainItemCard.js" />
         <option value="$PROJECT_DIR$/src/components/CarouselItem/CarouselItem.js" />
         <option value="$PROJECT_DIR$/src/models/MovieCard.model.js" />
-        <option value="$PROJECT_DIR$/src/components/MovieListPage/MovieListPage.js" />
-        <option value="$PROJECT_DIR$/src/components/NewMoviesListPage/NewMoviesListPage.js" />
-        <option value="$PROJECT_DIR$/src/components/PopularMoviesListPage/PopularMoviesListPage.js" />
         <option value="$PROJECT_DIR$/src/models/Movie.model.js" />
         <option value="$PROJECT_DIR$/src/components/Carousel/Carousel.js" />
         <option value="$PROJECT_DIR$/src/services/dataService/httpService.js" />
+        <option value="$PROJECT_DIR$/src/services/dataService/getDataService.js" />
+        <option value="$PROJECT_DIR$/src/services/dataService/index.js" />
+        <option value="$PROJECT_DIR$/src/ioc/clientIoC.js" />
+        <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/FiltrationPanel/index.js" />
+        <option value="$PROJECT_DIR$/src/FiltrationPanel/FiltrationPanel.js" />
+        <option value="$PROJECT_DIR$/src/components/MovieMainItemCard/MovieMainItemCard.scss" />
+        <option value="$PROJECT_DIR$/src/components/CarouselItem/CarouselItem.scss" />
+        <option value="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.scss" />
+        <option value="$PROJECT_DIR$/src/components/FiltrationPanel/FiltrationPanel.scss" />
+        <option value="$PROJECT_DIR$/src/components/FiltrationPanel/index.js" />
+        <option value="$PROJECT_DIR$/src/components/FiltrationPanel/FiltrationPanel.container.js" />
+        <option value="$PROJECT_DIR$/src/reducers/reducerSetFiltrationParams.js" />
+        <option value="$PROJECT_DIR$/src/components/TVShowListPage/TVShowListPage.container.js" />
+        <option value="$PROJECT_DIR$/src/components/PopularMoviesListPage/PopularMoviesListPage.container.js" />
+        <option value="$PROJECT_DIR$/src/components/NewMoviesListPage/NewMoviesListPage.container.js" />
+        <option value="$PROJECT_DIR$/src/components/MainPage/MainPage.container.js" />
+        <option value="$PROJECT_DIR$/src/actions/setFiltrationParams.js" />
+        <option value="$PROJECT_DIR$/src/components/TVShowListPage/TVShowListPage.js" />
+        <option value="$PROJECT_DIR$/src/actions/getMovies.js" />
+        <option value="$PROJECT_DIR$/src/reducers/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Navigation/Navigation.container.js" />
+        <option value="$PROJECT_DIR$/src/components/Navigation/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Header/index.js" />
+        <option value="$PROJECT_DIR$/src/constants/actionTypes/index.js" />
+        <option value="$PROJECT_DIR$/src/reducers/reducerSearch.js" />
+        <option value="$PROJECT_DIR$/src/components/FiltrationPanel/FiltrationPanel.js" />
+        <option value="$PROJECT_DIR$/src/components/SearchPage/index.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/components/DefaultLayout/DefaultLayout.container.js" />
+        <option value="$PROJECT_DIR$/src/components/Routes/Routes.js" />
+        <option value="$PROJECT_DIR$/src/actions/searchMovies.js" />
+        <option value="$PROJECT_DIR$/src/components/Header/Header.container.js" />
+        <option value="$PROJECT_DIR$/src/components/Header/Header.js" />
+        <option value="$PROJECT_DIR$/src/components/Navigation/NavigationMobile/NavigationMob.js" />
+        <option value="$PROJECT_DIR$/src/components/MovieListPage/index.js" />
+        <option value="$PROJECT_DIR$/src/components/NewMoviesListPage/NewMoviesListPage.js" />
+        <option value="$PROJECT_DIR$/src/components/PopularMoviesListPage/PopularMoviesListPage.js" />
+        <option value="$PROJECT_DIR$/src/components/MainPage/MainPage.js" />
+        <option value="$PROJECT_DIR$/src/components/MovieListPage/MovieListPage.container.js" />
+        <option value="$PROJECT_DIR$/src/components/DefaultLayout/DefaultLayout.js" />
+        <option value="$PROJECT_DIR$/src/components/SearchPage/SearchPage.container.js" />
+        <option value="$PROJECT_DIR$/src/components/MovieListPage/MovieListPage.js" />
+        <option value="$PROJECT_DIR$/src/components/MovieListPagination/MovieListPagination.js" />
+        <option value="$PROJECT_DIR$/src/components/SearchPage/SearchPage.js" />
+        <option value="$PROJECT_DIR$/src/components/Navigation/Navigation.js" />
       </list>
     </option>
   </component>
@@ -316,6 +292,12 @@
               <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="movie-project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ClientConfiguration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -344,6 +326,13 @@
               <item name="movie-project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="FiltrationPanel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Header" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -352,13 +341,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="MainPage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="MainPageSkeleton" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
@@ -407,6 +389,14 @@
               <item name="movie-project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Navigation" type="462c0819:PsiDirectoryNode" />
+              <item name="NavigationMobile" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="NewMoviesListPage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -429,6 +419,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="SearchPage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
@@ -519,18 +516,19 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/constants" />
-      <recent name="$PROJECT_DIR$/src/service" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/assets" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/PopularMoviesListPage" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/assets/fonts/Nunito" />
       <recent name="$PROJECT_DIR$/src/redux" />
       <recent name="$PROJECT_DIR$/src/assets/fonts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/src/constants" />
+      <recent name="$PROJECT_DIR$/src/service" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/assets" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -576,7 +574,7 @@
       <workItem from="1581537416207" duration="1327000" />
       <workItem from="1581687972964" duration="692000" />
       <workItem from="1581802107499" duration="138025000" />
-      <workItem from="1582488680876" duration="28584000" />
+      <workItem from="1582488680876" duration="84651000" />
     </task>
     <task id="LOCAL-00001" summary="fixes #1:&#10;&#10;1. viewportProvider was rewritten to HOC&#10;2. removed configureStore and custom connect&#10;3. Rewrote ScrollToTop component">
       <created>1582024749393</created>
@@ -599,11 +597,18 @@
       <option name="project" value="LOCAL" />
       <updated>1582544310101</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fixes of features #2 #3:&#10;&#10;1. refactored code&#10;2. Moved functions from rendering components to models where it posiible">
+      <created>1582646678980</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1582646678980</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="227650000" />
+    <option name="totallyTimeSpent" value="283717000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -623,7 +628,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5003524" side_tool="true" weight="0.32771084" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49964765" weight="0.20843373" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49964765" weight="0.23734939" />
       <window_info active="true" anchor="bottom" id="Messages" order="12" sideWeight="0.49964765" visible="true" weight="0.32891566" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -645,7 +650,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5003524" side_tool="true" weight="0.32771084" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49964765" weight="0.20843373" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49964765" visible="true" weight="0.23734939" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49964765" weight="0.32891566" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -694,7 +699,9 @@
     <MESSAGE value="features #3:&#10;&#10;1. Created services that get movie by id, videos by id.&#10;2. Crated and used models for: MovieList, Video, Movie, Genre&#10;3. Added VideoPlayer and navbar for multiple videos at MovieItemPage&#10;4. Created MovieItem page with its basic functionality&#10;5. Includes fixes and refactoring according to first commit review" />
     <MESSAGE value="features #3:&#10;&#10;1. Created services that get movie by id, videos by id.&#10;2. Crated and used models for: MovieList, Video, Movie, Genre&#10;3. Added VideoPlayer and navbar for multiple videos at MovieItemPage&#10;4. Created MovieItem page with its basic functionality and made it responsive&#10;5. Includes fixes and refactoring according to first commit review" />
     <MESSAGE value="fixes of features #3:&#10;&#10;1. refactored code&#10;2. Moved functions from rendering components to models where it posiible" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes of features #3:&#10;&#10;1. refactored code&#10;2. Moved functions from rendering components to models where it posiible" />
+    <MESSAGE value="fixes of features #2 #3:&#10;&#10;1. refactored code&#10;2. Moved functions from rendering components to models where it posiible" />
+    <MESSAGE value="created #4:&#10;&#10;1. filtration by year anr/or genre&#10;2. search functionality&#10;3. ioc pre setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="created #4:&#10;&#10;1. filtration by year anr/or genre&#10;2. search functionality&#10;3. ioc pre setup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -708,226 +715,109 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/VideoPlayerBar/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/actionsAPIcall.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#0#273#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Carousel/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/CarouselItem/CarouselItem.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="240">
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/CarouselItem/index.js">
+    <entry file="file://$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="41" selection-start-column="41" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DefaultLayout/DefaultLayout.container.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DefaultLayout/DefaultLayout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="28" column="3" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
-          <folding>
-            <element signature="e#50#85#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DefaultLayout/DefaultLayout.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Header/Header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MainPage/MainPage.container.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="11" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.container.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="11" lean-forward="true" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="150">
+          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/MovieMainItemCard/MovieMainItemCard.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-20">
-          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        <state relative-caret-position="60">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Navigation/Navigation.scss">
+    <entry file="file://$PROJECT_DIR$/src/components/FiltrationPanel/FiltrationPanel.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="26" />
+        <state relative-caret-position="195">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/NewMoviesListPage/NewMoviesListPage.container.js">
+    <entry file="file://$PROJECT_DIR$/src/services/dataService/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/PopularMoviesListPage/PopularMoviesListPage.container.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/TVShowListPage/TVShowListPage.container.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/VideoPlayer/VideoPlayer.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/VideoPlayer/VideoPlayer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Carousel/Carousel.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="77" column="2" selection-start-line="77" selection-start-column="2" selection-end-line="77" selection-end-column="2" />
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/reducers/reducerAPIcall.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="22" column="8" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="8" />
+        <state relative-caret-position="126">
+          <caret line="22" column="8" selection-end-line="96" />
           <folding>
             <element signature="e#0#258#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/index.js">
+    <entry file="file://$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.container.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="435">
+          <caret line="29" selection-end-line="29" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/MovieList.model.js">
+    <entry file="file://$PROJECT_DIR$/src/actions/actionsAPIcall.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="180">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/FiltrationPanel/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/NewMoviesListPage/NewMoviesListPage.container.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="38" selection-end-line="12" selection-end-column="73" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/FiltrationPanel/FiltrationPanel.container.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="73" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/TVShowListPage/TVShowListPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="43" lean-forward="true" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/Videos.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret column="48" selection-start-line="46" selection-start-column="2" selection-end-line="46" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/Genres.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/_variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/getVideos.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#62#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/getOneMovie.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="390">
+          <caret line="26" lean-forward="true" selection-end-line="26" />
           <folding>
             <element signature="e#0#62#0" expanded="true" />
           </folding>
@@ -936,213 +826,317 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/getMovies.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="480">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="e#0#62#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/getGenres.js">
+    <entry file="file://$PROJECT_DIR$/src/reducers/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="60">
+          <caret line="4" column="55" selection-start-line="4" selection-start-column="55" selection-end-line="4" selection-end-column="55" />
           <folding>
-            <element signature="e#0#62#0" expanded="true" />
+            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/constants/index.js">
+    <entry file="file://$PROJECT_DIR$/src/components/PopularMoviesListPage/PopularMoviesListPage.container.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" lean-forward="true" selection-end-line="27" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/NewMoviesListPage/index.js">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Navigation/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Header/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="34" selection-start-column="34" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/setFiltrationParams.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="9" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/constants/actionTypes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="345">
+          <caret line="23" column="31" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/connectWithViewport.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Navigation/Navigation.container.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="15">
+          <caret line="1" column="27" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/VideoPlayerBar/VideoPlayerBar.js">
+    <entry file="file://$PROJECT_DIR$/src/reducers/reducerSetFiltrationParams.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="114" column="1" lean-forward="true" selection-start-line="114" selection-start-column="1" selection-end-line="114" selection-end-column="1" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#50#91#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="330">
+          <caret line="22" lean-forward="true" selection-end-line="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Carousel/ScrollToHelper.js">
+    <entry file="file://$PROJECT_DIR$/src/components/FiltrationPanel/FiltrationPanel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Routes/Routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="68" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="68" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MovieListPagination/MovieListPagination.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        <state relative-caret-position="296">
+          <caret line="91" column="2" lean-forward="true" selection-start-line="91" selection-start-column="2" selection-end-line="96" selection-end-column="3" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/TVShowListPage/TVShowListPage.js">
+    <entry file="file://$PROJECT_DIR$/src/components/SearchPage/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state>
+          <caret column="73" selection-start-column="73" selection-end-column="73" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/constants/configurations.js">
+    <entry file="file://$PROJECT_DIR$/src/components/TVShowListPage/TVShowListPage.container.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="27" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="27" />
+        <state relative-caret-position="180">
+          <caret line="12" column="2" lean-forward="true" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="73" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/connected-react-router/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="92" column="15" selection-start-line="92" selection-start-column="15" selection-end-line="92" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ScrollToTop/ScrollToTop.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DefaultLayout/DefaultLayout.container.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+          <folding>
+            <element signature="e#1#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Header/Header.container.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/MainPage/MainPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="30">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.scss">
+    <entry file="file://$PROJECT_DIR$/src/components/MovieListPage/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="89" selection-start-line="89" selection-end-line="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MovieMainItemCard/MovieMainItemCard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="27" column="3" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/CarouselItem/CarouselItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/MovieCard.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="72" column="31" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MovieListPage/MovieListPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="60" column="1" lean-forward="true" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/NewMoviesListPage/NewMoviesListPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="15">
+          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MainPage/MainPage.container.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Routes/Routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/PopularMoviesListPage/PopularMoviesListPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="30">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/searchMovies.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Header/Header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="34" selection-start-column="34" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Navigation/NavigationMobile/NavigationMob.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="63" column="10" selection-start-line="63" selection-start-column="10" selection-end-line="63" selection-end-column="10" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.editorconfig">
+    <entry file="file://$PROJECT_DIR$/src/components/DefaultLayout/DefaultLayout.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/Movie.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-37">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="96">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
           <folding>
-            <element signature="e#49#95#0" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#50#85#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Carousel/Carousel.js">
+    <entry file="file://$PROJECT_DIR$/src/components/MovieListPage/MovieListPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="6" column="70" selection-start-line="6" selection-start-column="70" selection-end-line="6" selection-end-column="70" />
+        <state relative-caret-position="466">
+          <caret line="86" column="3" lean-forward="true" selection-start-line="86" selection-start-column="3" selection-end-line="86" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/dataService/httpService.js">
+    <entry file="file://$PROJECT_DIR$/src/reducers/reducerSearch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="21" column="39" lean-forward="true" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+        <state relative-caret-position="270">
+          <caret line="18" column="8" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SearchPage/SearchPage.container.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MovieListPage/MovieListPage.container.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="12" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SearchPage/SearchPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="58" lean-forward="true" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MovieListPagination/MovieListPagination.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Navigation/Navigation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Navigation/Navigation.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
         </state>
       </provider>
     </entry>

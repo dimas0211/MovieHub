@@ -2,26 +2,32 @@ import { connect } from 'react-redux';
 import { bindActionCreators, compose } from 'redux';
 import connectWithViewport from '../../services/connectWithViewport';
 
-import PopularMoviesListPage from './PopularMoviesListPage';
+import FiltrationPanel from './FiltrationPanel';
 import getGenres from '../../actions/getGenres';
-import getMovies from '../../actions/getMovies';
+import getOneMovie from '../../actions/getOneMovie';
+import getVideos from '../../actions/getVideos';
+import { setFiltrationParams, clearFiltrationParams } from '../../actions/setFiltrationParams';
 
 const mapStateToProps = ({ ApiReducer, setFiltrationParamsReducer }) => ({
   error: ApiReducer.error,
-  movieList: ApiReducer.movieListInfo,
+  movie: ApiReducer.movie,
   genres: ApiReducer.genresList.genres,
+  videos: ApiReducer.videos,
   filtrationQueryParams: setFiltrationParamsReducer.filtrationQueryParams
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
   getGenres,
-  getMovies
+  getOneMovie,
+  getVideos,
+  setFiltrationParams,
+  clearFiltrationParams
 }, dispatch);
 
-export const PopularMoviesListPageContainer = compose(
+export const FiltrationPanelContainer = compose(
   connectWithViewport(),
   connect(
     mapStateToProps,
     mapDispatchToProps
   )
-)(PopularMoviesListPage);
+)(FiltrationPanel);

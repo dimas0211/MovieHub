@@ -19,9 +19,10 @@ const defaultConfig = {
 export const createHttpHandler = (handler, onSuccess = successHandler, onError = errorHandler) => handler.then(onSuccess).catch(onError);
 
 export default class HttpService {
+  static $singleton = true;
+
   constructor(config = defaultConfig) {
     this.config = config;
-    // this.authorization = authorization;
   }
 
   get(url, config) {

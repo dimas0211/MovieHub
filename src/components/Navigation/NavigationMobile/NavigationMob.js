@@ -25,7 +25,8 @@ class NavigationMob extends Component {
     super(props);
 
     this.state = {
-      leftPopUp: false
+      leftPopUp: false,
+      query: ''
     };
 
     autoBind(this);
@@ -39,6 +40,23 @@ class NavigationMob extends Component {
     this.setState({ leftPopUp: open });
   };
 
+  handleSearchInput(event) {
+    this.setState({ query: event.target.value });
+  }
+
+  handleSearchSubmit() {
+    const { query } = this.state;
+    const { handleSearch } = this.props;
+
+    handleSearch && handleSearch(query);
+  }
+
+  isButtonDisabled() {
+    const { query } = this.state;
+
+    return !query;
+  }
+
   sideList(isMobile) {
     const { options } = this.props;
 
@@ -47,14 +65,14 @@ class NavigationMob extends Component {
         className={`${CN}__side-container`}
         role="presentation"
       >
-        <List className={`${CN}__side-bar`} bgcolor="text.disabled">
+        <List bgcolor="text.disabled" className={`${CN}__side-bar`}>
           {isMobile && this.renderSearch()}
           <Divider />
           {options.map((menuItem) => (
             <ListItem
               button
-              component={Link}
               className={`${CN}__nav-item`}
+              component={Link}
               key={menuItem.value}
               to={menuItem.link}
               onClick={this.toggleDrawer(false)}
@@ -70,6 +88,8 @@ class NavigationMob extends Component {
   }
 
   renderSearch() {
+    const { query } = this.state;
+
     return (
       <div className={`${CN}__search-container`}>
         <SearchIcon className={`${CN}__search-icon`} />
@@ -77,7 +97,12 @@ class NavigationMob extends Component {
           className={`${CN}__search-field`}
           color="secondary"
           placeholder="Search…"
+          value={query}
+          onChange={this.handleSearchInput}
         />
+        <Button disabled={this.isButtonDisabled()} onClick={this.handleSearchSubmit}>
+          Submit
+        </Button>
       </div>
     );
   }

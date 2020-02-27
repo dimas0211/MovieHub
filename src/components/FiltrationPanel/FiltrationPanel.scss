@@ -1,0 +1,15 @@
+@import '../../variables';
+
+.filtration-panel {
+  @include flex($justify: space-around);
+  margin: 25px 15px;
+  max-width: 100%;
+  padding: 20px;
+  border: 1px solid $border-color;
+  background-color: $gray;
+  border-radius: 5px;
+
+  &__item {
+    align-self: center;
+  }
+}

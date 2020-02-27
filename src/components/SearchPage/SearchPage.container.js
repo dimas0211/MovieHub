@@ -2,26 +2,29 @@ import { connect } from 'react-redux';
 import { bindActionCreators, compose } from 'redux';
 import connectWithViewport from '../../services/connectWithViewport';
 
-import Header from './Header';
-import { searchMovies, setSearchQuery, setSearchMode } from '../../actions/searchMovies';
+import SearchPage from './SearchPage';
+import getGenres from '../../actions/getGenres';
+import { searchMovies, clearSearchMode, clearSearchQuery } from '../../actions/searchMovies';
 
 const mapStateToProps = ({ ApiReducer, setSearchModeReducer }) => ({
   error: ApiReducer.error,
   movieList: ApiReducer.movieListInfo,
   genres: ApiReducer.genresList.genres,
-  searchQuery: setSearchModeReducer.searchQuery
+  query: setSearchModeReducer.searchQuery,
+  searchMode: setSearchModeReducer.searchMode
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
+  getGenres,
   searchMovies,
-  setSearchQuery,
-  setSearchMode
+  clearSearchMode,
+  clearSearchQuery
 }, dispatch);
 
-export const HeaderContainer = compose(
+export const SearchPageContainer = compose(
   connectWithViewport(),
   connect(
     mapStateToProps,
     mapDispatchToProps
   )
-)(Header);
+)(SearchPage);

@@ -7,6 +7,7 @@ import { PopularMoviesListPage } from '../PopularMoviesListPage';
 import { TVShowListPage } from '../TVShowListPage';
 import { NewMoviesListPage } from '../NewMoviesListPage';
 import { MovieItemPage } from '../MovieItemPage';
+import { SearchPage } from '../SearchPage';
 import NotFoundPage from '../NotFoundPage';
 
 const Routes = () => (
@@ -18,6 +19,7 @@ const Routes = () => (
       <DefaultLayout component={NewMoviesListPage} path="/new" />
       <DefaultLayout component={PopularMoviesListPage} path="/popular" />
       <DefaultLayout component={TVShowListPage} path="/tv-shows" />
+      <DefaultLayout component={SearchPage} path="/search" />
       <DefaultLayout component={MovieItemPage} path="/movie/view/:id" />
       <DefaultLayout
         component={NotFoundPage}

@@ -6,10 +6,11 @@ import MainPage from './MainPage';
 import getGenres from '../../actions/getGenres';
 import getMovies from '../../actions/getMovies';
 
-const mapStateToProps = ({ ApiReducer }) => ({
+const mapStateToProps = ({ ApiReducer, setFiltrationParamsReducer }) => ({
   error: ApiReducer.error,
   movieList: ApiReducer.movieListInfo,
-  genres: ApiReducer.genresList.genres
+  genres: ApiReducer.genresList.genres,
+  filtrationQueryParams: setFiltrationParamsReducer.filtrationQueryParams
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({

@@ -8,6 +8,14 @@ class TVShowListPage extends Component {
     this.loadShowList();
   }
 
+  componentDidUpdate(prevProps) {
+    const { filtrationQueryParams, getMovies } = this.props;
+
+    if (prevProps.filtrationQueryParams && prevProps.filtrationQueryParams !== filtrationQueryParams) {
+      getMovies && getMovies(1, TV_SHOW_LIST, ...filtrationQueryParams);
+    }
+  }
+
   loadShowList() {
     const { getGenres, getMovies } = this.props;
 
@@ -17,7 +25,7 @@ class TVShowListPage extends Component {
 
   render() {
     // eslint-disable-next-line react/jsx-props-no-spreading
-    return <MovieListPage {...this.props} />;
+    return <MovieListPage movieOrShow={TV_SHOW_LIST} {...this.props} />;
   }
 }
 

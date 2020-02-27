@@ -1,11 +1,12 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
+
 import autoBind from 'auto-bind';
 import cx from 'classnames';
 
-import MainPageSkeleton from '../MainPageSkeleton';
+import NotFoundPage from '../NotFoundPage';
 import { Header } from '../Header';
 
 import './DefaultLayout.scss';
@@ -35,6 +36,7 @@ class DefaultLayout extends Component {
       hideHeader,
       location,
       movies,
+      history,
       viewport: { device },
       ...rest
     } = this.props;
@@ -46,13 +48,13 @@ class DefaultLayout extends Component {
         render={(props) => {
           if (movies && !movies.length) {
             return (
-              <MainPageSkeleton />
+              <NotFoundPage />
             );
           }
 
           return (
             <div className={CN}>
-              {!hideHeader && <Header />}
+              {!hideHeader && <Header history={history} />}
               {/* eslint-disable-next-line react/jsx-props-no-spreading */}
               <div className={cx(`${CN}__page-wrapper`, isDesktop && `${CN}__desktop-page-wrapper`)}>
                 <Page scrollToTop={DefaultLayout.scrollToTop} {...props} />
@@ -77,4 +79,4 @@ DefaultLayout.defaultProps = {
   hideHeader: false
 };
 
-export default DefaultLayout;
+export default withRouter(DefaultLayout);
