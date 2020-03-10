@@ -3,9 +3,6 @@ import { bindActionCreators, compose } from 'redux';
 import connectWithViewport from '../../services/connectWithViewport';
 
 import FiltrationPanel from './FiltrationPanel';
-import getGenres from '../../actions/getGenres';
-import getOneMovie from '../../actions/getOneMovie';
-import getVideos from '../../actions/getVideos';
 import { setFiltrationParams, clearFiltrationParams } from '../../actions/setFiltrationParams';
 
 const mapStateToProps = ({ ApiReducer, setFiltrationParamsReducer }) => ({
@@ -17,9 +14,6 @@ const mapStateToProps = ({ ApiReducer, setFiltrationParamsReducer }) => ({
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
-  getGenres,
-  getOneMovie,
-  getVideos,
   setFiltrationParams,
   clearFiltrationParams
 }, dispatch);

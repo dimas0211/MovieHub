@@ -18,14 +18,20 @@ const StyledButton = withStyles({
     borderRadius: 3,
     border: 0,
     color: 'white',
-    padding: '0 10px',
+    width: 50,
+    padding: '0',
     boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
     '& > span': {
       color: 'white'
     }
   }
-
 })(Button);
+
+const StyledInput = withStyles({
+  root: {
+    color: 'white'
+  }
+})(InputBase);
 
 class Navigation extends Component {
   constructor(props) {
@@ -33,10 +39,23 @@ class Navigation extends Component {
 
     this.state = {
       selectedTab: 0,
-      query: ''
+      query: '',
+      location: props.location
     };
 
     autoBind(this);
+  }
+
+  static getDerivedStateFromProps(nextProps, prevState) {
+    const { pathname } = prevState.location;
+
+    if (pathname !== nextProps.location.pathname) {
+      return {
+        query: ''
+      };
+    }
+
+    return null;
   }
 
   handleSearchInput(event) {
@@ -67,7 +86,7 @@ class Navigation extends Component {
     return (
       <div className={CN}>
         <div className={`${CN}__nav-wrapper`}>
-          <Link className={`${CN}__logo-container`} to="/main">
+          <Link className={`${CN}__logo-container`} to="/">
             <img alt="logo" className={`${CN}__logo-img`} src={Logo} />
             <h3 className={`${CN}__logo-name`}>Movie Hub</h3>
           </Link>
@@ -91,7 +110,7 @@ class Navigation extends Component {
           </Tabs>
           <div className={`${CN}__search-container`}>
             <SearchIcon className={`${CN}__search-icon`} />
-            <InputBase
+            <StyledInput
               className={`${CN}__search-field`}
               placeholder="Search…"
               value={query}

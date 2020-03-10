@@ -12,13 +12,16 @@
     cursor: pointer;
   }
 
+  &__wrapper-large-screen {
+    height: 330px;
+  }
+
   &__image {
     max-width: 200px;
   }
 
-  &____image-container {
-    width: 25%;
-    align-self: center;
+  &__image-large-screen {
+    height: 300px;
   }
 
   &__info-container {
@@ -58,8 +61,16 @@
     @include flex($direction: column);
   }
 
+  &__wrapper-large-screen {
+    width: 50%;
+    height: 400px;
+  }
+
   &__info-container-mobile {
 
   }
+}
 
+.page-link {
+  text-decoration: none;
 }

@@ -1,31 +1,74 @@
 import React, { Component } from 'react';
+import autoBind from 'auto-bind';
 import MovieListPage from '../MovieListPage/MovieListPage';
 
-import { TV_SHOW_LIST, TV_SHOW_GENRES } from '../../constants/configurations';
-
 class TVShowListPage extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      loading: true
+    };
+
+    autoBind(this);
+  }
+
   componentDidMount() {
     this.loadShowList();
   }
 
   componentDidUpdate(prevProps) {
-    const { filtrationQueryParams, getMovies } = this.props;
+    const {
+      filtrationQueryParams,
+      getDataService,
+      apiCallConfig: { tvShow },
+      getMoviesSuccess,
+      getMoviesError
+    } = this.props;
 
     if (prevProps.filtrationQueryParams && prevProps.filtrationQueryParams !== filtrationQueryParams) {
-      getMovies && getMovies(1, TV_SHOW_LIST, ...filtrationQueryParams);
+      getDataService
+        .getMovieList(1, tvShow, ...filtrationQueryParams)
+        .then((data) => getMoviesSuccess(data))
+        .catch((error) => getMoviesError(error));
     }
   }
 
   loadShowList() {
-    const { getGenres, getMovies } = this.props;
+    const {
+      getDataService,
+      apiCallConfig: { tvShowGenres, tvShow },
+      getMoviesSuccess,
+      getMoviesError,
+      getGenresSuccess,
+      getGenresError
+    } = this.props;
 
-    getGenres && getGenres(TV_SHOW_GENRES);
-    getMovies && getMovies(1, TV_SHOW_LIST);
+    this.setState({ loading: true });
+
+    getDataService
+      .getGenres(tvShowGenres)
+      .then((data) => {
+        this.setState({ loading: false });
+        getGenresSuccess(data);
+      })
+      .catch((error) => getGenresError(error));
+
+    getDataService
+      .getMovieList(1, tvShow)
+      .then((data) => {
+        this.setState({ loading: false });
+        getMoviesSuccess(data);
+      })
+      .catch((error) => getMoviesError(error));
   }
 
   render() {
+    const { apiCallConfig: { tvShow } } = this.props;
+    const { loading } = this.state;
+
     // eslint-disable-next-line react/jsx-props-no-spreading
-    return <MovieListPage movieOrShow={TV_SHOW_LIST} {...this.props} />;
+    return <MovieListPage {...this.props} loading={loading} movieOrShow={tvShow} />;
   }
 }
 

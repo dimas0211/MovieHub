@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import autoBind from 'auto-bind';
+import cx from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
-import {
-  TextField, Select, MenuItem, InputLabel, FormControl, Button
-} from '@material-ui/core';
+import { NativeSelect, FormControl, Button } from '@material-ui/core';
+import { MOBILE } from '../../constants/configurations';
 
 import './FiltrationPanel.scss';
 
@@ -11,16 +11,16 @@ const CN = 'filtration-panel';
 
 const style = {
   color: 'white',
-  height: 50,
-  width: 200,
+  height: 30,
+  width: 120,
   border: '1px solid #404040',
   borderRadius: '5px',
-  margin: '20px',
+  margin: '5px',
   backgroundColor: '#282D2D',
   padding: '0',
   '& > *': {
     color: 'white',
-    padding: '10px',
+    paddingRight: 0,
     fontFamily: '"Nunito-Regular"'
   },
   '& > div': {
@@ -36,18 +36,21 @@ const style = {
     backgroundColor: '#282D2D'
   },
   '& > ::after, ::before': {
-    border: '0px',
+    borderBottom: '0px',
     padding: 0
   }
 };
 
-const StyledForm = withStyles({
-  root: style
-})(TextField);
+const StyledSelect = withStyles({
+  root: {
+    paddingLeft: 15,
+    '& > select': {
+    }
+  }
+})(NativeSelect);
 
 const StyledFormControl = withStyles({
   root: style
-
 })(FormControl);
 
 const StyledButton = withStyles({
@@ -60,10 +63,24 @@ export default class FiltrationPanel extends Component {
 
     this.state = {
       yearValue: '',
-      withGenres: ''
+      withGenres: '',
+      location: props.location
     };
 
     autoBind(this);
+  }
+
+  static getDerivedStateFromProps(nextProps, prevState) {
+    const { pathname } = prevState.location;
+
+    if (pathname !== nextProps.location.pathname) {
+      return {
+        yearValue: '',
+        withGenres: ''
+      };
+    }
+
+    return null;
   }
 
   componentWillUnmount() {
@@ -96,44 +113,58 @@ export default class FiltrationPanel extends Component {
     return emptyFileds;
   }
 
+  renderYearOptions() {
+    const minYear = 1883;
+    const maxYear = 2020;
+    const yearRange = [];
+
+    for (let i = minYear; i <= maxYear; i++) {
+      yearRange.push(i);
+    }
+
+    return yearRange.map((year) => <option key={year} value={year}>{year}</option>);
+  }
+
   renderGenreseOptions() {
     const { genres } = this.props;
 
-    return genres.map((genre) => <MenuItem key={genre.id} value={genre.id}>{genre.name}</MenuItem>);
+    return genres.map((genre) => <option key={genre.id} value={genre.id}>{genre.name}</option>);
   }
 
   render() {
     const { yearValue, withGenres } = this.state;
+    const { viewport: { device } } = this.props;
+    const isMobile = device === MOBILE;
 
     return (
-      <div autoComplete="off" className={CN} noValidate>
-        <StyledForm
-          className={`${CN}__item`}
-          id="filled-basic"
-          placeholder="Year"
-          type="number"
-          value={yearValue}
-          onChange={this.handleYearInput}
-        />
+      <div autoComplete="off" className={cx(CN, isMobile && `${CN}-mobile`)} noValidate>
         <StyledFormControl className={`${CN}__item`}>
-          <InputLabel focused={false} shrink={false}>Genre</InputLabel>
-          <Select
+          <StyledSelect
             id="demo-simple-select"
-            labelId="demo-simple-select-label"
-            placeholder="Genre"
+            value={yearValue}
+            onChange={this.handleYearInput}
+          >
+            <option value="">Year</option>
+            {this.renderYearOptions()}
+          </StyledSelect>
+        </StyledFormControl>
+        <StyledFormControl className={`${CN}__item`}>
+          <StyledSelect
+            id="demo-simple-select"
             value={withGenres}
             onChange={this.handleGenreSelect}
           >
+            <option value="">Genres</option>
             {this.renderGenreseOptions()}
-          </Select>
+          </StyledSelect>
         </StyledFormControl>
         <StyledButton
           className={`${CN}__item`}
           color="secondary"
+          disabled={this.isButtonDisabled()}
           type="submit"
           variant="contained"
           onClick={this.setFiltrationParams}
-          disabled={this.isButtonDisabled()}
         >
           Apply Filter
         </StyledButton>

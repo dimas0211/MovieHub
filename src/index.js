@@ -7,12 +7,13 @@ import store, { history } from './store';
 import { createClientIoCContainer } from './ioc/clientIoC';
 
 const ROOT = document.getElementById('root');
-const ioc = createClientIoCContainer(window);
+
+export const ioc = createClientIoCContainer(window);
 
 const renderer = (Component) => {
   render(
     <AppContainer>
-      <Component history={history} store={store} ioc={ioc} />
+      <Component history={history} ioc={ioc} store={store} />
     </AppContainer>,
     ROOT
   );

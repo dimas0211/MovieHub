@@ -1,10 +1,16 @@
 import { connect } from 'react-redux';
 import { bindActionCreators, compose } from 'redux';
 import connectWithViewport from '../../services/connectWithViewport';
+import connectWithIoC from '../../services/connectWithIoC';
 
 import MainPage from './MainPage';
-import getGenres from '../../actions/getGenres';
-import getMovies from '../../actions/getMovies';
+import {
+  getMoviesSuccess,
+  getMoviesError,
+  getGenresSuccess,
+  getGenresError
+
+} from '../../actions/actionsAPIcall';
 
 const mapStateToProps = ({ ApiReducer, setFiltrationParamsReducer }) => ({
   error: ApiReducer.error,
@@ -14,11 +20,14 @@ const mapStateToProps = ({ ApiReducer, setFiltrationParamsReducer }) => ({
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
-  getGenres,
-  getMovies
+  getMoviesSuccess,
+  getMoviesError,
+  getGenresSuccess,
+  getGenresError
 }, dispatch);
 
 export const MainPageContainer = compose(
+  connectWithIoC(['getDataService', 'apiCallConfig']),
   connectWithViewport(),
   connect(
     mapStateToProps,

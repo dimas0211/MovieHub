@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 import autoBind from 'auto-bind';
 import { withStyles } from '@material-ui/core/styles';
 import { Pagination } from '@material-ui/lab';
-import { MOVIE_LIST } from '../../constants/configurations';
 
 const StyledMovieListPagination = withStyles({
   root: {
-    background: '#282D2D',
+    background: '#353b48',
     display: 'flex',
     justifyContent: 'center',
     borderRadius: 3,
@@ -47,18 +46,26 @@ class MovieListPagination extends Component {
 
   movieListOrMovieSearchApiCall(page) {
     const {
-      searchMovies,
+      getDataService,
       searchMode,
       query,
       movieOrShow,
       pageParams,
-      getMovies,
-      filtrationQueryParams
+      filtrationQueryParams,
+      getMoviesSuccess,
+      getMoviesError,
+      apiCallConfig: { movie }
     } = this.props;
 
     searchMode === true
-      ? searchMovies && searchMovies(page, MOVIE_LIST, query)
-      : getMovies && getMovies(page, movieOrShow, pageParams, ...filtrationQueryParams);
+      ? getDataService
+        .searchMovies(page, movie, query)
+        .then((data) => getMoviesSuccess(data))
+        .catch((error) => getMoviesError(error))
+      : getDataService
+        .getMovieList(page, movieOrShow, pageParams, ...filtrationQueryParams)
+        .then((data) => getMoviesSuccess(data))
+        .catch((error) => getMoviesError(error));
   }
 
   render() {

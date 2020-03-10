@@ -1,10 +1,27 @@
 import React, { Component } from 'react';
 import { MovieListPage } from '../MovieListPage';
-import { MOVIE_LIST } from '../../constants/configurations';
 
 class SearchPage extends Component {
   componentDidMount() {
     this.loadMovieList();
+  }
+
+  componentDidUpdate(prevProps) {
+    const {
+      query,
+      getDataService,
+      getMoviesSuccess,
+      getMoviesError,
+      apiCallConfig: { movie },
+      match: { params }
+    } = this.props;
+
+    if (prevProps.query !== query) {
+      getDataService
+        .searchMovies(1, movie, params.query)
+        .then((data) => getMoviesSuccess(data))
+        .catch((error) => getMoviesError(error));
+    }
   }
 
   componentWillUnmount() {
@@ -15,15 +32,32 @@ class SearchPage extends Component {
   }
 
   loadMovieList() {
-    const { getGenres, searchMovies, query } = this.props;
+    const {
+      getDataService,
+      apiCallConfig: { movie },
+      getMoviesSuccess,
+      getMoviesError,
+      getGenresSuccess,
+      getGenresError,
+      match: { params }
+    } = this.props;
 
-    getGenres && getGenres();
-    searchMovies && searchMovies(1, MOVIE_LIST, query);
+    getDataService
+      .getGenres()
+      .then((data) => getGenresSuccess(data))
+      .catch((error) => getGenresError(error));
+
+    getDataService
+      .searchMovies(1, movie, params.query)
+      .then((data) => getMoviesSuccess(data))
+      .catch((error) => getMoviesError(error));
   }
 
   render() {
+    const { apiCallConfig: { movie } } = this.props;
+
     // eslint-disable-next-line react/jsx-props-no-spreading
-    return <MovieListPage movieOrShow={MOVIE_LIST} {...this.props} />;
+    return <MovieListPage movieOrShow={movie} {...this.props} />;
   }
 }
 

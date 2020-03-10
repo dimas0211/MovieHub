@@ -6,7 +6,7 @@
     margin: 25px 15px;
     max-width: 100%;
     padding: 20px;
-    border: 1px solid $border-color;
+    //border: 1px solid $border-color;
     background-color: $gray;
     border-radius: 5px;
     cursor: pointer;
@@ -88,11 +88,34 @@
     display: inline-block;
     margin: 2px 0;
     font-weight: bold;
-
   }
 
   &__info-item-name {
     color: $red;
+  }
+
+  &__accordion-item-container {
+    @include flex();
+  }
+
+  &__season-poster {
+    width: 150px;
+    margin: auto;
+  }
+
+  &__season-info {
+    display: inline-block;
+    width: 50%;
+    margin: 20px;
+  }
+
+  &__season-info-container-mobile {
+    width: 100%;
+  }
+
+  &__seasons-container {
+    overflow-x: scroll;
+    max-height: 500px;
   }
 
   &__about-container {
@@ -104,7 +127,26 @@
   }
 
   &__video-tabs-wrapper {
+  }
+
+  &__seasons-with-video-container {
     border: 1px solid $border-color;
+    background-color: $background-primary;
+    border-radius: 5px;
+  }
+
+  &__seasons-with-video-container-large-screen {
+    @include flex($direction: row);
+    height: 740px;
+  }
+
+  &__video-tabs-wrapper-show {
+    width: 55%;
+
+  }
+
+  &__seasons-container-show {
+    width: 45%;
   }
 
 }

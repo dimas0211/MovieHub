@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import cx from 'classnames';
-import { debounce } from 'lodash';
 import PropTypes from 'prop-types';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
@@ -21,7 +20,7 @@ class Carousel extends Component {
     this.handleClick = this.handleClick.bind(this);
     this.onResize = this.onResize.bind(this);
     this.onScroll = this.onScroll.bind(this);
-    this.resizeTheCarousel = debounce(this.resizeTheCarousel, 500);
+    this.resizeTheCarousel = this.resizeTheCarousel.bind(this);
     this.countTheSlideWidth = this.countTheSlideWidth.bind(this);
     this.state = {
       numOfSlidesToScroll: 2,
@@ -53,10 +52,12 @@ class Carousel extends Component {
   }
 
   getSlidesCount = () => {
-    const { desktop, tablet, mobile } = CAROUSEL_SIZE_VALUES;
+    const { large, desktop, tablet, mobile } = CAROUSEL_SIZE_VALUES;
     let count;
 
-    if (window.innerWidth >= desktop.width) {
+    if (window.innerWidth >= large.width) {
+      count = large.slidesCount;
+    } else if (window.innerWidth >= desktop.width) {
       count = desktop.slidesCount;
     } else if (window.innerWidth >= tablet.width) {
       count = tablet.slidesCount;

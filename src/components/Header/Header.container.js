@@ -3,7 +3,9 @@ import { bindActionCreators, compose } from 'redux';
 import connectWithViewport from '../../services/connectWithViewport';
 
 import Header from './Header';
-import { searchMovies, setSearchQuery, setSearchMode } from '../../actions/searchMovies';
+import { setSearchQuery, setSearchMode } from '../../actions/searchMovies';
+import connectWithIoC from '../../services/connectWithIoC';
+import { getMoviesError, getMoviesSuccess } from '../../actions/actionsAPIcall';
 
 const mapStateToProps = ({ ApiReducer, setSearchModeReducer }) => ({
   error: ApiReducer.error,
@@ -13,12 +15,14 @@ const mapStateToProps = ({ ApiReducer, setSearchModeReducer }) => ({
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
-  searchMovies,
+  getMoviesSuccess,
+  getMoviesError,
   setSearchQuery,
   setSearchMode
 }, dispatch);
 
 export const HeaderContainer = compose(
+  connectWithIoC(['getDataService', 'apiCallConfig', 'routingConfig']),
   connectWithViewport(),
   connect(
     mapStateToProps,

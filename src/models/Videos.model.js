@@ -16,7 +16,13 @@ class VideoModel extends Record({
   site: 'YouTube',
   size: 0,
   type: null
-}) {}
+}) {
+  get language() {
+    const language = this.get('iso_639_1');
+
+    return language.toUpperCase();
+  }
+}
 /**
  * MovieListModel
  * id: Number

@@ -1,13 +1,17 @@
 import { IoCContainer, iocClass } from 'libioc';
 import { httpService } from '../services/dataService';
+import GetDataService from '../services/dataService/GetDataService';
+import { routingConfig } from '../config/routingConfig';
+import { apiCallConfig } from '../config/apiCallConfig';
 
-export function createClientIoCContainer(window) {
+export function createClientIoCContainer() {
   const container = new IoCContainer();
-  const rawConfig = window.__CONFIG__;
 
   container.registerAll({
-    rawConfig,
-    httpService: iocClass(httpService)
+    httpService: iocClass(httpService),
+    apiCallConfig,
+    routingConfig,
+    getDataService: iocClass(GetDataService)
   });
 
   return container;

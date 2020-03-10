@@ -1,13 +1,5 @@
 @import '../../variables';
 
-.list-page {
-  &__carousel-wrapper {
-    @include flex($direction: row);
-
-    width: 100%;
-    overflow: auto;
-  }
-}
 .carousel-item {
   &__wrapper {
     height: 100%;

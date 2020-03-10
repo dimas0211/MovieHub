@@ -1,14 +1,17 @@
+import { routingConfig } from './config/routingConfig';
+
+const {
+  movie: { movieList },
+  tvShow: { showList }
+} = routingConfig;
+
 export default {
   navConfig: [
-    { value: 'movies', label: 'MOVIES', link: '/movies' },
-    { value: 'new', label: 'NEW', link: '/new' },
-    { value: 'popular', label: 'POPULAR', link: '/popular' },
-    { value: 'tv-shows', label: 'SHOWS', link: '/tv-shows' }
+    { value: 'movies', label: 'MOVIES', link: movieList },
+    { value: 'tv-shows', label: 'SHOWS', link: showList }
   ],
   burgerMenuItemsList: [
-    { value: 'movies', label: 'movies', link: '/movies' },
-    { value: 'new', label: 'new', link: '/new' },
-    { value: 'popular', label: 'popular', link: '/popular' },
-    { value: 'buy', label: 'buy', link: '/404' }
+    { value: 'movies', label: 'MOVIES', link: movieList },
+    { value: 'tv-shows', label: 'SHOWS', link: showList }
   ]
 };

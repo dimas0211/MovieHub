@@ -9,7 +9,12 @@ import {
   GET_MOVIE_SUCCESS,
   GET_MOVIE_ERROR,
   GET_VIDEOS_SUCCESS,
-  GET_VIDEOS_ERROR
+  GET_VIDEOS_ERROR,
+  SET_ONE_MOVIE_ID,
+  GET_NEW_MOVIES_SUCCESS,
+  GET_NEW_MOVIES_ERROR,
+  GET_POPULAR_MOVIES_SUCCESS,
+  GET_POPULAR_MOVIES_ERROR
 } from '../constants/actionTypes';
 
 export const getMoviesPending = () => ({ type: GET_MOVIES_PENDING });
@@ -17,6 +22,14 @@ export const getMoviesPending = () => ({ type: GET_MOVIES_PENDING });
 export const getMoviesSuccess = (movieListResponse) => ({ type: GET_MOVIES_SUCCESS, movieListResponse });
 
 export const getMoviesError = (error) => ({ type: GET_MOVIES_ERROR, error });
+
+export const getNewMoviesSuccess = (newMovieListResponse) => ({ type: GET_NEW_MOVIES_SUCCESS, newMovieListResponse });
+
+export const getNewMoviesError = (error) => ({ type: GET_NEW_MOVIES_ERROR, error });
+
+export const getPopularMoviesSuccess = (popularMovieListResponse) => ({ type: GET_POPULAR_MOVIES_SUCCESS, popularMovieListResponse });
+
+export const getPopularMoviesError = (error) => ({ type: GET_POPULAR_MOVIES_ERROR, error });
 
 export const getGenresPending = () => ({ type: GET_GENRES_PENDING });
 
@@ -33,3 +46,5 @@ export const getOneMovieError = (error) => ({ type: GET_MOVIE_ERROR, error });
 export const getVideosSuccess = (videosResponse) => ({ type: GET_VIDEOS_SUCCESS, videosResponse });
 
 export const getVideosError = (error) => ({ type: GET_VIDEOS_ERROR, error });
+
+export const setOneMovieType = (movieOrShow) => ({ type: SET_ONE_MOVIE_ID, movieOrShow });
