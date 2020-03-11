@@ -1,89 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="548926de-cff3-4d8a-aa20-72a745eefd1f" name="Default Changelist" comment="created #4:&#10;&#10;1. Rewrote API call actions to Data Service&#10;2. Used IoC Container Pattern for httpService, navConfig, apiCAlLCongid&#10;3. fixed bugs wihh filtration and search&#10;4.added filtration by clicking on genre in movie card">
-      <change afterPath="$PROJECT_DIR$/src/assets/images/404.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/empty-list.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Loader/Loader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Loader/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MovieItem/MovieItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MovieItem/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MovieListPage/MovieListPage.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TVShowItemPage/TVShowItemPage.container.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TVShowItemPage/TVShowItemPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TVShowItemPage/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TwoCarouselsComponent/TwoCarouselsComponent.container.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TwoCarouselsComponent/TwoCarouselsComponent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TwoCarouselsComponent/TwoCarouselsComponent.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TwoCarouselsComponent/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/apiCallConfig.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/routingConfig.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/connectWithIoC.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClientConfiguration/ClientConfiguration.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ EmptyListComponent/EmptyListComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClientConfiguration/ClientConfiguration.stub.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ EmptyListComponent/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClientConfiguration/Configuration.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Accordeon/Accordeon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClientConfiguration/recompose.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Accordeon/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/actionsAPIcall.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/actionsAPIcall.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/getGenres.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/getMovies.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/getOneMovie.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/getVideos.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/searchMovies.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/searchMovies.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/setFiltrationParams.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/setFiltrationParams.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Carousel/Carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Carousel/Carousel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Carousel/Carousel.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Carousel/Carousel.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CarouselItem/CarouselItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CarouselItem/CarouselItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CarouselItem/CarouselItem.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CarouselItem/CarouselItem.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DefaultLayout/DefaultLayout.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DefaultLayout/DefaultLayout.container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DefaultLayout/DefaultLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DefaultLayout/DefaultLayout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DefaultLayout/DefaultLayout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DefaultLayout/DefaultLayout.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FiltrationPanel/FiltrationPanel.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FiltrationPanel/FiltrationPanel.container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FiltrationPanel/FiltrationPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FiltrationPanel/FiltrationPanel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FiltrationPanel/FiltrationPanel.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FiltrationPanel/FiltrationPanel.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPage.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPage.container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieListPage/MovieListPage.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieListPage/MovieListPage.container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieListPage/MovieListPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieListPage/MovieListPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieListPagination/MovieListPagination.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieListPagination/MovieListPagination.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieMainItemCard/MovieMainItemCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieMainItemCard/MovieMainItemCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieMainItemCard/MovieMainItemCard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieMainItemCard/MovieMainItemCard.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Navigation.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Navigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation/NavigationMobile/NavigationMob.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/NavigationMobile/NavigationMob.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation/NavigationMobile/NavigationMob.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/NavigationMobile/NavigationMob.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NewMoviesListPage/NewMoviesListPage.container.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NewMoviesListPage/NewMoviesListPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NewMoviesListPage/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NotFoundPage/NotFoundPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NotFoundPage/NotFoundPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PopularMoviesListPage/PopularMoviesListPage.container.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PopularMoviesListPage/PopularMoviesListPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PopularMoviesListPage/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Routes/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Routes/Routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SearchPage/SearchPage.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchPage/SearchPage.container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SearchPage/SearchPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchPage/SearchPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TVShowListPage/TVShowListPage.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TVShowListPage/TVShowListPage.container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TVShowListPage/TVShowListPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TVShowListPage/TVShowListPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/VideoPlayerBar/VideoPlayerBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/VideoPlayerBar/VideoPlayerBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/base.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/actionTypes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/actionTypes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/configurations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/configurations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ioc/clientIoC.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ioc/clientIoC.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Movie.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Movie.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Videos.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Videos.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/reducerAPIcall.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/reducerAPIcall.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/connectWithViewport.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/connectWithViewport.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/dataService/getDataService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/dataService/GetDataService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/dataService/httpService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/dataService/httpService.js" afterDir="false" />
-    </list>
+    <list default="true" id="548926de-cff3-4d8a-aa20-72a745eefd1f" name="Default Changelist" comment="fixes of features #3:&#10;&#10;1. refactored code&#10;2. Moved functions from rendering components to models where it posiible" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,12 +15,12 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="login-guest-user-pages" />
       </map>
     </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -137,19 +55,19 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components" />
-      <recent name="$PROJECT_DIR$/src/constants" />
-      <recent name="$PROJECT_DIR$/src/service" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/assets" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/assets/images" />
       <recent name="$PROJECT_DIR$/src/components/PopularMoviesListPage" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/assets/fonts/Nunito" />
       <recent name="$PROJECT_DIR$/src/redux" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/src/constants" />
+      <recent name="$PROJECT_DIR$/src/service" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/assets" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">

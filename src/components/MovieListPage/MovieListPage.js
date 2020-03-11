@@ -75,7 +75,7 @@ class MovieListPage extends Component {
       >
         <TwoCarouselsComponent />
         {isSearchPage && <h2 className={`${CN}__search-results`}>Search Results:</h2>}
-        {!movieList.results.size ? (
+        {movieList.results.size ? (
           <div className={cx(`${CN}__movie-list-wrapper`, isLargeScreen && `${CN}__movie-list-wrapper-large-screen`)}>
             {this.renderMovieList() }
           </div>
