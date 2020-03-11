@@ -9,6 +9,7 @@ import {
   getGenresSuccess,
   getOneMovieSuccess,
   getOneMovieError,
+  clearOneMovie,
   getVideosSuccess,
   getVideosError
 } from '../../actions/actionsAPIcall';
@@ -27,6 +28,7 @@ const mapDispatchToProps = (dispatch) => bindActionCreators({
   getGenresError,
   getOneMovieSuccess,
   getOneMovieError,
+  clearOneMovie,
   getVideosSuccess,
   getVideosError
 }, dispatch);

@@ -49,7 +49,7 @@ const MovieItem = (props) => {
           overview={overview}
           poster={poster}
         >
-          <div className={cx(`${CN}__accordion-item-container`, isMobile && `${CN}__accordion-info-container`)}>
+          <div className={cx(`${CN}__accordion-item-container`, isMobile && `${CN}__accordion-info-container-mobile`)}>
             <img
               alt="season-poster"
               className={`${CN}__season-poster`}

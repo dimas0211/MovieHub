@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="548926de-cff3-4d8a-aa20-72a745eefd1f" name="Default Changelist" comment="fixes of features #3:&#10;&#10;1. refactored code&#10;2. Moved functions from rendering components to models where it posiible" />
+    <list default="true" id="548926de-cff3-4d8a-aa20-72a745eefd1f" name="Default Changelist" comment="fixes of features #3:&#10;&#10;1. refactored code&#10;2. Moved functions from rendering components to models where it posiible">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/actionsAPIcall.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/actionsAPIcall.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MovieItem/MovieItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieItem/MovieItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TVShowItemPage/TVShowItemPage.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TVShowItemPage/TVShowItemPage.container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TVShowItemPage/TVShowItemPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TVShowItemPage/TVShowItemPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/actionTypes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/actionTypes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/reducerAPIcall.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/reducerAPIcall.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,19 +66,19 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/assets/images" />
-      <recent name="$PROJECT_DIR$/src/components/PopularMoviesListPage" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/assets/fonts/Nunito" />
-      <recent name="$PROJECT_DIR$/src/redux" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/constants" />
       <recent name="$PROJECT_DIR$/src/service" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/assets" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/images" />
+      <recent name="$PROJECT_DIR$/src/components/PopularMoviesListPage" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/assets/fonts/Nunito" />
+      <recent name="$PROJECT_DIR$/src/redux" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -186,10 +197,10 @@
     </state>
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900/1440.0.1920.1200@0.0.1440.900" timestamp="1583150292866" />
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1583852681966" />
-    <state x="85" y="15" key="CommitChangelistDialog2" timestamp="1583852851784">
+    <state x="85" y="15" key="CommitChangelistDialog2" timestamp="1583942458067">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="85" y="15" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1583852851784" />
+    <state x="85" y="15" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1583942458067" />
     <state width="1419" height="303" key="GridCell.Tab.0.bottom" timestamp="1583231108384">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -262,11 +273,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="229" y="89" key="SettingsEditor/0.0.1440.900/1440.0.1920.1200@0.0.1440.900" timestamp="1583503569027" />
-    <state x="386" y="85" width="667" height="729" key="find.popup" timestamp="1583852438825">
+    <state x="386" y="85" width="667" height="729" key="find.popup" timestamp="1583939635270">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="386" y="85" width="816" height="729" key="find.popup/0.0.1440.900/1440.0.1920.1200@0.0.1440.900" timestamp="1583506841092" />
-    <state x="386" y="85" width="667" height="729" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1583852438825" />
+    <state x="386" y="85" width="667" height="729" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1583939635270" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1583224441970">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
