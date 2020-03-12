@@ -37,21 +37,24 @@ class Navigation extends Component {
   constructor(props) {
     super(props);
 
+    const { location: { pathname } } = props;
+
     this.state = {
       selectedTab: 0,
       query: '',
-      location: props.location
+      location: pathname
     };
 
     autoBind(this);
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
-    const { pathname } = prevState.location;
+    const { location } = prevState;
 
-    if (pathname !== nextProps.location.pathname) {
+    if (location !== nextProps.location.pathname) {
       return {
-        query: ''
+        query: '',
+        location: nextProps.location.pathname
       };
     }
 

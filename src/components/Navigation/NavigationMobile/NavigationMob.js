@@ -17,7 +17,6 @@ import { MOBILE } from '../../../constants/configurations';
 
 import '../Navigation.scss';
 
-// const CN = 'mobile-navigation';
 const CN = 'navigation-bar';
 
 const StyledButton = withStyles({
@@ -53,7 +52,8 @@ class NavigationMob extends Component {
 
     if (pathname !== nextProps.location.pathname) {
       return {
-        query: ''
+        query: '',
+        location: nextProps.location.pathname
       };
     }
 

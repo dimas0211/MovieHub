@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="548926de-cff3-4d8a-aa20-72a745eefd1f" name="Default Changelist" comment="fixes of features #3:&#10;&#10;1. refactored code&#10;2. Moved functions from rendering components to models where it posiible">
+    <list default="true" id="548926de-cff3-4d8a-aa20-72a745eefd1f" name="Default Changelist" comment="fixes of search functionality">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/actionsAPIcall.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/actionsAPIcall.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieItem/MovieItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieItem/MovieItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TVShowItemPage/TVShowItemPage.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TVShowItemPage/TVShowItemPage.container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TVShowItemPage/TVShowItemPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TVShowItemPage/TVShowItemPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/actionTypes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/actionTypes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/reducerAPIcall.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/reducerAPIcall.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/NavigationMobile/NavigationMob.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/NavigationMobile/NavigationMob.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +21,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="login-guest-user-pages" />
+        <entry key="$PROJECT_DIR$" value="login-page-guest-#5" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -66,19 +59,19 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components" />
-      <recent name="$PROJECT_DIR$/src/constants" />
-      <recent name="$PROJECT_DIR$/src/service" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/assets" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/assets/images" />
       <recent name="$PROJECT_DIR$/src/components/PopularMoviesListPage" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/assets/fonts/Nunito" />
       <recent name="$PROJECT_DIR$/src/redux" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/src/constants" />
+      <recent name="$PROJECT_DIR$/src/service" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/assets" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -185,7 +178,8 @@
     <MESSAGE value="fixes of features #2 #3:&#10;&#10;1. refactored code&#10;2. Moved functions from rendering components to models where it posiible" />
     <MESSAGE value="created #4:&#10;&#10;1. filtration by year anr/or genre&#10;2. search functionality&#10;3. ioc pre setup" />
     <MESSAGE value="created #4:&#10;&#10;1. Rewrote API call actions to Data Service&#10;2. Used IoC Container Pattern for httpService, navConfig, apiCAlLCongid&#10;3. fixed bugs wihh filtration and search&#10;4.added filtration by clicking on genre in movie card" />
-    <option name="LAST_COMMIT_MESSAGE" value="created #4:&#10;&#10;1. Rewrote API call actions to Data Service&#10;2. Used IoC Container Pattern for httpService, navConfig, apiCAlLCongid&#10;3. fixed bugs wihh filtration and search&#10;4.added filtration by clicking on genre in movie card" />
+    <MESSAGE value="fixes of search functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes of search functionality" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="115" key="#ESLint" timestamp="1583496646989">
@@ -197,9 +191,10 @@
     </state>
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900/1440.0.1920.1200@0.0.1440.900" timestamp="1583150292866" />
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1583852681966" />
-    <state x="85" y="15" key="CommitChangelistDialog2" timestamp="1583942458067">
+    <state x="85" y="15" key="CommitChangelistDialog2" timestamp="1584004309495">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="85" y="15" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1200@0.0.1440.900" timestamp="1584004309495" />
     <state x="85" y="15" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1583942458067" />
     <state width="1419" height="303" key="GridCell.Tab.0.bottom" timestamp="1583231108384">
       <screen x="0" y="0" width="1440" height="900" />
