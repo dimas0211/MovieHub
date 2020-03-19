@@ -5,7 +5,7 @@ import { Pagination } from '@material-ui/lab';
 
 const StyledMovieListPagination = withStyles({
   root: {
-    background: '#282D2D',
+    background: '#353b48',
     display: 'flex',
     justifyContent: 'center',
     borderRadius: 3,
@@ -36,17 +36,36 @@ class MovieListPagination extends Component {
   }
 
   handleChange = (event, value) => {
-    const {
-      getMovies, scrollToTop, listTVShow, movieParams, movieListParam
-    } = this.props;
+    const { scrollToTop } = this.props;
 
     this.setState({ page: value });
-
-    listTVShow
-      ? getMovies && getMovies(value, listTVShow)
-      : getMovies && getMovies(value, movieListParam, movieParams);
+    this.movieListOrMovieSearchApiCall(value);
 
     scrollToTop && scrollToTop();
+  };
+
+  movieListOrMovieSearchApiCall(page) {
+    const {
+      getDataService,
+      searchMode,
+      query,
+      movieOrShow,
+      pageParams,
+      filtrationQueryParams,
+      getMoviesSuccess,
+      getMoviesError,
+      apiCallConfig: { movie }
+    } = this.props;
+
+    searchMode === true
+      ? getDataService
+        .searchMovies(page, movie, query)
+        .then((data) => getMoviesSuccess(data))
+        .catch((error) => getMoviesError(error))
+      : getDataService
+        .getMovieList(page, movieOrShow, pageParams, ...filtrationQueryParams)
+        .then((data) => getMoviesSuccess(data))
+        .catch((error) => getMoviesError(error));
   }
 
   render() {

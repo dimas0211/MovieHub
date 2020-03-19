@@ -18,10 +18,11 @@ const defaultConfig = {
 
 export const createHttpHandler = (handler, onSuccess = successHandler, onError = errorHandler) => handler.then(onSuccess).catch(onError);
 
-export default class HttpService {
+class httpService {
+  static $singleton = true;
+
   constructor(config = defaultConfig) {
     this.config = config;
-    // this.authorization = authorization;
   }
 
   get(url, config) {
@@ -40,3 +41,5 @@ export default class HttpService {
     return createHttpHandler(axios.delete(url, config));
   }
 }
+
+export default httpService;

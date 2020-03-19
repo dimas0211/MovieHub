@@ -1,11 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React, { Component } from 'react';
 
-const BREAKPOINTS = {
-  MOBILE: { value: 0, device: 'mobile' },
-  TABLET: { value: 576, device: 'tablet' },
-  DESKTOP: { value: 768, device: 'desktop' }
-};
+import { BREAKPOINTS } from '../constants/configurations';
 
 const connectWithViewport = () => (WrappedComponent) => (
   class extends Component {
@@ -13,7 +9,7 @@ const connectWithViewport = () => (WrappedComponent) => (
       super();
 
       this.state = {
-        viewport: BREAKPOINTS.DESKTOP
+        viewport: BREAKPOINTS.LARGE_SCREEN
       };
 
       this.viewportUpdate = this.viewportUpdate.bind(this);
@@ -39,14 +35,20 @@ const connectWithViewport = () => (WrappedComponent) => (
 
     viewportUpdate() {
       const windowWidth = window.innerWidth;
-      let viewport = BREAKPOINTS.MOBILE;
+      const { MOBILE, TABLET, DESKTOP, LARGE_SCREEN } = BREAKPOINTS;
 
-      if (windowWidth > BREAKPOINTS.DESKTOP.value) {
-        viewport = BREAKPOINTS.DESKTOP;
-      } else if (windowWidth > BREAKPOINTS.TABLET.value) {
-        viewport = BREAKPOINTS.TABLET;
-      } else if (this.detectDesktopRequest()) {
-        viewport = BREAKPOINTS.DESKTOP;
+      let viewport = MOBILE;
+
+      if (windowWidth > DESKTOP.value) {
+        viewport = DESKTOP;
+      } else if (windowWidth > TABLET.value) {
+        viewport = TABLET;
+      } else if (windowWidth > DESKTOP.value) {
+        viewport = DESKTOP;
+      }
+
+      if (windowWidth > LARGE_SCREEN.value) {
+        viewport = LARGE_SCREEN;
       }
 
       this.setState({ viewport });

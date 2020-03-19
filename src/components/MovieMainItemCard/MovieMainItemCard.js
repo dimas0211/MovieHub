@@ -1,41 +1,57 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import StarRatings from 'react-star-ratings';
 import cx from 'classnames';
 
-import { MOBILE } from '../../constants/configurations';
+import { LARGE_SCREEN, MOBILE } from '../../constants/configurations';
 
 import './MovieMainItemCard.scss';
 
 const CN = 'movie-card';
 
-class MovieMainItemCard extends Component {
-  getGenres(ids) {
-    const { genres } = this.props;
+const MovieMainItemCard = ({
+  movieData,
+  genres,
+  device,
+  movieOrShow,
+  id,
+  setOneMovieType,
+  setFiltrationParams,
+  routingConfig: { view }
+}) => {
+  const isMobile = device === MOBILE;
+  const isLargeScreen = device === LARGE_SCREEN;
 
+  const filterByGenre = (e) => {
+    e.preventDefault();
+    const genreValue = e.target.innerText;
+    const targetGenre = genres.find((genre) => genre.name === genreValue);
+
+    setFiltrationParams && setFiltrationParams({ with_genres: targetGenre.id });
+  };
+
+  const getGenres = (ids) => {
     if (!ids || !ids.length) {
       return 'No genre';
     }
-
     const genresStrArray = genres.filter((genre) => ids.includes(genre.id));
 
     return (!genresStrArray.length && genresStrArray.map((el) => el && (
       <div className={`${CN}__genre`} key={el.name}>
-        <span className={`${CN}__genre-item`} key={el.name}>
+        <span className={`${CN}__genre-item`} key={el.name} onClick={filterByGenre}>
           {el.name}
         </span>
       </div>
     )));
-  }
+  };
 
-  renderStarRating() {
-    const { movieData } = this.props;
+  const renderStarRating = () => {
     const starsNumber = 5;
     const starWidth = '15px';
     const starSpacing = '0';
 
     return (
       <StarRatings
-        changeRating={this.changeRating}
         className={`${CN}__rating-starts`}
         name="rating"
         numberOfStars={starsNumber}
@@ -45,21 +61,19 @@ class MovieMainItemCard extends Component {
         starSpacing={starSpacing}
       />
     );
-  }
+  };
 
-  render() {
-    const {
-      device,
-      movieData
-    } = this.props;
-    const isMobile = device === MOBILE;
+  const onClickLoadMovieData = () => {
+    setOneMovieType(movieOrShow);
+  };
 
-    return (
-      <div className={cx(`${CN}__wrapper`, isMobile && `${CN}__wrapper-mobile`)}>
+  return (
+    <Link className={cx(isLargeScreen && `${CN}__wrapper-large-screen`, 'page-link')} to={`${movieOrShow}${view}`.replace(':id', id)}>
+      <div className={cx(`${CN}__wrapper`, isMobile && `${CN}__wrapper-mobile`)} onClick={onClickLoadMovieData}>
         <div className={`${CN}__image-container`}>
           <img
             alt="movie-poster"
-            className={`${CN}__image`}
+            className={cx(`${CN}__image`, isLargeScreen && `${CN}__image-large-screen`)}
             src={movieData.poster}
           />
         </div>
@@ -69,20 +83,20 @@ class MovieMainItemCard extends Component {
             <h5 className={`${CN}__movie-title-native-lang`}>{movieData.originalTitle}</h5>
           </div>
           <div className={`${CN}__rating-genre-container`}>
-            {this.renderStarRating()}
+            {renderStarRating()}
             <div className={`${CN}__rating-info`}>
               {`Rating: ${movieData.movieVote}/10 | Votes: ${movieData.movieVoteCount}`}
             </div>
             <div className={`${CN}__year-genre`}>
               {`${movieData.releaseDate} | `}
-              {this.getGenres(movieData.movieGeresId)}
+              {getGenres(movieData.movieGeresId)}
             </div>
           </div>
         </div>
       </div>
-    );
-  }
-}
+    </Link>
+  );
+};
 
 export default MovieMainItemCard;
 

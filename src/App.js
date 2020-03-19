@@ -11,12 +11,10 @@ class App extends Component {
 
     return (
       <Provider store={store}>
-        {/* <ViewportProvider> */}
         <ConnectedRouter history={history}>
           <ScrollToTop />
           <Routes />
         </ConnectedRouter>
-        {/* </ViewportProvider> */}
       </Provider>
     );
   }

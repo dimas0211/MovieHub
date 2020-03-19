@@ -1,155 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="548926de-cff3-4d8a-aa20-72a745eefd1f" name="Default Changelist" comment="fixes of features #3:&#10;&#10;1. refactored code&#10;2. Moved functions from rendering components to models where it posiible">
-      <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
+    <list default="true" id="548926de-cff3-4d8a-aa20-72a745eefd1f" name="Default Changelist" comment="fixes of search functionality">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/getGenres.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/getGenres.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/getMovies.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/getMovies.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/getOneMovie.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/getOneMovie.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/getVideos.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/getVideos.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Carousel/Carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Carousel/Carousel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Carousel/ScrollToHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Carousel/ScrollToHelper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CarouselItem/CarouselItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CarouselItem/CarouselItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieListPage/MovieListPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieListPage/MovieListPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieListPagination/MovieListPagination.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieListPagination/MovieListPagination.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieMainItemCard/MovieMainItemCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieMainItemCard/MovieMainItemCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NewMoviesListPage/NewMoviesListPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewMoviesListPage/NewMoviesListPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PopularMoviesListPage/PopularMoviesListPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PopularMoviesListPage/PopularMoviesListPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TVShowListPage/TVShowListPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TVShowListPage/TVShowListPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/VideoPlayerBar/VideoPlayerBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/VideoPlayerBar/VideoPlayerBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/configurations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/configurations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Movie.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Movie.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/MovieCard.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/MovieCard.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/dataService/httpService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/dataService/httpService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/NavigationMobile/NavigationMob.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/NavigationMobile/NavigationMob.js" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/Movie.model.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-37">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-              <folding>
-                <element signature="e#49#95#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Carousel/Carousel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="6" column="70" selection-start-line="6" selection-start-column="70" selection-end-line="6" selection-end-column="70" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/services/dataService/httpService.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="21" column="39" lean-forward="true" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/PopularMoviesListPage/PopularMoviesListPage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.editorconfig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/NewMoviesListPage/NewMoviesListPage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/MovieCard.model.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1080">
-              <caret line="72" column="31" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/MovieListPage/MovieListPage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="60" column="1" lean-forward="true" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/CarouselItem/CarouselItem.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -158,108 +18,13 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>secon</find>
-      <find>scrollTo</find>
-      <find>style</find>
-      <find>console.lo</find>
-      <find>getGenres</find>
-      <find>vertical</find>
-      <find>width</find>
-      <find>scrollLength</find>
-      <find>carouselContainer</find>
-      <find>clientWidth</find>
-      <find>lengthOfSlide</find>
-      <find>scrollWidth</find>
-      <find>hover</find>
-      <find>overflow</find>
-      <find>border</find>
-      <find>carouselViewport</find>
-      <find>under</find>
-      <find>normal</find>
-      <find>original_title</find>
-      <find>StyledMovieListPagination</find>
-      <find>SwipeableViews</find>
-      <find>getId()</find>
-      <find>404040</find>
-      <find>Model</find>
-      <find>sizeValues</find>
-      <find>1024</find>
-      <find>'left'</find>
-      <find>'right'</find>
-      <find>animatedScroll</find>
-      <find>totalTimetoMove</find>
-    </findStrings>
-    <dirStrings>
-      <dir>$PROJECT_DIR$/src</dir>
-      <dir>$PROJECT_DIR$/src/assets/fonts</dir>
-    </dirStrings>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="login-page-guest-#5" />
       </map>
     </option>
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/components/MainPage/MainPage.container.js" />
-        <option value="$PROJECT_DIR$/src/components/TVShowListPage/TVShowListPage.container.js" />
-        <option value="$PROJECT_DIR$/src/models/Genres.model.js" />
-        <option value="$PROJECT_DIR$/src/components/NewMoviesListPage/NewMoviesListPage.container.js" />
-        <option value="$PROJECT_DIR$/src/components/NewMoviesListPage/index.js" />
-        <option value="$PROJECT_DIR$/src/components/PopularMoviesListPage/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Carousel/CarouselItem.js" />
-        <option value="$PROJECT_DIR$/src/components/Carousel/index.js" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/components/MovieItemPage/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Routes/Routes.js" />
-        <option value="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.sccs" />
-        <option value="$PROJECT_DIR$/src/constants/actionTypes/index.js" />
-        <option value="$PROJECT_DIR$/src/models/index.js" />
-        <option value="$PROJECT_DIR$/src/components/VideoPlayerComponent/index.js" />
-        <option value="$PROJECT_DIR$/src/components/VideoPlayer/index.js" />
-        <option value="$PROJECT_DIR$/src/models/Videos.model.js" />
-        <option value="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.container.js" />
-        <option value="$PROJECT_DIR$/src/reducers/reducerAPIcall.js" />
-        <option value="$PROJECT_DIR$/src/components/VideoPlayerComponent/VideoPlayerComponent.js" />
-        <option value="$PROJECT_DIR$/src/actions/actionsAPIcall.js" />
-        <option value="$PROJECT_DIR$/src/components/CarouselItem/CarouselItem.scss" />
-        <option value="$PROJECT_DIR$/src/components/DefaultLayout/DefaultLayout.js" />
-        <option value="$PROJECT_DIR$/src/components/Navigation/Navigation.scss" />
-        <option value="$PROJECT_DIR$/src/components/MovieMainItemCard/MovieMainItemCard.scss" />
-        <option value="$PROJECT_DIR$/src/models/MovieList.model.js" />
-        <option value="$PROJECT_DIR$/src/components/VideoPlayer/VideoPlayer.scss" />
-        <option value="$PROJECT_DIR$/src/components/Carousel/Carousel.scss" />
-        <option value="$PROJECT_DIR$/src/components/VideoPlayer/VideoPlayer.js" />
-        <option value="$PROJECT_DIR$/src/_variables.scss" />
-        <option value="$PROJECT_DIR$/src/actions/getVideos.js" />
-        <option value="$PROJECT_DIR$/src/actions/getOneMovie.js" />
-        <option value="$PROJECT_DIR$/src/actions/getMovies.js" />
-        <option value="$PROJECT_DIR$/src/actions/getGenres.js" />
-        <option value="$PROJECT_DIR$/src/components/Carousel/ScrollToHelper.js" />
-        <option value="$PROJECT_DIR$/src/components/MovieListPagination/MovieListPagination.js" />
-        <option value="$PROJECT_DIR$/src/components/VideoPlayerBar/VideoPlayerBar.js" />
-        <option value="$PROJECT_DIR$/src/components/TVShowListPage/TVShowListPage.js" />
-        <option value="$PROJECT_DIR$/src/constants/configurations.js" />
-        <option value="$PROJECT_DIR$/src/components/MainPage/MainPage.js" />
-        <option value="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.scss" />
-        <option value="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.js" />
-        <option value="$PROJECT_DIR$/src/components/MovieMainItemCard/MovieMainItemCard.js" />
-        <option value="$PROJECT_DIR$/src/components/CarouselItem/CarouselItem.js" />
-        <option value="$PROJECT_DIR$/src/models/MovieCard.model.js" />
-        <option value="$PROJECT_DIR$/src/components/MovieListPage/MovieListPage.js" />
-        <option value="$PROJECT_DIR$/src/components/NewMoviesListPage/NewMoviesListPage.js" />
-        <option value="$PROJECT_DIR$/src/components/PopularMoviesListPage/PopularMoviesListPage.js" />
-        <option value="$PROJECT_DIR$/src/models/Movie.model.js" />
-        <option value="$PROJECT_DIR$/src/components/Carousel/Carousel.js" />
-        <option value="$PROJECT_DIR$/src/services/dataService/httpService.js" />
-      </list>
-    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -267,245 +32,20 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
-  </component>
   <component name="ProjectId" id="1XA0v2h43zMuNvRr1ZgyVAvhWEi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="actions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Carousel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="CarouselItem" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="DefaultLayout" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Header" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="MainPage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="MainPageSkeleton" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="MovieItemPage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="MovieListPage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="MovieListPagination" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="MovieMainItemCard" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="MoviePage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Navigation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="NewMoviesListPage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="NotFoundPage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="PopularMoviesListPage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="TVShowListPage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="VideoPlayer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="VideoPlayerBar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="constants" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="constants" type="462c0819:PsiDirectoryNode" />
-              <item name="actionTypes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="reducers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="movie-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movie-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-              <item name="dataService" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/PopularMoviesListPage" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/images" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -515,35 +55,24 @@
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/images" />
+      <recent name="$PROJECT_DIR$/src/components/PopularMoviesListPage" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/assets/fonts/Nunito" />
+      <recent name="$PROJECT_DIR$/src/redux" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/constants" />
       <recent name="$PROJECT_DIR$/src/service" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/assets" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components/PopularMoviesListPage" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/assets/fonts/Nunito" />
-      <recent name="$PROJECT_DIR$/src/redux" />
-      <recent name="$PROJECT_DIR$/src/assets/fonts" />
-    </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="npm.npm start">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
@@ -576,7 +105,8 @@
       <workItem from="1581537416207" duration="1327000" />
       <workItem from="1581687972964" duration="692000" />
       <workItem from="1581802107499" duration="138025000" />
-      <workItem from="1582488680876" duration="28584000" />
+      <workItem from="1582488680876" duration="84651000" />
+      <workItem from="1583165057919" duration="86505000" />
     </task>
     <task id="LOCAL-00001" summary="fixes #1:&#10;&#10;1. viewportProvider was rewritten to HOC&#10;2. removed configureStore and custom connect&#10;3. Rewrote ScrollToTop component">
       <created>1582024749393</created>
@@ -599,58 +129,15 @@
       <option name="project" value="LOCAL" />
       <updated>1582544310101</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fixes of features #2 #3:&#10;&#10;1. refactored code&#10;2. Moved functions from rendering components to models where it posiible">
+      <created>1582646678980</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1582646678980</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="227650000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4982079" visible="true" weight="0.17829457" />
-      <window_info id="Structure" order="1" sideWeight="0.50179213" side_tool="true" weight="0.22269204" />
-      <window_info id="npm" order="2" side_tool="true" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32891566" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5003524" side_tool="true" weight="0.32771084" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49964765" weight="0.20843373" />
-      <window_info active="true" anchor="bottom" id="Messages" order="12" sideWeight="0.49964765" visible="true" weight="0.32891566" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4982079" visible="true" weight="0.17829457" />
-      <window_info id="Structure" order="1" sideWeight="0.50179213" side_tool="true" weight="0.22269204" />
-      <window_info id="npm" order="2" side_tool="true" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32891566" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5003524" side_tool="true" weight="0.32771084" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49964765" weight="0.20843373" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49964765" weight="0.32891566" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -661,12 +148,6 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
@@ -694,7 +175,108 @@
     <MESSAGE value="features #3:&#10;&#10;1. Created services that get movie by id, videos by id.&#10;2. Crated and used models for: MovieList, Video, Movie, Genre&#10;3. Added VideoPlayer and navbar for multiple videos at MovieItemPage&#10;4. Created MovieItem page with its basic functionality&#10;5. Includes fixes and refactoring according to first commit review" />
     <MESSAGE value="features #3:&#10;&#10;1. Created services that get movie by id, videos by id.&#10;2. Crated and used models for: MovieList, Video, Movie, Genre&#10;3. Added VideoPlayer and navbar for multiple videos at MovieItemPage&#10;4. Created MovieItem page with its basic functionality and made it responsive&#10;5. Includes fixes and refactoring according to first commit review" />
     <MESSAGE value="fixes of features #3:&#10;&#10;1. refactored code&#10;2. Moved functions from rendering components to models where it posiible" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes of features #3:&#10;&#10;1. refactored code&#10;2. Moved functions from rendering components to models where it posiible" />
+    <MESSAGE value="fixes of features #2 #3:&#10;&#10;1. refactored code&#10;2. Moved functions from rendering components to models where it posiible" />
+    <MESSAGE value="created #4:&#10;&#10;1. filtration by year anr/or genre&#10;2. search functionality&#10;3. ioc pre setup" />
+    <MESSAGE value="created #4:&#10;&#10;1. Rewrote API call actions to Data Service&#10;2. Used IoC Container Pattern for httpService, navConfig, apiCAlLCongid&#10;3. fixed bugs wihh filtration and search&#10;4.added filtration by clicking on genre in movie card" />
+    <MESSAGE value="fixes of search functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes of search functionality" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="320" y="115" key="#ESLint" timestamp="1583496646989">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="115" key="#ESLint/0.0.1440.900/1440.0.1920.1200@0.0.1440.900" timestamp="1583496646989" />
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583852681966">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900/1440.0.1920.1200@0.0.1440.900" timestamp="1583150292866" />
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1583852681966" />
+    <state x="85" y="15" key="CommitChangelistDialog2" timestamp="1584004309495">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="85" y="15" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1200@0.0.1440.900" timestamp="1584004309495" />
+    <state x="85" y="15" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1583942458067" />
+    <state width="1419" height="303" key="GridCell.Tab.0.bottom" timestamp="1583231108384">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1200@0.0.1440.900" timestamp="1583164872853" />
+    <state width="1419" height="303" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1583231108384" />
+    <state width="1419" height="303" key="GridCell.Tab.0.center" timestamp="1583231108383">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="245" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1200@0.0.1440.900" timestamp="1583164872850" />
+    <state width="1419" height="303" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1583231108383" />
+    <state width="1419" height="303" key="GridCell.Tab.0.left" timestamp="1583231108382">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="245" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1200@0.0.1440.900" timestamp="1583164872849" />
+    <state width="1419" height="303" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1583231108382" />
+    <state width="1419" height="303" key="GridCell.Tab.0.right" timestamp="1583231108383">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="245" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1200@0.0.1440.900" timestamp="1583164872852" />
+    <state width="1419" height="303" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1583231108383" />
+    <state width="1419" height="303" key="GridCell.Tab.1.bottom" timestamp="1583231108386">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="303" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1583231108386" />
+    <state width="1419" height="303" key="GridCell.Tab.1.center" timestamp="1583231108385">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="303" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1583231108385" />
+    <state width="1419" height="303" key="GridCell.Tab.1.left" timestamp="1583231108384">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="303" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1583231108384" />
+    <state width="1419" height="303" key="GridCell.Tab.1.right" timestamp="1583231108386">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="303" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1583231108386" />
+    <state width="1419" height="303" key="GridCell.Tab.2.bottom" timestamp="1583231108388">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="303" key="GridCell.Tab.2.bottom/0.0.1440.900@0.0.1440.900" timestamp="1583231108388" />
+    <state width="1419" height="303" key="GridCell.Tab.2.center" timestamp="1583231108387">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="303" key="GridCell.Tab.2.center/0.0.1440.900@0.0.1440.900" timestamp="1583231108387" />
+    <state width="1419" height="303" key="GridCell.Tab.2.left" timestamp="1583231108387">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="303" key="GridCell.Tab.2.left/0.0.1440.900@0.0.1440.900" timestamp="1583231108387" />
+    <state width="1419" height="303" key="GridCell.Tab.2.right" timestamp="1583231108388">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="303" key="GridCell.Tab.2.right/0.0.1440.900@0.0.1440.900" timestamp="1583231108388" />
+    <state width="1419" height="303" key="GridCell.Tab.3.bottom" timestamp="1583231108390">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="303" key="GridCell.Tab.3.bottom/0.0.1440.900@0.0.1440.900" timestamp="1583231108390" />
+    <state width="1419" height="303" key="GridCell.Tab.3.center" timestamp="1583231108389">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="303" key="GridCell.Tab.3.center/0.0.1440.900@0.0.1440.900" timestamp="1583231108389" />
+    <state width="1419" height="303" key="GridCell.Tab.3.left" timestamp="1583231108389">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="303" key="GridCell.Tab.3.left/0.0.1440.900@0.0.1440.900" timestamp="1583231108389" />
+    <state width="1419" height="303" key="GridCell.Tab.3.right" timestamp="1583231108390">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="303" key="GridCell.Tab.3.right/0.0.1440.900@0.0.1440.900" timestamp="1583231108390" />
+    <state x="229" y="89" key="SettingsEditor" timestamp="1583503569027">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="229" y="89" key="SettingsEditor/0.0.1440.900/1440.0.1920.1200@0.0.1440.900" timestamp="1583503569027" />
+    <state x="386" y="85" width="667" height="729" key="find.popup" timestamp="1583939635270">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="386" y="85" width="816" height="729" key="find.popup/0.0.1440.900/1440.0.1920.1200@0.0.1440.900" timestamp="1583506841092" />
+    <state x="386" y="85" width="667" height="729" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1583939635270" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1583224441970">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1583224441970" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -706,446 +288,6 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/VideoPlayerBar/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/actionsAPIcall.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#0#273#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Carousel/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/CarouselItem/CarouselItem.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/CarouselItem/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="41" selection-start-column="41" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DefaultLayout/DefaultLayout.container.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DefaultLayout/DefaultLayout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="28" column="3" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
-          <folding>
-            <element signature="e#50#85#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DefaultLayout/DefaultLayout.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Header/Header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MainPage/MainPage.container.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="11" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.container.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="11" lean-forward="true" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MovieMainItemCard/MovieMainItemCard.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-20">
-          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Navigation/Navigation.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/NewMoviesListPage/NewMoviesListPage.container.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/PopularMoviesListPage/PopularMoviesListPage.container.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/TVShowListPage/TVShowListPage.container.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/VideoPlayer/VideoPlayer.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/VideoPlayer/VideoPlayer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Carousel/Carousel.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="77" column="2" selection-start-line="77" selection-start-column="2" selection-end-line="77" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/reducerAPIcall.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="22" column="8" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#258#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/MovieList.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/Videos.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret column="48" selection-start-line="46" selection-start-column="2" selection-end-line="46" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/Genres.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/_variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/getVideos.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#62#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/getOneMovie.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#62#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/getMovies.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#62#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/getGenres.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#62#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/constants/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/constants/actionTypes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/connectWithViewport.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/VideoPlayerBar/VideoPlayerBar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="114" column="1" lean-forward="true" selection-start-line="114" selection-start-column="1" selection-end-line="114" selection-end-column="1" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#50#91#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Carousel/ScrollToHelper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Routes/Routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="68" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="68" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MovieListPagination/MovieListPagination.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/TVShowListPage/TVShowListPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/constants/configurations.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="27" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MainPage/MainPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="89" selection-start-line="89" selection-end-line="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MovieMainItemCard/MovieMainItemCard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="27" column="3" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/CarouselItem/CarouselItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/MovieCard.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="72" column="31" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MovieListPage/MovieListPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="60" column="1" lean-forward="true" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/NewMoviesListPage/NewMoviesListPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/PopularMoviesListPage/PopularMoviesListPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.editorconfig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/Movie.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-37">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#49#95#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Carousel/Carousel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="6" column="70" selection-start-line="6" selection-start-column="70" selection-end-line="6" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/dataService/httpService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="21" column="39" lean-forward="true" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>

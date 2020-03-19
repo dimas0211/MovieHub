@@ -1,1 +1,1 @@
-export { default } from './MovieListPage';
+export { MovieListPageContainer as MovieListPage } from './MovieListPage.container';

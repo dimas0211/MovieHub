@@ -31,6 +31,22 @@ class SpokenLanguageModel extends Record({
   name: null
 }) {}
 
+class SeasonsModel extends Record({
+  air_date: null,
+  episode_count: 0,
+  id: 0,
+  name: null,
+  overview: null,
+  poster_path: null,
+  season_number: 0
+}) {
+  get poster() {
+    const posterPath = this.get('poster_path');
+
+    return (!posterPath) ? defaultImage : `${IMAGE_BASE_URL}${posterPath}`;
+  }
+}
+
 /**
  * adult: Boolean,
  * backdrop_path: String,
@@ -83,7 +99,23 @@ export class MovieModel extends Record({
   title: null,
   video: false,
   vote_average: 0,
-  vote_count: 0
+  vote_count: 0,
+  created_by: List(),
+  episode_run_time: List(),
+  first_air_date: null,
+  in_production: false,
+  languages: List().asImmutable(),
+  last_air_date: null,
+  last_episode_to_air: List(),
+  name: null,
+  next_episode_to_air: null,
+  networks: List(),
+  number_of_episodes: 0,
+  number_of_seasons: 0,
+  origin_country: List(),
+  original_name: null,
+  seasons: List(),
+  type: null
 }, 'MovieModel') {
   constructor(values) {
     super(values);
@@ -92,7 +124,8 @@ export class MovieModel extends Record({
       .set('results', this.populateGenres())
       .set('production_companies', this.populateProdCompanies())
       .set('production_countries', this.populateProdCountries())
-      .set('spoken_languages', this.populateLanguages());
+      .set('spoken_languages', this.populateLanguages())
+      .set('seasons', this.populateSeasons());
   }
 
   populateGenres() {
@@ -135,6 +168,16 @@ export class MovieModel extends Record({
     return List();
   }
 
+  populateSeasons() {
+    const seasons = this.get('seasons');
+
+    if (seasons.length) {
+      return List(seasons.map((season) => new SeasonsModel(season)));
+    }
+
+    return List();
+  }
+
   get id() {
     return this.get('id');
   }
@@ -162,7 +205,10 @@ export class MovieModel extends Record({
   }
 
   get originTitle() {
-    return this.get('original_title');
+    const movieTitle = this.get('original_title');
+    const showTitle = this.get('original_name');
+
+    return movieTitle === null ? showTitle : movieTitle;
   }
 
   get overview() {
@@ -186,35 +232,54 @@ export class MovieModel extends Record({
   }
 
   get prodCountries() {
-    const counriesList = this.get('production_countries');
+    const counriesListMovie = this.get('production_countries');
+    const counriesListShow = this.get('origin_country');
 
-    return List(counriesList.map((el) => `${el.iso_3166_1} `));
+    if (counriesListShow.length > 0) {
+      return List(counriesListShow.map((el) => `${el} `));
+    }
+
+    return List(counriesListMovie.map((el) => `${el.iso_3166_1} `));
   }
 
   get releaseDate() {
-    const date = this.get('release_date');
+    const movieDate = this.get('release_date');
+    const tvShowDate = this.get('first_air_date');
 
-    return new Date(date).toLocaleDateString();
+    const releaseDate = movieDate === null ? tvShowDate : movieDate;
+
+    return new Date(releaseDate).toLocaleDateString();
   }
 
   get movieYear() {
-    const date = this.get('release_date');
+    const movieDate = this.get('release_date');
+    const tvShowDate = this.get('first_air_date');
 
-    return new Date(date).getFullYear();
+    const releaseDate = movieDate === null ? tvShowDate : movieDate;
+
+    return new Date(releaseDate).getFullYear();
   }
 
   get revenue() {
     return this.get('revenue');
   }
 
-  get runtime() {
-    return this.get('runtime');
+  get duration() {
+    const episodeRunTime = this.get('episode_run_time').map((time) => `${time} `);
+    const movieRunTime = this.get('runtime');
+
+    return !!movieRunTime ? movieRunTime : episodeRunTime;
   }
 
   get languages() {
-    const languages = this.get('spoken_languages');
+    const movieLanguages = this.get('spoken_languages');
+    const showLanguages = this.get('languages');
 
-    return List(languages.map((el) => `${el.name} `));
+    if (showLanguages.length > 0) {
+      return List(showLanguages.map((el) => `${el.toUpperCase()} `));
+    }
+
+    return List(movieLanguages.map((el) => `${el.name} `));
   }
 
   get status() {
@@ -226,7 +291,10 @@ export class MovieModel extends Record({
   }
 
   get title() {
-    return this.get('title');
+    const movieTitle = this.get('title');
+    const showTitle = this.get('name');
+
+    return movieTitle === null ? showTitle : movieTitle;
   }
 
   get movieVote() {

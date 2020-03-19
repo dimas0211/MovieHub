@@ -9,7 +9,7 @@ import {
   Divider,
   Button,
   Drawer,
-  List
+  List, withStyles
 } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import Logo from '../../../assets/images/icon-movie.png';
@@ -17,18 +17,47 @@ import { MOBILE } from '../../../constants/configurations';
 
 import '../Navigation.scss';
 
-// const CN = 'mobile-navigation';
 const CN = 'navigation-bar';
+
+const StyledButton = withStyles({
+  root: {
+    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+    borderRadius: 3,
+    border: 0,
+    color: 'white',
+    padding: '0 10px',
+    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+    '& > span': {
+      color: 'white'
+    }
+  }
+
+})(Button);
 
 class NavigationMob extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      leftPopUp: false
+      leftPopUp: false,
+      query: '',
+      location: props.location
     };
 
     autoBind(this);
+  }
+
+  static getDerivedStateFromProps(nextProps, prevState) {
+    const { pathname } = prevState.location;
+
+    if (pathname !== nextProps.location.pathname) {
+      return {
+        query: '',
+        location: nextProps.location.pathname
+      };
+    }
+
+    return null;
   }
 
   toggleDrawer = (open) => (event) => {
@@ -39,6 +68,23 @@ class NavigationMob extends Component {
     this.setState({ leftPopUp: open });
   };
 
+  handleSearchInput(event) {
+    this.setState({ query: event.target.value });
+  }
+
+  handleSearchSubmit() {
+    const { query } = this.state;
+    const { handleSearch } = this.props;
+
+    handleSearch && handleSearch(query);
+  }
+
+  isButtonDisabled() {
+    const { query } = this.state;
+
+    return !query;
+  }
+
   sideList(isMobile) {
     const { options } = this.props;
 
@@ -47,14 +93,14 @@ class NavigationMob extends Component {
         className={`${CN}__side-container`}
         role="presentation"
       >
-        <List className={`${CN}__side-bar`} bgcolor="text.disabled">
+        <List bgcolor="text.disabled" className={`${CN}__side-bar`}>
           {isMobile && this.renderSearch()}
           <Divider />
           {options.map((menuItem) => (
             <ListItem
               button
-              component={Link}
               className={`${CN}__nav-item`}
+              component={Link}
               key={menuItem.value}
               to={menuItem.link}
               onClick={this.toggleDrawer(false)}
@@ -70,6 +116,8 @@ class NavigationMob extends Component {
   }
 
   renderSearch() {
+    const { query } = this.state;
+
     return (
       <div className={`${CN}__search-container`}>
         <SearchIcon className={`${CN}__search-icon`} />
@@ -77,7 +125,12 @@ class NavigationMob extends Component {
           className={`${CN}__search-field`}
           color="secondary"
           placeholder="Search…"
+          value={query}
+          onChange={this.handleSearchInput}
         />
+        <StyledButton disabled={this.isButtonDisabled()} onClick={this.handleSearchSubmit}>
+          Find
+        </StyledButton>
       </div>
     );
   }
@@ -93,7 +146,7 @@ class NavigationMob extends Component {
         <div className={`${CN}__mobile-wrapper`}>
           <Button className={`${CN}__burger-icon`} onClick={this.toggleDrawer(true)}><MenuIcon /></Button>
           <div className={`${CN}__logo-container`}>
-            <Link className={`${CN}__logo-container`} to="/main">
+            <Link className={`${CN}__logo-container`} to="/">
               <img alt="logo" className={`${CN}__logo-img`} src={Logo} />
               <h3 className={`${CN}__logo-name`}>Movie Hub</h3>
             </Link>

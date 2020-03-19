@@ -86,11 +86,11 @@ class VideoPlayerBar extends Component {
     const { videos, CN, isMobile } = this.props;
 
     return videos.getVideos().map((video, index) => (
-      <StyledTabPanel index={index} key={video.name} value={value}>
+      <StyledTabPanel index={index} key={video.id} value={value}>
         <p className={`${CN}__info-item-container`}>
           <span className={`${CN}__info-item-name`}>Language: </span>
           <span className={`${CN}__info-item-value video-title`}>
-            {video.iso_639_1}
+            {video.language}
           </span>
         </p>
         <VideoPlayer isMobile={isMobile} title={video.type} youtubeId={video.key} />
@@ -99,10 +99,10 @@ class VideoPlayerBar extends Component {
   }
 
   render() {
-    const { value } = this.state;
+    const { value, CN } = this.state;
 
     return (
-      <div>
+      <div className={`${CN}__wrapper`}>
         <StyledAppBar position="static">
           <Tabs aria-label="wrapped label tabs example" value={value} variant="scrollable" onChange={this.handleChange}>
             {this.returnTabs()}

@@ -1,23 +1,33 @@
 import { connect } from 'react-redux';
 import { bindActionCreators, compose } from 'redux';
 import connectWithViewport from '../../services/connectWithViewport';
+import connectWithIoC from '../../services/connectWithIoC';
 
 import MainPage from './MainPage';
-import getGenres from '../../actions/getGenres';
-import getMovies from '../../actions/getMovies';
+import {
+  getMoviesSuccess,
+  getMoviesError,
+  getGenresSuccess,
+  getGenresError
 
-const mapStateToProps = ({ ApiReducer }) => ({
+} from '../../actions/actionsAPIcall';
+
+const mapStateToProps = ({ ApiReducer, setFiltrationParamsReducer }) => ({
   error: ApiReducer.error,
   movieList: ApiReducer.movieListInfo,
-  genres: ApiReducer.genresList.genres
+  genres: ApiReducer.genresList.genres,
+  filtrationQueryParams: setFiltrationParamsReducer.filtrationQueryParams
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
-  getGenres,
-  getMovies
+  getMoviesSuccess,
+  getMoviesError,
+  getGenresSuccess,
+  getGenresError
 }, dispatch);
 
 export const MainPageContainer = compose(
+  connectWithIoC(['getDataService', 'apiCallConfig']),
   connectWithViewport(),
   connect(
     mapStateToProps,
