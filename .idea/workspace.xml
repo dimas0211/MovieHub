@@ -2,69 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="548926de-cff3-4d8a-aa20-72a745eefd1f" name="Default Changelist" comment=" features #5:&#10;&#10;1. Login Service.&#10;2. Login page layout and functionality.&#10;3. Ability to leave movie rating with method in Data Service.&#10;4. Notifications.&#10;5. Fixes from previous PR Review">
-      <change afterPath="$PROJECT_DIR$/src/assets/images/down-arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/LoginPage/LoginPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/LoginPage/LoginPage.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/LoginPage/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Navigation/NavigationMobile/NavigationMob.container.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/StarRating/StarRating.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/StarRating/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UserMenu/UserMenu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UserMenu/UserMenu.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UserMenu/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants/notificationData.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/reducerAuthentication.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/configureStore.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/dataService/LoginService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CarouselItem/CarouselItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CarouselItem/CarouselItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DefaultLayout/DefaultLayout.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DefaultLayout/DefaultLayout.container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DefaultLayout/DefaultLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DefaultLayout/DefaultLayout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DefaultLayout/DefaultLayout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DefaultLayout/DefaultLayout.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FiltrationPanel/FiltrationPanel.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FiltrationPanel/FiltrationPanel.container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FiltrationPanel/FiltrationPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FiltrationPanel/FiltrationPanel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPage.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPage.container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieItem/MovieItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieItem/MovieItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieItemPage/MovieItemPage.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieListPage/MovieListPage.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieListPage/MovieListPage.container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieListPage/MovieListPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieListPage/MovieListPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieListPage/MovieListPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieListPage/MovieListPage.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieListPagination/MovieListPagination.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieListPagination/MovieListPagination.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieMainItemCard/MovieMainItemCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieMainItemCard/MovieMainItemCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MoviePage/MoviePage.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/actionsAuthentication.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MoviePage/MoviePage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MoviePage/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Navigation.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Navigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation/NavigationMobile/NavigationMob.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/NavigationMobile/NavigationMob.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation/NavigationMobile/NavigationMob.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoginPage/LoginPage.container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation/NavigationMobile/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/NavigationMobile/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Routes/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Routes/Routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SearchPage/SearchPage.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchPage/SearchPage.container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SearchPage/SearchPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchPage/SearchPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TVShowItemPage/TVShowItemPage.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TVShowItemPage/TVShowItemPage.container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TVShowListPage/TVShowListPage.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TVShowListPage/TVShowListPage.container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TwoCarouselsComponent/TwoCarouselsComponent.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TwoCarouselsComponent/TwoCarouselsComponent.container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/apiCallConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/apiCallConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/routingConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/routingConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/actionTypes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/actionTypes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/configurations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/configurations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ioc/clientIoC.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ioc/clientIoC.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/dataService/GetDataService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/dataService/GetDataService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/dataService/httpService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/dataService/httpService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
