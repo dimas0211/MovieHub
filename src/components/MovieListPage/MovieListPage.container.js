@@ -11,14 +11,28 @@ import {
 import { setFiltrationParams } from '../../actions/setFiltrationParams';
 import connectWithIoC from '../../services/connectWithIoC';
 
-const mapStateToProps = ({ ApiReducer, setFiltrationParamsReducer, setSearchModeReducer }) => ({
-  error: ApiReducer.error,
-  movieList: ApiReducer.movieListInfo,
-  genres: ApiReducer.genresList.genres,
-  filtrationQueryParams: setFiltrationParamsReducer.filtrationQueryParams,
-  query: setSearchModeReducer.searchQuery,
-  searchMode: setSearchModeReducer.searchMode,
-  oneMovieId: ApiReducer.oneMovieId
+const mapStateToProps = ({
+  ApiReducer: {
+    error,
+    movieListInfo,
+    genresList,
+    oneMovieId
+  },
+  setFiltrationParamsReducer: { filtrationQueryParams },
+  setSearchModeReducer: {
+    searchQuery,
+    searchMode
+  },
+  authenticationReducer: { isAuthenticated }
+}) => ({
+  error,
+  movieList: movieListInfo,
+  genres: genresList.genres,
+  filtrationQueryParams,
+  query: searchQuery,
+  searchMode,
+  oneMovieId,
+  isAuthenticated
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({

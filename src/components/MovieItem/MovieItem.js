@@ -1,69 +1,15 @@
 import React from 'react';
-import StarRatings from 'react-star-ratings';
 import cx from 'classnames';
 import Accordeon from '../Accordeon/Accordeon';
 import { LARGE_SCREEN, MOBILE } from '../../constants/configurations';
+import StarRating from '../StarRating';
 import VideoPlayerBar from '../VideoPlayerBar';
 
 const CN = 'movie-page';
 const MovieItem = (props) => {
-  const renderGenres = () => {
-    const { movie: { genres } } = props;
-
-    return (genres.map((el) => <span className={`${CN}__genre-item`} key={el.id}>{el.name}</span>));
-  };
-
-  const renderStarRating = () => {
-    const { movie } = props;
-    const starsNumber = 5;
-    const starWidth = '25px';
-    const starSpacing = '5';
-
-    return (
-      <StarRatings
-        className={`${CN}__rating-starts`}
-        name="rating"
-        numberOfStars={starsNumber}
-        rating={movie.movieVote / 2}
-        starDimension={starWidth}
-        starRatedColor="gold"
-        starSpacing={starSpacing}
-      />
-    );
-  };
-
-  const renderSeasons = (isMobile) => {
-    const { movie: { seasons } } = props;
-
-    return seasons.map(({
-      id,
-      overview,
-      poster,
-      name
-    }) => (
-      <div className={`${CN}__info-item-container`} key={id}>
-        <Accordeon
-          CN={CN}
-          id={id}
-          name={name}
-          overview={overview}
-          poster={poster}
-        >
-          <div className={cx(`${CN}__accordion-item-container`, isMobile && `${CN}__accordion-info-container-mobile`)}>
-            <img
-              alt="season-poster"
-              className={`${CN}__season-poster`}
-              src={poster}
-            />
-            <span className={cx(`${CN}__season-info`, isMobile && `${CN}__season-info-container-mobile`)}>{overview}</span>
-          </div>
-        </Accordeon>
-      </div>
-    ));
-  };
-
   const {
     movie: {
+      id,
       title,
       originTitle,
       movieVote,
@@ -78,16 +24,76 @@ const MovieItem = (props) => {
       prodCountries,
       languages,
       seasons,
-      duration
+      duration,
+      genres
     },
     videos,
     viewport: { device },
     location: { pathname },
-    routingConfig: { tvShow }
+    routingConfig: { tvShow },
+    isAuthenticated,
+    movieOrShow,
+    getDataService,
+    enqueueSnackbar
   } = props;
   const isMobile = device === MOBILE;
   const isLargeScreen = device === LARGE_SCREEN;
   const isTVShow = pathname.includes(tvShow.showPath);
+
+  const renderGenres = () => (genres.map((el) => <span className={`${CN}__genre-item`} key={el.id}>{el.name}</span>));
+
+  const renderStarRating = () => {
+    const { movie } = props;
+    const starsNumber = 5;
+    const starWidth = '25px';
+    const starSpacing = '5';
+
+    return (
+      <StarRating
+        className={`${CN}__rating-starts`}
+        getDataService={getDataService}
+        id={id}
+        isAuthenticated={isAuthenticated}
+        movie={movie}
+        movieOrShow={movieOrShow}
+        name="rating"
+        numberOfStars={starsNumber}
+        starSpacing={starSpacing}
+        starWidth={starWidth}
+        enqueueSnackbar={enqueueSnackbar}
+      />
+    );
+  };
+
+  const renderSeasons = () => seasons.map(({ name }) => (
+    <div className={`${CN}__info-item-container`} key={id}>
+      <Accordeon
+        CN={CN}
+        id={id}
+        name={name}
+        overview={overview}
+        poster={poster}
+      >
+        <div className={cx(`${CN}__accordion-item-container`, isMobile && `${CN}__accordion-info-container-mobile`)}>
+          <img
+            alt="season-poster"
+            className={`${CN}__season-poster`}
+            src={poster}
+          />
+          <span className={cx(`${CN}__season-info`, isMobile && `${CN}__season-info-container-mobile`)}>{overview}</span>
+        </div>
+      </Accordeon>
+    </div>
+  ));
+
+  const renderInfoItem = (infoTitle, infoValue, className) => (
+    <p className={`${CN}__info-item-container`}>
+      <span className={`${CN}__info-item-name`}>{`${infoTitle}: `}</span>
+      <span className={`${CN}__info-item-value ${className}`}>
+        {typeof infoValue === 'function' ? infoValue() : infoValue}
+      </span>
+    </p>
+  );
 
   return (
     <div className={`${CN}__wrapper`}>
@@ -104,71 +110,21 @@ const MovieItem = (props) => {
           />
         </div>
         <div className={cx(`${CN}__info-container`, isMobile && `${CN}__mobile-info-container`)}>
-          <p className={`${CN}__info-item-container`}>
-            <span className={`${CN}__info-item-name`}>Original Title: </span>
-            <span className={`${CN}__info-item-value original-title`}>
-              {originTitle}
-            </span>
-          </p>
-          <p className={`${CN}__info-item-container`}>
-            <span className={`${CN}__info-item-name`}>Year: </span>
-            <span className={`${CN}__info-item-value release-year`}>
-              {movieYear}
-            </span>
-          </p>
-          {!!prodCountries && (
-            <p className={`${CN}__info-item-container`}>
-              <span className={`${CN}__info-item-name`}>Country: </span>
-              <span className={`${CN}__info-item-value country`}>
-                {prodCountries}
-              </span>
-            </p>
-          )}
-          <p className={`${CN}__info-item-container`}>
-            <span className={`${CN}__info-item-name`}>Company: </span>
-            <span className={`${CN}__info-item-value company`}>
-              {prodCompanies}
-            </span>
-          </p>
-          <p className={`${CN}__info-item-container`}>
-            <span className={`${CN}__info-item-name`}>Genre: </span>
-            <span className={`${CN}__info-item-value genre`}>
-              {renderGenres()}
-            </span>
-          </p>
-          <p className={`${CN}__info-item-container`}>
-            <span className={`${CN}__info-item-name`}>Release Date: </span>
-            <span className={`${CN}__info-item-value release-year`}>
-              {releaseDate}
-            </span>
-          </p>
-          <p className={`${CN}__info-item-container`}>
-            <span className={`${CN}__info-item-name`}>Duration: </span>
-            <span className={`${CN}__info-item-value release-year`}>
-              {duration}
-              {' minutes'}
-            </span>
-          </p>
-          <p className={`${CN}__info-item-container`}>
-            <span className={`${CN}__info-item-name`}>Language: </span>
-            <span className={`${CN}__info-item-value languages`}>
-              {languages}
-            </span>
-          </p>
+          {renderInfoItem('Original Title', originTitle, 'original-title')}
+          {renderInfoItem('Year', movieYear, 'release-year')}
+          {!!prodCountries && renderInfoItem('Country', prodCountries, 'country')}
+          {renderInfoItem('Company', prodCompanies, 'company')}
+          {renderInfoItem('Genre', renderGenres, 'genre')}
+          {renderInfoItem('Release Date', releaseDate, 'release-year')}
+          {renderInfoItem('Duration', `${duration} minutes`, 'duration')}
+          {renderInfoItem('Language', languages, 'languages')}
           <div className={`${CN}__info-item-container`}>
             {renderStarRating()}
           </div>
           <div className={`${CN}__rating-info`}>
             {`Rating: ${movieVote}/10 (${voteCount} Votes)`}
           </div>
-          {!!budget && (
-            <p className={`${CN}__info-item-container`}>
-              <span className={`${CN}__info-item-name`}>Budget $: </span>
-              <span className={`${CN}__info-item-value budget`}>
-                {budget}
-              </span>
-            </p>
-          )}
+          {!!budget && renderInfoItem('Budget $', budget, 'budget')}
           {!!homePage && (
             <p className={`${CN}__info-item-container`}>
               <span className={`${CN}__info-item-name`}>Homepage: </span>

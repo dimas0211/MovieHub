@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import autoBind from 'auto-bind';
 import { withRouter } from 'react-router-dom';
-import Navigation from '../Navigation';
-import NavigationMob from '../Navigation/NavigationMobile';
+import { Navigation } from '../Navigation';
+import { NavigationMob } from '../Navigation/NavigationMobile';
 import config from '../../config';
 import { DESKTOP, LARGE_SCREEN } from '../../constants/configurations';
 

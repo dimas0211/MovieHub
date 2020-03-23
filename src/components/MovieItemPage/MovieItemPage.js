@@ -4,6 +4,7 @@ import cx from 'classnames';
 import MovieItem from '../MovieItem';
 import Loader from '../Loader';
 import { MOBILE } from '../../constants/configurations';
+import * as NOTIFICATION_DATA from '../../constants/notificationData';
 
 import './MovieItemPage.scss';
 
@@ -24,11 +25,11 @@ class MovieItemPage extends Component {
     const {
       getDataService,
       getOneMovieSuccess,
-      getOneMovieError,
+      enqueueSnackbar,
       getVideosSuccess,
-      getVideosError,
       match: { params }
     } = this.props;
+    const { DATA_NOT_LOADED } = NOTIFICATION_DATA;
 
     this.setState({ loading: true });
 
@@ -38,7 +39,7 @@ class MovieItemPage extends Component {
         this.setState({ loading: false });
         getOneMovieSuccess(data);
       })
-      .catch((error) => getOneMovieError(error));
+      .catch(() => enqueueSnackbar(DATA_NOT_LOADED.message, DATA_NOT_LOADED.params));
 
     getDataService
       .getVideos(params.id, this.returnMoviePath())
@@ -46,7 +47,7 @@ class MovieItemPage extends Component {
         this.setState({ loading: false });
         getVideosSuccess(data);
       })
-      .catch((error) => getVideosError(error));
+      .catch(() => enqueueSnackbar(DATA_NOT_LOADED.message, DATA_NOT_LOADED.params));
   }
 
   componentWillUnmount() {

@@ -1,1 +1,1 @@
-export { default } from './NavigationMob';
+export { NavigationMobContainer as NavigationMob } from './NavigationMob.container';

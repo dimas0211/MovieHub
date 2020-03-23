@@ -29,7 +29,8 @@ class MovieListPage extends Component {
       viewport: { device },
       setOneMovieType,
       movieOrShow,
-      setFiltrationParams
+      setFiltrationParams,
+      isAuthenticated
     } = this.props;
 
     return movieList.getMovieList().map((movieData) => (
@@ -45,6 +46,7 @@ class MovieListPage extends Component {
         routingConfig={routingConfig}
         setFiltrationParams={setFiltrationParams}
         setOneMovieType={setOneMovieType}
+        isAuthenticated={isAuthenticated}
       />
     ));
   }

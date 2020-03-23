@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ls from 'local-storage';
 import SearchIcon from '@material-ui/icons/Search';
 import MenuIcon from '@material-ui/icons/Menu';
 import autoBind from 'auto-bind';
@@ -9,15 +10,17 @@ import {
   Divider,
   Button,
   Drawer,
-  List, withStyles
+  List,
+  withStyles
 } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import Logo from '../../../assets/images/icon-movie.png';
 import { MOBILE } from '../../../constants/configurations';
+import * as NOTIFICATION_DATA from '../../../constants/notificationData';
 
 import '../Navigation.scss';
 
-// const CN = 'mobile-navigation';
 const CN = 'navigation-bar';
 
 const StyledButton = withStyles({
@@ -53,7 +56,8 @@ class NavigationMob extends Component {
 
     if (pathname !== nextProps.location.pathname) {
       return {
-        query: ''
+        query: '',
+        location: nextProps.location
       };
     }
 
@@ -85,8 +89,30 @@ class NavigationMob extends Component {
     return !query;
   }
 
+  handleLogOut() {
+    const { setUserUnauthenticated, loginService, enqueueSnackbar } = this.props;
+    const { LOGGED_OUT, REGULAR_ERROR } = NOTIFICATION_DATA;
+
+    this.handleClose();
+
+    loginService
+      .deleteSession()
+      .then((data) => {
+        if (data.success) {
+          ls.remove('sessionId');
+        } else {
+          enqueueSnackbar(REGULAR_ERROR.message, REGULAR_ERROR.params);
+        }
+      })
+      .catch((error) => console.log(error));
+    // .catch((error) => enqueueSnackbar(error.message, { variant: ERROR_TYPES.error }));
+
+    setUserUnauthenticated && setUserUnauthenticated();
+    enqueueSnackbar(LOGGED_OUT.message, LOGGED_OUT.params);
+  }
+
   sideList(isMobile) {
-    const { options } = this.props;
+    const { options, isAuthenticated, userName } = this.props;
 
     return (
       <div
@@ -94,6 +120,14 @@ class NavigationMob extends Component {
         role="presentation"
       >
         <List bgcolor="text.disabled" className={`${CN}__side-bar`}>
+          {isAuthenticated ? (
+            <div className={`${CN}__user-greeting-container`}>
+              <h4 className={`${CN}__user-greeting`}>{`Hello ${userName}`}</h4>
+              <Divider />
+            </div>
+          ) : (
+            <h4 className={`${CN}__user-greeting`}>Please, log in for more experience</h4>
+          )}
           {isMobile && this.renderSearch()}
           <Divider />
           {options.map((menuItem) => (
@@ -110,6 +144,12 @@ class NavigationMob extends Component {
             </ListItem>
           ))}
           <Divider />
+          {isAuthenticated && (
+            <div className={`${CN}__logout-container`} onClick={this.handleLogOut}>
+              <h4>LOGOUT</h4>
+              <ExitToAppIcon className={`${CN}__logout-logo`} />
+            </div>
+          )}
         </List>
       </div>
     );

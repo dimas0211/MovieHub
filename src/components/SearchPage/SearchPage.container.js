@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { withSnackbar } from 'notistack';
 import { bindActionCreators, compose } from 'redux';
 import connectWithViewport from '../../services/connectWithViewport';
 
@@ -12,12 +13,19 @@ import {
   getGenresError
 } from '../../actions/actionsAPIcall';
 
-const mapStateToProps = ({ ApiReducer, setSearchModeReducer }) => ({
-  error: ApiReducer.error,
-  movieList: ApiReducer.movieListInfo,
-  genres: ApiReducer.genresList.genres,
-  query: setSearchModeReducer.searchQuery,
-  searchMode: setSearchModeReducer.searchMode
+const mapStateToProps = ({
+  ApiReducer: {
+    error,
+    movieListInfo,
+    genresList
+  },
+  setSearchModeReducer: { searchQuery, searchMode }
+}) => ({
+  error,
+  movieList: movieListInfo,
+  genres: genresList.genres,
+  query: searchQuery,
+  searchMode
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
@@ -36,4 +44,4 @@ export const SearchPageContainer = compose(
     mapStateToProps,
     mapDispatchToProps
   )
-)(SearchPage);
+)(withSnackbar(SearchPage));

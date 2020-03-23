@@ -57,15 +57,12 @@ class MovieListPagination extends Component {
       apiCallConfig: { movie }
     } = this.props;
 
-    searchMode === true
-      ? getDataService
-        .searchMovies(page, movie, query)
-        .then((data) => getMoviesSuccess(data))
-        .catch((error) => getMoviesError(error))
-      : getDataService
-        .getMovieList(page, movieOrShow, pageParams, ...filtrationQueryParams)
-        .then((data) => getMoviesSuccess(data))
-        .catch((error) => getMoviesError(error));
+    const action = searchMode ? 'searchMovies' : 'getMovieList';
+    const args = searchMode ? [page, movie, query] : [page, movieOrShow, pageParams, ...filtrationQueryParams];
+
+    getDataService[action](...args)
+      .then((data) => getMoviesSuccess(data))
+      .catch((error) => getMoviesError(error));
   }
 
   render() {

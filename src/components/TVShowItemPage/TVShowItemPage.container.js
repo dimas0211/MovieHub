@@ -14,13 +14,22 @@ import {
   getVideosError
 } from '../../actions/actionsAPIcall';
 
-const mapStateToProps = ({ ApiReducer }) => ({
-  error: ApiReducer.error,
-  movie: ApiReducer.movie,
-  genres: ApiReducer.genresList.genres,
-  videos: ApiReducer.videos,
-  oneMovieId: ApiReducer.oneMovieId,
-  movieOrShow: ApiReducer.movieOrShow
+const mapStateToProps = ({
+  ApiReducer: {
+    error,
+    movie,
+    genresList,
+    videos,
+    oneMovieId,
+    movieOrShow
+  }
+}) => ({
+  error,
+  movie,
+  genres: genresList.genres,
+  videos,
+  oneMovieId,
+  movieOrShow
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({

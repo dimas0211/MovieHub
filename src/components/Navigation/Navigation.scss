@@ -23,11 +23,18 @@
     width: 95%;
   }
 
+  &__logo-user-container {
+    @include flex($justify: space-around, $align: center);
+  }
+
+  &__user-logo {
+    margin: 0 20px;
+    color:  $green;
+  }
+
   &__logo-container {
     @include flex($justify: space-around, $align: center);
-
     height: 100%;
-    margin-right: 25px;
 
     cursor: pointer;
     text-decoration: none;
@@ -54,9 +61,8 @@
 
   &__search-container {
     @include flex($justify: space-around, $align: center, $wrap: nowrap);
-    margin-left: -75px;
     border-radius: 5px;
-
+    width: 200px;
     background-color: $input-background;
   }
 
@@ -97,6 +103,25 @@
 }
 
 .navigation-bar {
+  &__user-greeting {
+    text-align: center;
+    margin: 15px 0;
+    color: $green;
+  }
+
+  &__logout-container {
+    @include flex($justify: center, $align: center);
+    color: $red;
+    cursor: pointer;
+    &:hover {
+      background-color: $gray;
+    }
+  }
+
+  &__logout-logo {
+    margin: 0 10px;
+  }
+
   &__mobile {
     position: fixed;
     top: 0;
@@ -112,9 +137,8 @@
 
     &__search-container {
       @include flex($justify: space-around, $align: center);
-
+      margin: 5px;
       border-radius: 5px;
-
       background-color: $input-background;
     }
 
@@ -142,7 +166,7 @@
 
   .navigation-bar__search-container {
     width: 90%;
-    margin: 0 auto 10px;
+    margin: 10px auto;
   }
   .navigation-bar__nav-item {
     color: $white;

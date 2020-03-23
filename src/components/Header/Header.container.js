@@ -7,10 +7,17 @@ import { setSearchQuery, setSearchMode } from '../../actions/searchMovies';
 import connectWithIoC from '../../services/connectWithIoC';
 import { getMoviesError, getMoviesSuccess } from '../../actions/actionsAPIcall';
 
-const mapStateToProps = ({ ApiReducer, setSearchModeReducer }) => ({
-  error: ApiReducer.error,
-  movieList: ApiReducer.movieListInfo,
-  genres: ApiReducer.genresList.genres,
+const mapStateToProps = ({
+  ApiReducer: {
+    error,
+    movieListInfo,
+    genresList
+  },
+  setSearchModeReducer
+}) => ({
+  error,
+  movieList: movieListInfo,
+  genres: genresList.genres,
   searchQuery: setSearchModeReducer.searchQuery
 });
 

@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
 import { bindActionCreators, compose } from 'redux';
 import { withSnackbar } from 'notistack';
-import connectWithViewport from '../../services/connectWithViewport';
+import connectWithViewport from '../../../services/connectWithViewport';
 
-import Navigation from './Navigation';
-import { setUserUnauthenticated } from '../../actions/actionsAuthentication';
-import connectWithIoC from '../../services/connectWithIoC';
+import NavigationMob from './NavigationMob';
+import { setUserUnauthenticated } from '../../../actions/actionsAuthentication';
+import connectWithIoC from '../../../services/connectWithIoC';
 
 const mapStateToProps = ({
   ApiReducer: { error, movieListInfo, genresList },
@@ -24,11 +24,11 @@ const mapDispatchToProps = (dispatch) => bindActionCreators({
   setUserUnauthenticated
 }, dispatch);
 
-export const NavigationContainer = compose(
+export const NavigationMobContainer = compose(
   connectWithIoC(['loginService']),
   connectWithViewport(),
   connect(
     mapStateToProps,
     mapDispatchToProps
   )
-)(withSnackbar(Navigation));
+)(withSnackbar(NavigationMob));

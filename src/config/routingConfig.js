@@ -18,6 +18,7 @@ export const routingConfig = {
   search: {
     searchPath: '/search/:query'
   },
+  login: '/login',
   notFound: 'not-found'
 };
 

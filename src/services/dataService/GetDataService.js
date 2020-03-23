@@ -1,4 +1,5 @@
 import autoBind from 'auto-bind';
+import ls from 'local-storage';
 
 class GetDataService {
   static $inject = ['httpService', 'apiCallConfig'];
@@ -72,6 +73,19 @@ class GetDataService {
         query
       }
     });
+  }
+
+  setMovieRating(movieOrShow = this.movie, movieId, movieRating) {
+    const { rating } = this.apiCallConfig;
+    const sessionId = ls.get('sessionId');
+    const ratingParams = {
+      value: movieRating
+    };
+    const query = {
+      session_id: `${sessionId}`
+    };
+
+    return this.httpService.post(`${this.baseURL}${movieOrShow}/${movieId}${rating}`, ratingParams, { params: query });
   }
 }
 

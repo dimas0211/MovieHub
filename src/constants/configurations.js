@@ -19,3 +19,15 @@ export const BREAKPOINTS = {
   DESKTOP: { value: 768, device: DESKTOP },
   LARGE_SCREEN: { value: 1200, device: LARGE_SCREEN }
 };
+
+export const NOTIFICATION_ANCHOR = {
+  vertical: 'bottom',
+  horizontal: 'right'
+};
+
+export const NOTIFICATION_EMOJI = {
+  success: '✅',
+  error: '✖️',
+  warning: '⚠️',
+  info: 'ℹ️'
+};

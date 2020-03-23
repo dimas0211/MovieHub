@@ -5,10 +5,7 @@ axios.defaults.headers.common.Authorization = `Bearer ${API_KEY}`;
 
 const successHandler = (response) => response.data;
 const errorHandler = (error) => {
-  // eslint-disable-next-line no-console
-  console.log(error, 'Couldn`t get data');
-
-  return error;
+  throw error;
 };
 const defaultConfig = {
   headers: {
