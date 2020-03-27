@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "56a246f3d4676f4008af1502a1adef65",
+    "revision": "794facbe8044bc89c17bfa0420f9b1c0",
     "url": "/MovieHub/index.html"
   },
   {
-    "revision": "ef454c4e68ff7cb7aaf1",
-    "url": "/MovieHub/static/css/main.16a193c5.chunk.css"
+    "revision": "743587875482e8a1a3d4",
+    "url": "/MovieHub/static/css/main.acd6293d.chunk.css"
   },
   {
-    "revision": "e9b51a5b86965a208c60",
-    "url": "/MovieHub/static/js/2.f4924063.chunk.js"
+    "revision": "59e186f6fb1c325faefe",
+    "url": "/MovieHub/static/js/2.3a27ca7e.chunk.js"
   },
   {
     "revision": "e933f8dbfdf496cb72e495663a499a00",
-    "url": "/MovieHub/static/js/2.f4924063.chunk.js.LICENSE.txt"
+    "url": "/MovieHub/static/js/2.3a27ca7e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ef454c4e68ff7cb7aaf1",
-    "url": "/MovieHub/static/js/main.4c071d1c.chunk.js"
+    "revision": "743587875482e8a1a3d4",
+    "url": "/MovieHub/static/js/main.7869565f.chunk.js"
   },
   {
     "revision": "33b1d2ca3beea9c7433c",
