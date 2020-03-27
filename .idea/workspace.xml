@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="548926de-cff3-4d8a-aa20-72a745eefd1f" name="Default Changelist" comment="fixes of search functionality">
+    <list default="true" id="548926de-cff3-4d8a-aa20-72a745eefd1f" name="Default Changelist" comment=" features #5:&#10;&#10;1. Login Service.&#10;2. Login page layout and functionality.&#10;3. Ability to leave movie rating with method in Data Service.&#10;4. Notifications.&#10;5. Fixes from previous PR Review">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation/NavigationMobile/NavigationMob.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/NavigationMobile/NavigationMob.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +19,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="login-page-guest-#5" />
+        <entry key="$PROJECT_DIR$" value="login-guest-user-pages" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,6 +40,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
@@ -55,7 +55,7 @@
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
@@ -107,6 +107,9 @@
       <workItem from="1581802107499" duration="138025000" />
       <workItem from="1582488680876" duration="84651000" />
       <workItem from="1583165057919" duration="86505000" />
+      <workItem from="1584008956892" duration="15199000" />
+      <workItem from="1584107637581" duration="201000" />
+      <workItem from="1584108067211" duration="85728000" />
     </task>
     <task id="LOCAL-00001" summary="fixes #1:&#10;&#10;1. viewportProvider was rewritten to HOC&#10;2. removed configureStore and custom connect&#10;3. Rewrote ScrollToTop component">
       <created>1582024749393</created>
@@ -136,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582646678980</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fixes of search functionality">
+      <created>1584004342306</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1584004342306</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,6 +180,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="fixes #1:&#10;&#10;1. viewportProvider was rewritten to HOC&#10;2. removed configureStore and custom connect&#10;3. Rewrote ScrollToTop component" />
     <MESSAGE value="features #2:&#10;&#10;1. Creates services that get movies, tv shows and genres.&#10;2. Movie and TV show list page main layout and functionality&#10;3. Pagination for movieListPage layout and functionality&#10;4. Created MovieCard and MovieList models using immutableJS (functionalty will be developed in future)&#10;5. Made fixes and refactoring according to last review" />
     <MESSAGE value="features #3:&#10;&#10;1. Created services that get movie by id, videos by id.&#10;2. Crated and used models for: MovieList, Video, Movie, Genre&#10;3. Added VideoPlayer and navbar for multiple videos at MovieItemPage&#10;4. Created MovieItem page with its basic functionality&#10;5. Includes fixes and refactoring according to first commit review" />
@@ -178,24 +189,24 @@
     <MESSAGE value="fixes of features #2 #3:&#10;&#10;1. refactored code&#10;2. Moved functions from rendering components to models where it posiible" />
     <MESSAGE value="created #4:&#10;&#10;1. filtration by year anr/or genre&#10;2. search functionality&#10;3. ioc pre setup" />
     <MESSAGE value="created #4:&#10;&#10;1. Rewrote API call actions to Data Service&#10;2. Used IoC Container Pattern for httpService, navConfig, apiCAlLCongid&#10;3. fixed bugs wihh filtration and search&#10;4.added filtration by clicking on genre in movie card" />
-    <MESSAGE value="fixes of search functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes of search functionality" />
+    <MESSAGE value=" features #5:&#10;&#10;1. Login Service.&#10;2. Login page layout and functionality.&#10;3. Ability to leave movie rating with method in Data Service.&#10;4. Notifications.&#10;5. Fixes from previous PR Review" />
+    <option name="LAST_COMMIT_MESSAGE" value=" features #5:&#10;&#10;1. Login Service.&#10;2. Login page layout and functionality.&#10;3. Ability to leave movie rating with method in Data Service.&#10;4. Notifications.&#10;5. Fixes from previous PR Review" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="320" y="115" key="#ESLint" timestamp="1583496646989">
+    <state x="320" y="115" key="#ESLint" timestamp="1584542423742">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="115" key="#ESLint/0.0.1440.900/1440.0.1920.1200@0.0.1440.900" timestamp="1583496646989" />
+    <state x="320" y="115" key="#ESLint/0.0.1440.900/1440.0.1920.1200@0.0.1440.900" timestamp="1584025472333" />
+    <state x="320" y="115" key="#ESLint/0.0.1440.900@0.0.1440.900" timestamp="1584542423742" />
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583852681966">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900/1440.0.1920.1200@0.0.1440.900" timestamp="1583150292866" />
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1583852681966" />
-    <state x="85" y="15" key="CommitChangelistDialog2" timestamp="1584004309495">
+    <state x="85" y="15" key="CommitChangelistDialog2" timestamp="1584998346450">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="85" y="15" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1200@0.0.1440.900" timestamp="1584004309495" />
-    <state x="85" y="15" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1583942458067" />
+    <state x="85" y="15" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1584998346450" />
     <state width="1419" height="303" key="GridCell.Tab.0.bottom" timestamp="1583231108384">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -264,15 +275,15 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1419" height="303" key="GridCell.Tab.3.right/0.0.1440.900@0.0.1440.900" timestamp="1583231108390" />
-    <state x="229" y="89" key="SettingsEditor" timestamp="1583503569027">
+    <state x="229" y="89" key="SettingsEditor" timestamp="1584107564618">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="229" y="89" key="SettingsEditor/0.0.1440.900/1440.0.1920.1200@0.0.1440.900" timestamp="1583503569027" />
-    <state x="386" y="85" width="667" height="729" key="find.popup" timestamp="1583939635270">
+    <state x="229" y="89" key="SettingsEditor/0.0.1440.900/1440.0.1920.1200@0.0.1440.900" timestamp="1584107564618" />
+    <state x="386" y="85" width="667" height="729" key="find.popup" timestamp="1584998440795">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="386" y="85" width="816" height="729" key="find.popup/0.0.1440.900/1440.0.1920.1200@0.0.1440.900" timestamp="1583506841092" />
-    <state x="386" y="85" width="667" height="729" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1583939635270" />
+    <state x="386" y="85" width="816" height="729" key="find.popup/0.0.1440.900/1440.0.1920.1200@0.0.1440.900" timestamp="1584088980800" />
+    <state x="386" y="85" width="667" height="729" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1584998440795" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1583224441970">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

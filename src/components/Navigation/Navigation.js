@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
+import autoBind from 'auto-bind';
 import {
   Tabs, Tab, InputBase, Button, withStyles
 } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
-import autoBind from 'auto-bind';
 import { Link } from 'react-router-dom';
-
+import UserMenu from '../UserMenu';
 import Logo from '../../assets/images/icon-movie.png';
 
 import './Navigation.scss';
@@ -37,24 +37,22 @@ class Navigation extends Component {
   constructor(props) {
     super(props);
 
-    const { location: { pathname } } = props;
-
     this.state = {
       selectedTab: 0,
       query: '',
-      location: pathname
+      location: props.location
     };
 
     autoBind(this);
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
-    const { location } = prevState;
+    const { pathname } = prevState.location;
 
-    if (location !== nextProps.location.pathname) {
+    if (pathname !== nextProps.location.pathname) {
       return {
         query: '',
-        location: nextProps.location.pathname
+        location: nextProps.location
       };
     }
 
@@ -82,17 +80,34 @@ class Navigation extends Component {
     return !query;
   }
 
+  renderUserIcon() {
+    const { setUserUnauthenticated, userName, loginService, enqueueSnackbar } = this.props;
+
+    return (
+      <UserMenu
+        CN={CN}
+        setUserUnauthenticated={setUserUnauthenticated}
+        userName={userName}
+        loginService={loginService}
+        enqueueSnackbar={enqueueSnackbar}
+      />
+    );
+  }
+
   render() {
     const { selectedTab, query } = this.state;
-    const { options } = this.props;
+    const { options, isAuthenticated } = this.props;
 
     return (
       <div className={CN}>
         <div className={`${CN}__nav-wrapper`}>
-          <Link className={`${CN}__logo-container`} to="/">
-            <img alt="logo" className={`${CN}__logo-img`} src={Logo} />
-            <h3 className={`${CN}__logo-name`}>Movie Hub</h3>
-          </Link>
+          <div className={`${CN}__logo-user-container`}>
+            <Link className={`${CN}__logo-container`} to="/">
+              <img alt="logo" className={`${CN}__logo-img`} src={Logo} />
+              <h3 className={`${CN}__logo-name`}>Movie Hub</h3>
+            </Link>
+            {isAuthenticated && this.renderUserIcon()}
+          </div>
           <Tabs
             centered
             className={`${CN}__tabs-container`}

@@ -118,7 +118,7 @@ export default class FiltrationPanel extends Component {
     const maxYear = 2020;
     const yearRange = [];
 
-    for (let i = minYear; i <= maxYear; i++) {
+    for (let i = maxYear; i >= minYear; i--) {
       yearRange.push(i);
     }
 

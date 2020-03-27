@@ -28,6 +28,20 @@
   &__filtration-panel-wrapper {
     width: 100%;
   }
+
+  &__login-container,
+  &__login-container-mobile{
+    z-index: 100;
+    position: fixed;
+    top: 100px;
+    right: 10%;
+    margin: 15px;
+  }
+
+  &__login-container-mobile {
+    right: 0;
+    top: 140px;
+  }
 }
 
 .not-found-page {

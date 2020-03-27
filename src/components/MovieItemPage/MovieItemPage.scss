@@ -6,7 +6,6 @@
     margin: 25px 15px;
     max-width: 100%;
     padding: 20px;
-    //border: 1px solid $border-color;
     background-color: $gray;
     border-radius: 5px;
     cursor: pointer;
@@ -113,7 +112,7 @@
   }
 
   &__seasons-container {
-    overflow-x: scroll;
+    overflow-x: auto;
     max-height: 450px;
   }
 
@@ -142,7 +141,6 @@
 
   &__video-tabs-wrapper-show {
     width: 55%;
-
   }
 
   &__seasons-container-show {

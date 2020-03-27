@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
+import { generatePath } from 'react-router';
 
 import { MOBILE } from '../../constants/configurations';
 
@@ -20,7 +21,7 @@ const CarouselItem = ({
   const isMobile = device === MOBILE;
 
   return (
-    <Link to={`${moviePath}${view}`.replace(':id', id)}>
+    <Link to={generatePath(`${moviePath}${view}`, { id })}>
       <div className={cx(`${CN}__wrapper`, isMobile && `${CN}__wrapper-mobile`)}>
         <img
           alt="movie-poster"

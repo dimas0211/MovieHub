@@ -5,11 +5,19 @@ import connectWithViewport from '../../services/connectWithViewport';
 import FiltrationPanel from './FiltrationPanel';
 import { setFiltrationParams, clearFiltrationParams } from '../../actions/setFiltrationParams';
 
-const mapStateToProps = ({ ApiReducer, setFiltrationParamsReducer }) => ({
-  error: ApiReducer.error,
-  movie: ApiReducer.movie,
-  genres: ApiReducer.genresList.genres,
-  videos: ApiReducer.videos,
+const mapStateToProps = ({
+  ApiReducer: {
+    error,
+    movie,
+    genresList,
+    videos
+  },
+  setFiltrationParamsReducer
+}) => ({
+  error,
+  movie,
+  genres: genresList.genres,
+  videos,
   filtrationQueryParams: setFiltrationParamsReducer.filtrationQueryParams
 });
 

@@ -28,7 +28,7 @@ const persistConfig = {
 };
 const persistedReducer = persistReducer(persistConfig, createRootReducer(history));
 
-const configureStore = () => {
+export default () => {
   const store = createStore(
     persistedReducer,
     composeWithDevTools(
@@ -42,5 +42,3 @@ const configureStore = () => {
 
   return { store, persistor };
 };
-
-export default configureStore;

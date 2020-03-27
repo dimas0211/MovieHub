@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import autoBind from 'auto-bind';
 import { MovieListPage } from '../MovieListPage';
+import * as NOTIFICATION_DATA from '../../constants/notificationData';
 
 class MainPage extends Component {
   constructor(props) {
@@ -23,14 +24,15 @@ class MainPage extends Component {
       getDataService,
       apiCallConfig: { movie },
       getMoviesSuccess,
-      getMoviesError
+      enqueueSnackbar
     } = this.props;
+    const { DATA_NOT_LOADED } = NOTIFICATION_DATA;
 
     if (prevProps.filtrationQueryParams && prevProps.filtrationQueryParams !== filtrationQueryParams) {
       getDataService
         .getMovieList(1, movie, ...filtrationQueryParams)
         .then((data) => getMoviesSuccess(data))
-        .catch((error) => getMoviesError(error));
+        .catch(() => enqueueSnackbar(DATA_NOT_LOADED.message, DATA_NOT_LOADED.params));
     }
   }
 
@@ -38,10 +40,10 @@ class MainPage extends Component {
     const {
       getDataService,
       getMoviesSuccess,
-      getMoviesError,
       getGenresSuccess,
-      getGenresError
+      enqueueSnackbar
     } = this.props;
+    const { DATA_NOT_LOADED } = NOTIFICATION_DATA;
 
     this.setState({ loading: true });
 
@@ -51,7 +53,7 @@ class MainPage extends Component {
         this.setState({ loading: false });
         getGenresSuccess(data);
       })
-      .catch((error) => getGenresError(error));
+      .catch(() => enqueueSnackbar(DATA_NOT_LOADED.message, DATA_NOT_LOADED.params));
 
     getDataService
       .getMovieList(1)
@@ -59,7 +61,7 @@ class MainPage extends Component {
         this.setState({ loading: false });
         getMoviesSuccess(data);
       })
-      .catch((error) => getMoviesError(error));
+      .catch(() => enqueueSnackbar(DATA_NOT_LOADED.message, DATA_NOT_LOADED.params));
   }
 
   render() {

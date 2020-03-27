@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { MovieListPage } from '../MovieListPage';
+import * as NOTIFICATION_DATA from '../../constants/notificationData';
 
 class SearchPage extends Component {
   componentDidMount() {
@@ -11,16 +12,17 @@ class SearchPage extends Component {
       query,
       getDataService,
       getMoviesSuccess,
-      getMoviesError,
+      enqueueSnackbar,
       apiCallConfig: { movie },
       match: { params }
     } = this.props;
+    const { DATA_NOT_LOADED } = NOTIFICATION_DATA;
 
     if (prevProps.query !== query) {
       getDataService
         .searchMovies(1, movie, params.query)
         .then((data) => getMoviesSuccess(data))
-        .catch((error) => getMoviesError(error));
+        .catch(() => enqueueSnackbar(DATA_NOT_LOADED.message, DATA_NOT_LOADED.params));
     }
   }
 
@@ -36,21 +38,21 @@ class SearchPage extends Component {
       getDataService,
       apiCallConfig: { movie },
       getMoviesSuccess,
-      getMoviesError,
       getGenresSuccess,
-      getGenresError,
+      enqueueSnackbar,
       match: { params }
     } = this.props;
+    const { DATA_NOT_LOADED } = NOTIFICATION_DATA;
 
     getDataService
       .getGenres()
       .then((data) => getGenresSuccess(data))
-      .catch((error) => getGenresError(error));
+      .catch(() => enqueueSnackbar(DATA_NOT_LOADED.message, DATA_NOT_LOADED.params));
 
     getDataService
       .searchMovies(1, movie, params.query)
       .then((data) => getMoviesSuccess(data))
-      .catch((error) => getMoviesError(error));
+      .catch(() => enqueueSnackbar(DATA_NOT_LOADED.message, DATA_NOT_LOADED.params));
   }
 
   render() {

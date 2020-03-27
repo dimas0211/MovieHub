@@ -12,11 +12,14 @@ import {
   setOneMovieType
 } from '../../actions/actionsAPIcall';
 
-const mapStateToProps = ({ ApiReducer, setFiltrationParamsReducer }) => ({
-  error: ApiReducer.error,
-  movieList: ApiReducer.movieListInfo,
-  genres: ApiReducer.genresList.genres,
-  filtrationQueryParams: setFiltrationParamsReducer.filtrationQueryParams
+const mapStateToProps = ({
+  ApiReducer: { error, movieListInfo, genresList },
+  setFiltrationParamsReducer: { filtrationQueryParams }
+}) => ({
+  error,
+  movieList: movieListInfo,
+  genres: genresList.genres,
+  filtrationQueryParams
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({

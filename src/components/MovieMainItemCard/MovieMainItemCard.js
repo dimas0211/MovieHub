@@ -1,7 +1,8 @@
 import React from 'react';
+import cx from 'classnames';
+import { generatePath } from 'react-router';
 import { Link } from 'react-router-dom';
 import StarRatings from 'react-star-ratings';
-import cx from 'classnames';
 
 import { LARGE_SCREEN, MOBILE } from '../../constants/configurations';
 
@@ -15,7 +16,6 @@ const MovieMainItemCard = ({
   device,
   movieOrShow,
   id,
-  setOneMovieType,
   setFiltrationParams,
   routingConfig: { view }
 }) => {
@@ -63,13 +63,9 @@ const MovieMainItemCard = ({
     );
   };
 
-  const onClickLoadMovieData = () => {
-    setOneMovieType(movieOrShow);
-  };
-
   return (
-    <Link className={cx(isLargeScreen && `${CN}__wrapper-large-screen`, 'page-link')} to={`${movieOrShow}${view}`.replace(':id', id)}>
-      <div className={cx(`${CN}__wrapper`, isMobile && `${CN}__wrapper-mobile`)} onClick={onClickLoadMovieData}>
+    <Link className={cx(isLargeScreen && `${CN}__wrapper-large-screen`, 'page-link')} to={generatePath(`${movieOrShow}${view}`, { id })}>
+      <div className={cx(`${CN}__wrapper`, isMobile && `${CN}__wrapper-mobile`)}>
         <div className={`${CN}__image-container`}>
           <img
             alt="movie-poster"

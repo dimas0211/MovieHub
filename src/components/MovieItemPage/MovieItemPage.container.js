@@ -1,36 +1,32 @@
 import { connect } from 'react-redux';
 import { bindActionCreators, compose } from 'redux';
+import { withSnackbar } from 'notistack';
 import connectWithViewport from '../../services/connectWithViewport';
+import connectWithIoC from '../../services/connectWithIoC';
 
 import MovieItemPage from './MovieItemPage';
-import connectWithIoC from '../../services/connectWithIoC';
-import {
-  getGenresError,
-  getGenresSuccess,
-  getOneMovieSuccess,
-  getOneMovieError,
-  clearOneMovie,
-  getVideosSuccess,
-  getVideosError
-} from '../../actions/actionsAPIcall';
+import * as movieActions from '../../actions/actionsAPIcall';
 
-const mapStateToProps = ({ ApiReducer }) => ({
-  error: ApiReducer.error,
-  movie: ApiReducer.movie,
-  genres: ApiReducer.genresList.genres,
-  videos: ApiReducer.videos,
-  oneMovieId: ApiReducer.oneMovieId,
-  movieOrShow: ApiReducer.movieOrShow
+const mapStateToProps = ({
+  ApiReducer: {
+    error,
+    movie,
+    genresList,
+    videos,
+    movieOrShow
+  },
+  authenticationReducer: { isAuthenticated }
+}) => ({
+  error,
+  movie,
+  genres: genresList.genres,
+  videos,
+  movieOrShow,
+  isAuthenticated
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
-  getGenresSuccess,
-  getGenresError,
-  getOneMovieSuccess,
-  getOneMovieError,
-  clearOneMovie,
-  getVideosSuccess,
-  getVideosError
+  ...movieActions
 }, dispatch);
 
 export const MovieItemPageContainer = compose(
@@ -40,4 +36,4 @@ export const MovieItemPageContainer = compose(
     mapStateToProps,
     mapDispatchToProps
   )
-)(MovieItemPage);
+)(withSnackbar(MovieItemPage));

@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { withSnackbar } from 'notistack';
 import { bindActionCreators, compose } from 'redux';
 import connectWithViewport from '../../services/connectWithViewport';
 import connectWithIoC from '../../services/connectWithIoC';
@@ -12,10 +13,17 @@ import {
 
 } from '../../actions/actionsAPIcall';
 
-const mapStateToProps = ({ ApiReducer, setFiltrationParamsReducer }) => ({
-  error: ApiReducer.error,
-  movieList: ApiReducer.movieListInfo,
-  genres: ApiReducer.genresList.genres,
+const mapStateToProps = ({
+  ApiReducer: {
+    error,
+    movieListInfo,
+    genresList
+  },
+  setFiltrationParamsReducer
+}) => ({
+  error,
+  movieList: movieListInfo,
+  genres: genresList.genres,
   filtrationQueryParams: setFiltrationParamsReducer.filtrationQueryParams
 });
 
@@ -33,4 +41,4 @@ export const MainPageContainer = compose(
     mapStateToProps,
     mapDispatchToProps
   )
-)(MainPage);
+)(withSnackbar(MainPage));

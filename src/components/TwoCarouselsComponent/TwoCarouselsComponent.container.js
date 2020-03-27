@@ -12,10 +12,10 @@ import {
   getPopularMoviesError
 } from '../../actions/actionsAPIcall';
 
-const mapStateToProps = ({ ApiReducer }) => ({
-  error: ApiReducer.error,
-  newMovies: ApiReducer.newMovies,
-  popularMovies: ApiReducer.popularMovies
+const mapStateToProps = ({ ApiReducer: { error, newMovies, popularMovies } }) => ({
+  error,
+  newMovies,
+  popularMovies
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
