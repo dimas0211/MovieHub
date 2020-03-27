@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/MovieHub/static/css/main.acd6293d.chunk.css",
-    "main.js": "/MovieHub/static/js/main.7869565f.chunk.js",
-    "main.js.map": "/MovieHub/static/js/main.7869565f.chunk.js.map",
-    "runtime-main.js": "/MovieHub/static/js/runtime-main.121eb934.js",
-    "runtime-main.js.map": "/MovieHub/static/js/runtime-main.121eb934.js.map",
-    "static/js/2.3a27ca7e.chunk.js": "/MovieHub/static/js/2.3a27ca7e.chunk.js",
-    "static/js/2.3a27ca7e.chunk.js.map": "/MovieHub/static/js/2.3a27ca7e.chunk.js.map",
-    "index.html": "/MovieHub/index.html",
-    "precache-manifest.47a257648a3b8db7bc3bb09cea180b15.js": "/MovieHub/precache-manifest.47a257648a3b8db7bc3bb09cea180b15.js",
-    "service-worker.js": "/MovieHub/service-worker.js",
-    "static/css/main.acd6293d.chunk.css.map": "/MovieHub/static/css/main.acd6293d.chunk.css.map",
-    "static/js/2.3a27ca7e.chunk.js.LICENSE.txt": "/MovieHub/static/js/2.3a27ca7e.chunk.js.LICENSE.txt",
-    "static/media/404.gif": "/MovieHub/static/media/404.6965e9ef.gif",
-    "static/media/App.scss": "/MovieHub/static/media/Roboto-Regular.30799efa.eot",
-    "static/media/empty-list.png": "/MovieHub/static/media/empty-list.1cb4e224.png",
-    "static/media/icon-movie.png": "/MovieHub/static/media/icon-movie.3bbca59f.png"
+    "main.css": "/static/css/main.defe889e.chunk.css",
+    "main.js": "/static/js/main.ed8fe75c.chunk.js",
+    "main.js.map": "/static/js/main.ed8fe75c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.71877732.js",
+    "runtime-main.js.map": "/static/js/runtime-main.71877732.js.map",
+    "static/js/2.3a27ca7e.chunk.js": "/static/js/2.3a27ca7e.chunk.js",
+    "static/js/2.3a27ca7e.chunk.js.map": "/static/js/2.3a27ca7e.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.6dc903b24630962e470841c2b104eb89.js": "/precache-manifest.6dc903b24630962e470841c2b104eb89.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.defe889e.chunk.css.map": "/static/css/main.defe889e.chunk.css.map",
+    "static/js/2.3a27ca7e.chunk.js.LICENSE.txt": "/static/js/2.3a27ca7e.chunk.js.LICENSE.txt",
+    "static/media/404.gif": "/static/media/404.6965e9ef.gif",
+    "static/media/App.scss": "/static/media/Roboto-Regular.30799efa.eot",
+    "static/media/empty-list.png": "/static/media/empty-list.1cb4e224.png",
+    "static/media/icon-movie.png": "/static/media/icon-movie.3bbca59f.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.121eb934.js",
+    "static/js/runtime-main.71877732.js",
     "static/js/2.3a27ca7e.chunk.js",
-    "static/css/main.acd6293d.chunk.css",
-    "static/js/main.7869565f.chunk.js"
+    "static/css/main.defe889e.chunk.css",
+    "static/js/main.ed8fe75c.chunk.js"
   ]
 }
